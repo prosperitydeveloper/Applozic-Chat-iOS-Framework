@@ -16,7 +16,7 @@
 #import "ALUserDefaultsHandler.h"
 #import "ALMessageService.h"
 #import "ALMessagesViewController.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALMQTTConversationService.h"
 #import "ALGroupDetailViewController.h"
 #import "ALConversationService.h"
@@ -117,7 +117,7 @@
             ALMessageService *messageService = [[ALMessageService alloc]init];
             [messageService processPendingMessages];
 
-            ALUserService *userService = [ALUserService new];
+            ALApplozicUserService *userService = [ALApplozicUserService new];
             [userService blockUserSync: [ALUserDefaultsHandler getUserBlockLastTimeStamp]];
 
         }

@@ -20,7 +20,7 @@
 #import "ALConversationService.h"
 #import "MessageListRequest.h"
 #import "ALUserBlockResponse.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "NSString+Encode.h"
 #import "ALApplozicSettings.h"
 #import "UIImageView+WebCache.h"
@@ -222,7 +222,7 @@
             }
         }
         //USER BLOCK SYNC CALL
-        ALUserService * userService = [ALUserService new];
+        ALApplozicUserService * userService = [ALApplozicUserService new];
         [userService blockUserSync: [ALUserDefaultsHandler getUserBlockLastTimeStamp]];
 
         completion(messageListResponse, nil);

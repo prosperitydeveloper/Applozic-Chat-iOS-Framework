@@ -17,7 +17,7 @@
 #import "ALMQTTConversationService.h"
 #import "ALMessageService.h"
 #import "ALConstant.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALContactDBService.h"
 #import "ALInternalSettings.h"
 #import "ALAuthService.h"
@@ -170,7 +170,7 @@
 
             completion(response,nil);
 
-            ALUserService * alUserService = [ALUserService new];
+            ALApplozicUserService * alUserService = [ALApplozicUserService new];
             [alUserService getMutedUserListWithDelegate:nil withCompletion:^(NSMutableArray *userDetailArray, NSError *error) {
 
             }];

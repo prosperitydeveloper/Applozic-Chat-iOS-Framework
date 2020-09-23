@@ -19,9 +19,9 @@
 #import "ALRealTimeUpdate.h"
 #import "ALMuteRequest.h"
 
-@interface ALUserService : NSObject
+@interface ALApplozicUserService : NSObject
 
-+(ALUserService *)sharedInstance;
++(ALApplozicUserService *)sharedInstance;
 
 +(void)processContactFromMessages:(NSArray *) messagesArr withCompletion:(void(^)(void))completionMark;
 

@@ -10,7 +10,7 @@
 #import "ALContactDBService.h"
 #import "ALDBHandler.h"
 #import "ALUserDefaultsHandler.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 
 @implementation ALContactService
 

@@ -20,7 +20,7 @@
 #import "ALAudioVideoBaseVC.h"
 #import "ALChannelService.h"
 #import "ALChannel.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALUtilityClass.h"
 
 @implementation ALMessageDBService
@@ -214,7 +214,7 @@
             [ALChannelService setUnreadCountZeroForGroupID:key];
         } else {
             predicate = [NSPredicate predicateWithFormat:@"contactId = %@ AND groupId = %@",contactId,nil];
-            [ALUserService setUnreadCountZeroForContactId:contactId];
+            [ALApplozicUserService setUnreadCountZeroForContactId:contactId];
         }
 
         [fetchRequest setEntity:entity];

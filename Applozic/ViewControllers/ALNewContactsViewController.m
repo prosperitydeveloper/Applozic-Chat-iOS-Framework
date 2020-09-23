@@ -24,7 +24,7 @@
 #import "TSMessage.h"
 #import "ALDataNetworkConnection.h"
 #import "ALNotificationView.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALContactService.h"
 #import "ALPushAssist.h"
 #import "ALSubViewController.h"
@@ -799,7 +799,7 @@ static const int SHOW_GROUP = 102;
         [[self activityIndicator] startAnimating];
         
         if(searchBar.text){
-            ALUserService *userservice = [[ALUserService alloc] init];
+            ALApplozicUserService *userservice = [[ALApplozicUserService alloc] init];
             [userservice getListOfUsersWithUserName:searchBar.text withCompletion:^(ALAPIResponse *response, NSError *error) {
                 
                 if(!error &&  [response.status isEqualToString:@"success"]){
@@ -1305,7 +1305,7 @@ static const int SHOW_GROUP = 102;
 
 -(void)processFilterListWithLastSeen
 {
-    ALUserService * userService = [ALUserService new];
+    ALApplozicUserService * userService = [ALApplozicUserService new];
     [userService fetchOnlineContactFromServer:^(NSMutableArray * array, NSError * error) {
         
         if(error)
@@ -1465,7 +1465,7 @@ static const int SHOW_GROUP = 102;
 
 -(void)proccessRegisteredContactsCall:(BOOL)isRemoveobject{
     
-    ALUserService * userService = [ALUserService new];
+    ALApplozicUserService * userService = [ALApplozicUserService new];
     [userService getListOfRegisteredUsersWithCompletion:^(NSError *error) {
         
         [self.searchBar setUserInteractionEnabled:YES];

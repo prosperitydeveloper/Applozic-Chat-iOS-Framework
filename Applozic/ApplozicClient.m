@@ -68,7 +68,7 @@ NSString * const ApplozicClientDomain = @"ApplozicClient";
     _messageService = [ALMessageService sharedInstance];
     _messageService.delegate = self.delegate;
     _messageDbService = [ALMessageDBService new];
-    _userService = [ALUserService sharedInstance];
+    _userService = [ALApplozicUserService sharedInstance];
     _channelService = [ALChannelService sharedInstance];
     alAttachmentService = [ALAttachmentService sharedInstance];
 }

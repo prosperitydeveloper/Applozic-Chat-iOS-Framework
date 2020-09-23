@@ -22,7 +22,7 @@
 #import "ALConstant.h"
 #import "ALGroupDetailViewController.h"
 #import "ALUserProfileVC.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "Applozic.h"
 
 

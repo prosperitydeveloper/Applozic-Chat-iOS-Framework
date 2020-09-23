@@ -16,7 +16,7 @@
 #import "ALMessageClientService.h"
 #import "ALUserDefaultsHandler.h"
 #import "ALMessagesViewController.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 
 const int REGULAR_CONTACTS = 0;
 

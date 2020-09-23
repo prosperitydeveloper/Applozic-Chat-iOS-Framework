@@ -42,7 +42,7 @@ static NSString *const REMOVE_MULTIPLE_SUB_GROUP = @"/rest/ws/group/remove/subgr
 #import "ALContactDBService.h"
 #import "ALContactDBService.h"
 #import "ALUserDetailListFeed.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALMuteRequest.h"
 
 @interface ALChannelClientService ()
@@ -82,7 +82,7 @@ static NSString *const REMOVE_MULTIPLE_SUB_GROUP = @"/rest/ws/group/remove/subgr
             if (userNotPresentIds.count>0) {
                 ALSLog(ALLoggerSeverityInfo, @"Call userDetails...");
 
-                ALUserService *alUserService = [ALUserService new];
+                ALApplozicUserService *alUserService = [ALApplozicUserService new];
                 [alUserService fetchAndupdateUserDetails:userNotPresentIds withCompletion:^(NSMutableArray *userDetailArray, NSError *theError) {
                     ALSLog(ALLoggerSeverityInfo, @"User detail response sucessfull.");
                     completion(error, response.alChannel);
@@ -440,7 +440,7 @@ static NSString *const REMOVE_MULTIPLE_SUB_GROUP = @"/rest/ws/group/remove/subgr
                 }
             } if(userNotPresentIds.count>0) {
                 ALSLog(ALLoggerSeverityInfo, @"Call userDetails...");
-                ALUserService *alUserService = [ALUserService new];
+                ALApplozicUserService *alUserService = [ALApplozicUserService new];
                 [alUserService fetchAndupdateUserDetails:userNotPresentIds withCompletion:^(NSMutableArray *userDetailArray, NSError *theError) {
                     ALSLog(ALLoggerSeverityInfo, @"User detail response sucessfull.");
                     completion(error, response);
@@ -833,7 +833,7 @@ static NSString *const REMOVE_MULTIPLE_SUB_GROUP = @"/rest/ws/group/remove/subgr
             if (userNotPresentIds.count>0) {
                 ALSLog(ALLoggerSeverityInfo, @"CALLING user deatils for the users..");
 
-                ALUserService *alUserService = [ALUserService new];
+                ALApplozicUserService *alUserService = [ALApplozicUserService new];
                 [alUserService fetchAndupdateUserDetails:userNotPresentIds withCompletion:^(NSMutableArray *userDetailArray, NSError *theError) {
                     ALSLog(ALLoggerSeverityInfo, @"User detail response sucessfull.");
                     completion(error, response.alChannel);
@@ -919,7 +919,7 @@ static NSString *const REMOVE_MULTIPLE_SUB_GROUP = @"/rest/ws/group/remove/subgr
                 } if (userNotPresentIds.count>0) {
                     ALSLog(ALLoggerSeverityInfo, @"Call userDetails...");
 
-                    ALUserService *alUserService = [ALUserService new];
+                    ALApplozicUserService *alUserService = [ALApplozicUserService new];
                     [alUserService fetchAndupdateUserDetails:userNotPresentIds withCompletion:^(NSMutableArray *userDetailArray, NSError *theError) {
                         ALSLog(ALLoggerSeverityInfo, @"User detail response sucessfull.");
                         completion(error, response);
@@ -981,7 +981,7 @@ static NSString *const REMOVE_MULTIPLE_SUB_GROUP = @"/rest/ws/group/remove/subgr
             if (userNotPresentIds.count>0) {
                 ALSLog(ALLoggerSeverityInfo, @"CALLING user deatils for the users..");
 
-                ALUserService *alUserService = [ALUserService new];
+                ALApplozicUserService *alUserService = [ALApplozicUserService new];
                 [alUserService fetchAndupdateUserDetails:userNotPresentIds withCompletion:^(NSMutableArray *userDetailArray, NSError *theError) {
                     ALSLog(ALLoggerSeverityInfo, @"User detail response sucessfull.");
                     completion(error, theChannelFeedArray);

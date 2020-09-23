@@ -34,7 +34,7 @@
 #import "DB_Contact.h"
 #import "ALMapViewController.h"
 #import "ALNotificationView.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALMessageService.h"
 #import "ALUserDetail.h"
 #import "ALMQTTConversationService.h"
@@ -536,7 +536,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
             }
             else
             {
-                ALUserService *userService = [[ALUserService alloc] init];
+                ALApplozicUserService *userService = [[ALApplozicUserService alloc] init];
                 [userService processResettingUnreadCount];
 
             }
@@ -545,14 +545,14 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
     if(self.contactIds && !self.isGroup)
     {
-        [[ALUserService sharedInstance] markConversationAsRead:self.contactIds withCompletion:^(NSString * string, NSError *error) {
+        [[ALApplozicUserService sharedInstance] markConversationAsRead:self.contactIds withCompletion:^(NSString * string, NSError *error) {
             if(error)
             {
                 ALSLog(ALLoggerSeverityError, @"Error while marking messages as read for contact %@", self.contactIds);
             }
             else
             {
-                ALUserService *userService = [[ALUserService alloc] init];
+                ALApplozicUserService *userService = [[ALApplozicUserService alloc] init];
                 [userService processResettingUnreadCount];
 
             }
@@ -566,7 +566,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     {
         if([self.channelKey isEqualToNumber:almessage.groupId])
         {
-            [ALUserService markMessageAsRead:almessage withPairedkeyValue:almessage.pairedMessageKey withCompletion:^(NSString * completion, NSError * error) {
+            [ALApplozicUserService markMessageAsRead:almessage withPairedkeyValue:almessage.pairedMessageKey withCompletion:^(NSString * completion, NSError * error) {
 
                 if(error)
                 {
@@ -579,7 +579,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     {
         if([self.contactIds isEqualToString:almessage.contactIds])
         {
-            [ALUserService markMessageAsRead:almessage withPairedkeyValue:almessage.pairedMessageKey withCompletion:^(NSString * completion, NSError * error) {
+            [ALApplozicUserService markMessageAsRead:almessage withPairedkeyValue:almessage.pairedMessageKey withCompletion:^(NSString * completion, NSError * error) {
 
                 if(error)
                 {
@@ -933,7 +933,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
             [self showNoDataNotification];
             return;
         }
-        ALUserService *userService = [ALUserService new];
+        ALApplozicUserService *userService = [ALApplozicUserService new];
         [userService unblockUser:self.contactIds withCompletionHandler:^(NSError *error, BOOL userBlock) {
 
             if(userBlock)
@@ -1163,7 +1163,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 -(void) fetchConversationProfileDetailsWithUserId:(NSString *)userId
                                    withChannelKey:(NSNumber *)channelKey
                                    withCompletion:(void (^)( ALChannel *channel, ALContact *contact))completion {
-    ALUserService * userService = [[ALUserService alloc] init];
+    ALApplozicUserService * userService = [[ALApplozicUserService alloc] init];
 
     if (channelKey) {
 
@@ -2892,7 +2892,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
                 return;
             }
 
-            ALUserService *userService = [ALUserService new];
+            ALApplozicUserService *userService = [ALApplozicUserService new];
             [userService blockUser:self.contactIds withCompletionHandler:^(NSError *error, BOOL userBlock) {
 
                 if(userBlock)
@@ -3766,7 +3766,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         return;
     }
 
-    [ALUserService userDetailServerCall:self.contactIds withCompletion:^(ALUserDetail *alUserDetail)
+    [ALApplozicUserService userDetailServerCall:self.contactIds withCompletion:^(ALUserDetail *alUserDetail)
      {
         if(alUserDetail)
         {
@@ -4192,7 +4192,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 {
     ALSLog(ALLoggerSeverityInfo, @"ALCHATVC : USER_DETAIL_CHANGED_CALL_UPDATE");
 
-    [ALUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
+    [ALApplozicUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
 
         [[NSNotificationCenter defaultCenter] postNotificationName:@"USER_DETAIL_OTHER_VC" object:userDetail];
         [self subProcessDetailUpdate:userDetail];
@@ -4738,7 +4738,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         return;
     }
 
-    ALUserService * userService = [[ALUserService alloc] init];
+    ALApplozicUserService * userService = [[ALApplozicUserService alloc] init];
     [userService getUserDetail:self.contactIds withCompletion:^(ALContact *contact) {
 
         if (contact) {
@@ -4974,7 +4974,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     if (displayName.length && !message.groupId) {
         ALContact * contact =  [contactDBService loadContactByKey:@"userId" value:message.to];
         if (contact && [contact isDisplayNameUpdateRequired] ) {
-            [[ALUserService sharedInstance] updateDisplayNameWith:message.to withDisplayName:displayName withCompletion:^(ALAPIResponse *apiResponse, NSError *error) {
+            [[ALApplozicUserService sharedInstance] updateDisplayNameWith:message.to withDisplayName:displayName withCompletion:^(ALAPIResponse *apiResponse, NSError *error) {
                 if (apiResponse &&  [apiResponse.status isEqualToString:AL_RESPONSE_SUCCESS]) {
                     [contactDBService addOrUpdateMetadataWithUserId:message.to withMetadataKey:AL_DISPLAY_NAME_UPDATED withMetadataValue:@"true"];
                 }

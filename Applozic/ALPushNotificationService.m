@@ -13,7 +13,7 @@
 #import "ALChatViewController.h"
 #import "ALMessagesViewController.h"
 #import "ALPushAssist.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALNotificationView.h"
 #import "ALRegisterUserClientService.h"
 #import "ALAppLocalNotifications.h"
@@ -279,14 +279,14 @@
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"USER_DETAILS_UPDATE_CALL" object:userId];
             }
             if(self.realTimeUpdate){
-                [ALUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
+                [ALApplozicUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
                     [self.realTimeUpdate onUserDetailsUpdate:userDetail];
                 }];
             }
         }
         else if([type isEqualToString:self.notificationTypes[@(AL_CONVERSATION_READ)]]){
             //Conversation read for user
-            ALUserService *channelService = [[ALUserService alloc]init];
+            ALApplozicUserService *channelService = [[ALApplozicUserService alloc]init];
             NSString * userId = [theMessageDict objectForKey:@"message"];
             [channelService updateConversationReadWithUserId:userId withDelegate:self.realTimeUpdate];
 
@@ -310,7 +310,7 @@
                     [self.realTimeUpdate onUserMuteStatus:userDetail];
                 }
             }else if([flag isEqualToString:@"1"]) {
-                ALUserService *userService = [[ALUserService alloc]init];
+                ALApplozicUserService *userService = [[ALApplozicUserService alloc]init];
 
                 [userService getMutedUserListWithDelegate:self.realTimeUpdate withCompletion:^(NSMutableArray *userDetailArray, NSError *error) {
 
@@ -448,7 +448,7 @@
 
 +(void)userSync
 {
-    ALUserService *userService = [ALUserService new];
+    ALApplozicUserService *userService = [ALApplozicUserService new];
     [userService blockUserSync: [ALUserDefaultsHandler getUserBlockLastTimeStamp]];
 }
 

@@ -68,7 +68,7 @@ FOUNDATION_EXPORT const unsigned char ApplozicVersionString[];
 #import <Applozic/ALApplozicSettings.h>
 #import <Applozic/ALContactsResponse.h>
 #import <Applozic/ALContactService.h>
-#import <Applozic/ALUserService.h>
+#import <Applozic/ALApplozicUserService.h>
 #import <Applozic/ALCollectionReusableView.h>
 #import <Applozic/ALCustomCell.h>
 #import <Applozic/ALDocumentsCell.h>

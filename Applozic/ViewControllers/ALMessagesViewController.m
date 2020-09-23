@@ -28,7 +28,7 @@ static const int BROADCAST_GROUP_CREATION = 5;
 #import "ALMQTTConversationService.h"
 #import "ALApplozicSettings.h"
 #import "ALDataNetworkConnection.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALChannelDBService.h"
 #import "ALChannel.h"
 #import "ALChatLauncher.h"
@@ -1028,7 +1028,7 @@ static int const MQTT_MAX_RETRY = 3;
 -(void)updateUserDetail:(NSString *)userId
 {
     ALSLog(ALLoggerSeverityInfo, @"ALMSGVC : USER_DETAIL_CHANGED_CALL_UPDATE");
-    [ALUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
+    [ALApplozicUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"USER_DETAIL_OTHER_VC" object:userDetail];
         ALContactCell * contactCell = [self getCell:userId];
@@ -1224,7 +1224,7 @@ static int const MQTT_MAX_RETRY = 3;
 }
 -(void)callLastSeenStatusUpdate
 {
-    [ALUserService getLastSeenUpdateForUsers:[ALUserDefaultsHandler getLastSeenSyncTime] withCompletion:^(NSMutableArray * userDetailArray)
+    [ALApplozicUserService getLastSeenUpdateForUsers:[ALUserDefaultsHandler getLastSeenSyncTime] withCompletion:^(NSMutableArray * userDetailArray)
      {
          for(ALUserDetail * userDetail in userDetailArray)
          {

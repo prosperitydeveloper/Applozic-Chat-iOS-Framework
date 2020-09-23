@@ -18,7 +18,6 @@
 #import "ALResponseHandler.h"
 #import "ALNotificationView.h"
 #import "ALDataNetworkConnection.h"
-#import "ALUserService.h"
 #import "ALRegisterUserClientService.h"
 #import "UIImageView+WebCache.h"
 #import "ALContactService.h"
@@ -26,7 +25,7 @@
 #import "ALMessagesViewController.h"
 #import "ALPushAssist.h"
 #import "ALUserDefaultsHandler.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALUserDetail.h"
 #import "ALHTTPManager.h"
 
@@ -478,7 +477,7 @@
                     NSString *imageLinkFromServer = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                     ALSLog(ALLoggerSeverityInfo, @"PROFILE IMAGE URL :: %@",imageLinkFromServer);
                     self->imageLinkFromServer = imageLinkFromServer;
-                    ALUserService *userService = [ALUserService new];
+                    ALApplozicUserService *userService = [ALApplozicUserService new];
                     [userService updateUserDisplayName:@"" andUserImage:imageLinkFromServer userStatus:@"" withCompletion:^(id theJson, NSError *error) {
 
                         ALSLog(ALLoggerSeverityInfo, @"SERVER_RESPONSE_IMAGE_UPDATE :: %@",(NSString *)theJson);
@@ -567,7 +566,7 @@
                                                               
                                                               [self.activityIndicator startAnimating];
                                                               
-                                                              ALUserService *userService = [ALUserService new];
+                                                              ALApplozicUserService *userService = [ALApplozicUserService new];
                                                               [userService updateUserDisplayName:self.userNameLabel.text
                                                                                     andUserImage:@""
                                                                                       userStatus:statusText

@@ -16,7 +16,7 @@
 #import "ALChannelService.h"
 #import "ALContactDBService.h"
 #import "ALMessageService.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "NSData+AES.h"
 #import "ALDataNetworkConnection.h"
 #import "ALPushNotificationService.h"
@@ -495,7 +495,7 @@ static NSString * const observeSupportGroupMessage = @"observeSupportGroupMessag
                 [self.mqttConversationDelegate updateUserDetail:userId];
             }
             if(self.realTimeUpdate){
-                [ALUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
+                [ALApplozicUserService updateUserDetail:userId withCompletion:^(ALUserDetail *userDetail) {
                     [self.realTimeUpdate onUserDetailsUpdate:userDetail];
                 }];
             }
@@ -515,7 +515,7 @@ static NSString * const observeSupportGroupMessage = @"observeSupportGroupMessag
         }
         else if([type isEqualToString:pushNotificationService.notificationTypes[@(AL_CONVERSATION_READ)]]){
             //Conversation read for user
-            ALUserService *channelService = [[ALUserService alloc]init];
+            ALApplozicUserService *channelService = [[ALApplozicUserService alloc]init];
             NSString * userId = [theMessageDict objectForKey:@"message"];
             [channelService updateConversationReadWithUserId:userId withDelegate:self.realTimeUpdate];
             
@@ -541,7 +541,7 @@ static NSString * const observeSupportGroupMessage = @"observeSupportGroupMessag
                 }
                 
             }else if([flag isEqualToString:@"1"]) {
-                ALUserService *userService = [[ALUserService alloc]init];
+                ALApplozicUserService *userService = [[ALApplozicUserService alloc]init];
                 [userService getMutedUserListWithDelegate:self.realTimeUpdate withCompletion:^(NSMutableArray *userDetailArray, NSError *error) {
                     
                 }];

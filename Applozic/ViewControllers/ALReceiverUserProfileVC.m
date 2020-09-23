@@ -11,7 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "ALApplozicSettings.h"
 #import "ALMessageClientService.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 
 @interface ALReceiverUserProfileVC ()
 
@@ -155,7 +155,7 @@
     alMuteRequest.userId = self.alContact.userId;
     alMuteRequest.notificationAfterTime = time;
     
-    ALUserService * userService = [[ALUserService alloc ] init];
+    ALApplozicUserService * userService = [[ALApplozicUserService alloc ] init];
     [userService muteUser:alMuteRequest withCompletion:^(ALAPIResponse *response, NSError *error) {
         
         if(response && [response.status isEqualToString:@"success"]){

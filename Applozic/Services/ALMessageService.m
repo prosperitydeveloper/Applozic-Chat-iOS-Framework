@@ -17,7 +17,7 @@
 #import "ALUserDefaultsHandler.h"
 #import "ALMessageClientService.h"
 #import "ALSendMessageResponse.h"
-#import "ALUserService.h"
+#import "ALApplozicUserService.h"
 #import "ALUserDetail.h"
 #import "ALContactDBService.h"
 #import "ALContactService.h"
@@ -199,7 +199,7 @@ static ALMessageClientService *alMsgClientService;
             }
             if(userNotPresentIds.count>0) {
                 ALSLog(ALLoggerSeverityInfo, @"Call userDetails...");
-                ALUserService *alUserService = [ALUserService new];
+                ALApplozicUserService *alUserService = [ALApplozicUserService new];
                 [alUserService fetchAndupdateUserDetails:userNotPresentIds withCompletion:^(NSMutableArray *userDetailArray, NSError *theError) {
                     ALSLog(ALLoggerSeverityInfo, @"User detail response sucessfull.");
                     completion(messages, error,userDetailArray);
@@ -398,7 +398,7 @@ static ALMessageClientService *alMsgClientService;
 +(void) processMessages:(NSMutableArray* )messageArray
                delegate:(id<ApplozicUpdatesDelegate>)delegate
          withCompletion:(void(^)(NSMutableArray *))completion {
-    [ALUserService processContactFromMessages:messageArray withCompletion:^{
+    [ALApplozicUserService processContactFromMessages:messageArray withCompletion:^{
         for (int i = (int)messageArray.count - 1; i>=0; i--) {
             ALMessage * message = messageArray[i];
             if([message isHiddenMessage] && ![message isVOIPNotificationMessage]) {
@@ -581,7 +581,7 @@ static ALMessageClientService *alMsgClientService;
             }
             else
             {
-                [ALUserService setUnreadCountZeroForContactId:contactId];
+                [ALApplozicUserService setUnreadCountZeroForContactId:contactId];
             }
         }
         completion(response, error);
@@ -636,7 +636,7 @@ static ALMessageClientService *alMsgClientService;
                 if (!msg.groupId) {
                     ALContact * contact = [contactDBService loadContactByKey:@"userId" value:msg.to];
                     if (contact && [contact isDisplayNameUpdateRequired] ) {
-                        [[ALUserService sharedInstance] updateDisplayNameWith:msg.to withDisplayName:contact.displayName withCompletion:^(ALAPIResponse *apiResponse, NSError *error) {
+                        [[ALApplozicUserService sharedInstance] updateDisplayNameWith:msg.to withDisplayName:contact.displayName withCompletion:^(ALAPIResponse *apiResponse, NSError *error) {
                             if (apiResponse &&  [apiResponse.status isEqualToString:AL_RESPONSE_SUCCESS]) {
                                 [contactDBService addOrUpdateMetadataWithUserId:msg.to withMetadataKey:AL_DISPLAY_NAME_UPDATED withMetadataValue:@"true"];
                             }
@@ -878,7 +878,7 @@ static ALMessageClientService *alMsgClientService;
                 }
             }
             if (userNotPresentIds.count > 0) {
-                ALUserService *alUserService = [ALUserService new];
+                ALApplozicUserService *alUserService = [ALApplozicUserService new];
                 [alUserService fetchAndupdateUserDetails:userNotPresentIds withCompletion:^(NSMutableArray *userDetailArray, NSError *theError) {
                     if (!theError){
                         ALSLog(ALLoggerSeverityInfo, @"User detail fetched sucessfull.");
@@ -1032,7 +1032,7 @@ static ALMessageClientService *alMsgClientService;
     if (!alMessage.groupId) {
         ALContact * contact = [contactDBService loadContactByKey:@"userId" value:alMessage.to];
         if (contact && [contact isDisplayNameUpdateRequired] ) {
-            [[ALUserService sharedInstance] updateDisplayNameWith:alMessage.to withDisplayName:contact.displayName withCompletion:^(ALAPIResponse *apiResponse, NSError *error) {
+            [[ALApplozicUserService sharedInstance] updateDisplayNameWith:alMessage.to withDisplayName:contact.displayName withCompletion:^(ALAPIResponse *apiResponse, NSError *error) {
                 if (apiResponse &&  [apiResponse.status isEqualToString:AL_RESPONSE_SUCCESS]) {
                     [contactDBService addOrUpdateMetadataWithUserId:alMessage.to withMetadataKey:AL_DISPLAY_NAME_UPDATED withMetadataValue:@"true"];
                 }
