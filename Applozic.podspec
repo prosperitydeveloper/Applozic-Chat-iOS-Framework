@@ -91,9 +91,10 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "Applozic", "Applozic/**/*.{h,m,swift}"
-  s.exclude_files = "Classes/Exclude"
+  s.exclude_files = "Classes/Exclude", "Applozic/Resources/lib/SDWebImage"
   s.swift_version = '5.0'
   s.prefix_header_file = 'Applozic/Applozic_Prefix.pch'
+  s.dependency 'ApplozicCore', '~>7.15.0'
   # s.public_header_files = "Classes/**/*.h"
 
 
