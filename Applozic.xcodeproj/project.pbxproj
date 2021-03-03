@@ -311,7 +311,7 @@
 		1896EEEB25DBE95B0038EBFF /* ALRegistrationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1896EEE325DBE95A0038EBFF /* ALRegistrationResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1896EEEC25DBE95B0038EBFF /* ALRegistrationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896EEE425DBE95A0038EBFF /* ALRegistrationResponse.m */; };
 		1896EEFF25DBEA670038EBFF /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1896EEF025DBEA650038EBFF /* TSBlurView.h */; };
-		1896EF0025DBEA670038EBFF /* HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1896EEF125DBEA650038EBFF /* HexColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1896EF0025DBEA670038EBFF /* HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 1896EEF125DBEA650038EBFF /* HexColors.h */; };
 		1896EF0125DBEA670038EBFF /* TSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1896EEF225DBEA650038EBFF /* TSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1896EF0325DBEA670038EBFF /* ALPushAssist.h in Headers */ = {isa = PBXBuildFile; fileRef = 1896EEF425DBEA660038EBFF /* ALPushAssist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1896EF0425DBEA670038EBFF /* TSBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896EEF525DBEA660038EBFF /* TSBlurView.m */; };
@@ -2717,7 +2717,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 7.14.0;
+				MARKETING_VERSION = 7.15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2756,7 +2756,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 7.14.0;
+				MARKETING_VERSION = 7.15.0;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.ApplozicCore;
