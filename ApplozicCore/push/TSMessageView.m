@@ -153,7 +153,8 @@ static NSMutableDictionary *_notificationDesign;
 {
     if (!_notificationDesign)
     {
-        NSString *path = [[NSBundle bundleForClass:self.class] pathForResource:TSDesignFileName ofType:@"json"];
+        NSBundle *bundle = [ALUtilityClass getBundle];
+        NSString *path = [bundle pathForResource:TSDesignFileName ofType:@"json"];
         NSData *data = [NSData dataWithContentsOfFile:path];
         NSAssert(data != nil, @"Could not read TSMessages config file from main bundle with name %@.json", TSDesignFileName);
 
@@ -267,7 +268,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
             // add background image here
             UIImage *backgroundImage = [self bundledImageNamed:[current valueForKey:@"backgroundImageName"]];
             backgroundImage = [backgroundImage stretchableImageWithLeftCapWidth:0.0 topCapHeight:0.0];
-            
+
             _backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
             self.backgroundImageView.autoresizingMask = (UIViewAutoresizingFlexibleWidth);
             [self addSubview:self.backgroundImageView];
@@ -300,7 +301,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
         } else {
             [self.titleLabel setFont:[UIFont boldSystemFontOfSize:fontSize]];
         }
-        
+
 //        [self.titleLabel setShadowColor:[UIColor colorWithHexString:[current valueForKey:@"shadowColor"]]];
 //        [self.titleLabel setShadowOffset:CGSizeMake([[current valueForKey:@"shadowOffsetX"] floatValue],
 //                                                    [[current valueForKey:@"shadowOffsetY"] floatValue])];
@@ -349,11 +350,11 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
                                                   topPadding,
                                                   image.size.width,
                                                   image.size.height);
-            
+
             self.iconImageView.layer.cornerRadius=image.size.width/2;
             self.iconImageView.layer.masksToBounds=YES;
             [self addSubview:self.iconImageView];
-            
+
         }
 
         // Set up button (if set)
@@ -631,7 +632,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
 
 #pragma mark - Grab Image From Pod Bundle
 - (UIImage *)bundledImageNamed:(NSString*)name{
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSBundle *bundle = [ALUtilityClass getBundle];
     NSString *imagePath = [bundle pathForResource:name ofType:nil];
     return [[UIImage alloc] initWithContentsOfFile:imagePath];
 }

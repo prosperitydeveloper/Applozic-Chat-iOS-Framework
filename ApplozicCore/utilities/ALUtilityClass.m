@@ -22,29 +22,29 @@
 
 + (NSString *) formatTimestamp:(NSTimeInterval) timeInterval toFormat:(NSString *) forMatStr
 {
-    
+
     NSDateFormatter * formatter =  [[NSDateFormatter alloc] init];
     [formatter setAMSymbol:@"am"];
     [formatter setPMSymbol:@"pm"];
     [formatter setDateFormat:forMatStr];
     formatter.timeZone = [NSTimeZone localTimeZone];
-    
+
     NSString * dateStr = [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:timeInterval]];
 
     return dateStr;
-    
+
 }
 
 + (NSString *)generateJsonStringFromDictionary:(NSDictionary *)dictionary {
 
     NSString *jsonString = nil;
-    
+
     NSError *error;
-    
+
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary
                                                        options:NSJSONWritingPrettyPrinted
                                                          error:&error];
-    
+
     if (! jsonData)
     {
         ALSLog(ALLoggerSeverityError, @"Got an error: %@", error);
@@ -53,21 +53,21 @@
     {
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-    
+
     return jsonString;
-    
+
 }
 
 + (BOOL)isToday:(NSDate *)todayDate {
-    
+
     BOOL result = NO;
-    
+
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *components = [cal components:(NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:[NSDate date]];
     NSDate *today = [cal dateFromComponents:components];
     components = [cal components:(NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:todayDate];
     NSDate *otherDate = [cal dateFromComponents:components];
-    
+
     if([today isEqualToDate:otherDate]) {
         //do stuff
         result = YES;
@@ -92,7 +92,7 @@
     constraintSize.width = width;
     NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                           [UIFont fontWithName:fontName size:fontSize], NSFontAttributeName,nil];
-    
+
     CGRect frame = [text boundingRectWithSize:constraintSize
                                       options:NSStringDrawingUsesLineFragmentOrigin
                                    attributes:attributesDictionary
@@ -147,7 +147,7 @@
         handler(YES);
     }
                                     buttonTitle:nil buttonCallback:nil atPosition:TSMessageNotificationPositionTop canBeDismissedByUser:YES];
-    
+
 }
 
 +(NSString *)getFileNameWithCurrentTimeStamp
@@ -158,37 +158,37 @@
 
 -(void)getExactDate:(NSNumber *)dateValue
 {
-    
+
     NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970: [dateValue doubleValue]/1000];
-    
+
     NSDate *current = [[NSDate alloc] init];
     NSDate *today = [NSDate date];
     NSDate *yesterday = [today dateByAddingTimeInterval: -86400.0];
-    
+
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"dd/MM/yyy"];
-    
+
     NSString *todaydate = [format stringFromDate:current];
     NSString *yesterdaydate = [format stringFromDate:yesterday];
     NSString *serverdate = [format stringFromDate:date];
     self.msgdate = serverdate;
-    
+
     if([serverdate isEqualToString:todaydate])
     {
         self.msgdate = NSLocalizedStringWithDefaultValue(@"todayMsgViewText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"today" , @"");
-        
+
     }
     else if ([serverdate isEqualToString:yesterdaydate])
     {
         self.msgdate = NSLocalizedStringWithDefaultValue(@"yesterdayMsgViewText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"yesterday" , @"");
     }
-    
+
     [format setDateFormat:@"hh:mm a"];
     [format setAMSymbol:@"am"];
     [format setPMSymbol:@"pm"];
-    
+
     self.msgtime = [format stringFromDate:date];
-    
+
 }
 
 +(BOOL)isThisDebugBuild
@@ -201,7 +201,7 @@
     ALSLog(ALLoggerSeverityInfo, @"RELEASE_MODE");
     debug = NO;
 #endif
-    
+
     return debug;
 }
 
@@ -224,9 +224,9 @@
     NSInteger seconds = ti % 60;
     NSInteger minutes = (ti / 60) % 60;
     NSInteger hours = (ti / 3600);
-    
+
     NSString * text = @"";
-    
+
     if (hours)
     {
         text = [NSString stringWithFormat:@"%ld Hr %02ld Min %02ld Sec", (long)hours, (long)minutes, (long)seconds];
@@ -239,7 +239,7 @@
     {
         text = [NSString stringWithFormat:@"%ld Sec", (long)seconds];
     }
-    
+
     return text;
 }
 
@@ -254,14 +254,14 @@
 
 +(NSString*)getLocationUrl:(ALMessage*)almessage size: (CGRect) withSize
 {
-    
-    
+
+
     NSString *latLongArgument = [self formatLocationJson:almessage];
-    
-    
+
+
     NSString *staticMapUrl = [NSString stringWithFormat:@"http://maps.google.com/maps/api/staticmap?format=png&markers=%@&key=%@&zoom=13&size=%dx%d&scale=1",latLongArgument,
                               [ALUserDefaultsHandler getGoogleMapAPIKey], 2*(int)withSize.size.width, 2*(int)withSize.size.height];
-    
+
     return staticMapUrl;
 }
 
@@ -272,14 +272,14 @@
     NSDictionary *jsonStringDic = [NSJSONSerialization JSONObjectWithData:objectData
                                                                   options:NSJSONReadingMutableContainers
                                                                     error:&error];
-    
+
     NSArray* latLog = [[NSArray alloc] initWithObjects:[jsonStringDic valueForKey:@"lat"],[jsonStringDic valueForKey:@"lon"], nil];
-    
+
     if(!latLog.count)
     {
         return [self processMapUrl:locationAlMessage];
     }
-    
+
     NSString *latLongArgument = [NSString stringWithFormat:@"%@,%@", latLog[0], latLog[1]];
     return latLongArgument;
 }
@@ -405,6 +405,15 @@
         return nil;
     }
     return documentFileURL;
+}
+
+/// get the bundle if its SWIFT_PACKAGE will use the runtime bundle of SPM else will use the bundle from class
++(NSBundle*)getBundle {
+#if SWIFT_PACKAGE
+    return SWIFTPM_MODULE_BUNDLE;
+#else
+    return [NSBundle bundleForClass:[ALUtilityClass class]];
+#endif
 }
 
 @end
