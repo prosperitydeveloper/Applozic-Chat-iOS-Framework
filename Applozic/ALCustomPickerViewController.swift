@@ -116,7 +116,7 @@ public class ALBaseNavigationViewController: UINavigationController {
 
         self.navigationController?.navigationBar.tintColor = navigationItemColor
 
-        let aSize = UIFont.boldSystemFont(ofSize: 18)  {
+        let aSize = UIFont.boldSystemFont(ofSize: 18)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: navigationItemColor, NSAttributedString.Key.font: aSize]
         
 
