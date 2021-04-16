@@ -16,7 +16,7 @@ static CGFloat TYPING_LABEL_SIZE = 12.5;
 #import "ALNavigationController.h"
 #import "ALUIUtilityClass.h"
 
-static CGFloat const sendTextViewCornerRadius = 15.0f;
+static CGFloat const sendTextViewCornerRadius = 10.0f;
 
 @interface ALBaseViewController ()
 

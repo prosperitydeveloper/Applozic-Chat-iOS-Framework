@@ -56,7 +56,7 @@ static NSString *const DEFAULT_FONT_NAME = @"Helvetica-Bold";
 
         self.backgroundColor = [UIColor clearColor];
 
-        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 45, 45)];
+        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 36, 36)];
         self.mUserProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
         self.mUserProfileImageView.layer.cornerRadius=self.mUserProfileImageView.frame.size.width/2;
         self.mUserProfileImageView.clipsToBounds = YES;
@@ -65,13 +65,13 @@ static NSString *const DEFAULT_FONT_NAME = @"Helvetica-Bold";
         self.mBubleImageView = [[UIImageView alloc] init];
         self.mBubleImageView.contentMode = UIViewContentModeScaleToFill;
         self.mBubleImageView.backgroundColor = [UIColor whiteColor];
-        self.mBubleImageView.layer.cornerRadius = 5;
+        self.mBubleImageView.layer.cornerRadius = 10;
         [self.contentView addSubview:self.mBubleImageView];
 
         self.replyParentView = [[UIImageView alloc] init];
         self.replyParentView.contentMode = UIViewContentModeScaleToFill;
         self.replyParentView.backgroundColor = [UIColor whiteColor];
-        self.replyParentView.layer.cornerRadius = 5;
+        self.replyParentView.layer.cornerRadius = 10;
         [self.replyParentView setUserInteractionEnabled:YES];
 
         UITapGestureRecognizer * replyViewTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureForReplyView:)];
