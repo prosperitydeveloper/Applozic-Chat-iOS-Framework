@@ -22,7 +22,7 @@
 {
     [super populateCell:alMessage viewSize:viewSize];
     
-    [self.mMessageLabel setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+    [self.mMessageLabel setFont:[UIFont systemFontOfSize:14]];
     [self.mMessageLabel setTextAlignment:NSTextAlignmentCenter];
     [self.mMessageLabel setBackgroundColor:[UIColor clearColor]];
     [self.mMessageLabel setLineBreakMode:NSLineBreakByCharWrapping];

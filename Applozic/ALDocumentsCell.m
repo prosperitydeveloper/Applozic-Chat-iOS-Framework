@@ -80,7 +80,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 45;
         
         self.documentName = [[UILabel alloc] init];
         [self.documentName setBackgroundColor:[UIColor clearColor]];
-        [self.documentName setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+        [self.documentName setFont:[UIFont systemFontSize:14]];
         [self.documentName setNumberOfLines:4];
         [self.contentView addSubview:self.documentName];
         

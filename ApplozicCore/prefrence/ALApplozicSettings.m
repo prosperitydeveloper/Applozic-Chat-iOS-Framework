@@ -753,7 +753,7 @@
 +(NSString *)getCustomMessageFont
 {   NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
     NSString * font = [userDefaults valueForKey:AL_CUSTOM_MSG_FONT];
-    return font ? font : @"Helvetica";
+    return font ? font : @"SanFranciscoText";
 }
 
 +(void)setGroupInfoDisabled:(BOOL)flag
@@ -1614,7 +1614,7 @@
 +(NSString *)getFontForAudioView {
     NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
     NSString * font = [userDefaults valueForKey:AL_AUDIO_RECORD_VIEW_FONT];
-    return font ? font : @"Helvetica";
+    return font ? font : @"SanFranciscoText";
 }
 
 + (void)enableNewAudioDesign:(BOOL)enable {

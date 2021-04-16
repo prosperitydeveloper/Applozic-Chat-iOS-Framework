@@ -557,7 +557,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 {
     [navigationController.navigationBar setTitleTextAttributes: @{
         NSForegroundColorAttributeName:[ALApplozicSettings getColorForNavigationItem],
-        NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:18]
+        NSFontAttributeName:[UIFont boldSystemFontOfSize:18]
     }];
     [navigationController.navigationBar setBarTintColor: [ALApplozicSettings getColorForNavigation]];
     [navigationController.navigationBar setTintColor:[ALApplozicSettings getColorForNavigationItem]];
@@ -2125,7 +2125,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     for (UILabel * label in labelArray)
     {
         label.textColor = [ALApplozicSettings getColorForNavigationItem];
-        label.font = [UIFont fontWithName:@"Helvetica" size:11.0];
+        label.font = [UIFont systemFontOfSize:11.0];
         [self resizeLabels:label];
         [view addSubview:label];
     }

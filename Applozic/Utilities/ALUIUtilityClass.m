@@ -105,7 +105,7 @@
 
         UIWindow * keyWindow = [[UIApplication sharedApplication] keyWindow];
         UILabel * toastView = [[UILabel alloc] init];
-        [toastView setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+        [toastView setFont:[UIFont systemFontOfSize:14]];
         toastView.text = toastMessage;
         [toastView setTextColor:[ALApplozicSettings getColorForToastText]];
         toastView.backgroundColor = [ALApplozicSettings getColorForToastBackground];
