@@ -1043,7 +1043,7 @@ static const int SHOW_GROUP = 102;
 -(UIView *)setCustomBackButton:(NSString *)text
 {
     UIImageView *imageView = [[UIImageView alloc] initWithImage: [ALUIUtilityClass getImageFromFramworkBundle:@"bbb.png"]];
-    [imageView setFrame:CGRectMake(-10, 0, 30, 30)];
+    [imageView setFrame:CGRectMake(-10, 0, 30, 40)];
     [imageView setTintColor:[UIColor whiteColor]];
     UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(imageView.frame.origin.x + imageView.frame.size.width - 5, imageView.frame.origin.y + 5 , @"back".length, 15)];
     [label setTextColor: [ALApplozicSettings getColorForNavigationItem]];

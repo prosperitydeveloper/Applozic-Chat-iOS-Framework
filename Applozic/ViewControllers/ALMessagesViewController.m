@@ -1295,10 +1295,10 @@ static CGFloat const DEFAULT_TOP_PORTRAIT_CONSTANT = 64;
 -(UIView *)setCustomBackButton:(NSString *)text
 {
     UIImage * backImage = [ALUIUtilityClass getImageFromFramworkBundle:@"bbb.png"];
-    backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:backImage];
-    [imageView setFrame:CGRectMake(-10, 0, 30, 30)];
-    [imageView setTintColor:[ALApplozicSettings getColorForNavigationItem]];
+    [imageView setFrame:CGRectMake(-10, 0, 30, 41)];
+   // [imageView setTintColor:[ALApplozicSettings getColorForNavigationItem]];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(imageView.frame.origin.x + imageView.frame.size.width - 5,
                                                                imageView.frame.origin.y + 5 , 20, 15)];
     
