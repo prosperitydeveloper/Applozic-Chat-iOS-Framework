@@ -15,7 +15,7 @@
 #import "ALUIUtilityClass.h"
 
 static CGFloat const USER_PROFILE_PADDING_X_OUTBOX = 50;
-static CGFloat const USER_PROFILE_HEIGHT = 45;
+static CGFloat const USER_PROFILE_HEIGHT = 36;
 static CGFloat const BUBBLE_PADDING_X_OUTBOX = 60;
 static CGFloat const BUBBLE_PADDING_WIDTH = 120;
 static CGFloat const BUBBLE_PADDING_HEIGHT_OUTBOX = 180;
