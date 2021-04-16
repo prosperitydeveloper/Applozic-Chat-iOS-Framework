@@ -987,7 +987,6 @@
                             <outlet property="delegate" destination="Ec6-td-O0D" id="eV1-cC-fTC"/>
                         </connections>
                     </tableView>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="callButton" destination="IoM-hF-MPk" id="X3w-ug-4xO"/>
@@ -1710,6 +1709,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="oOD-ac-EA7"/>
                                         </constraints>
+                                        <inset key="imageEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
                                         <state key="normal" image="attachments"/>
                                         <connections>
                                             <action selector="attachmentActionMethod:" destination="rWz-Vg-7Ha" eventType="touchDown" id="4Ag-VV-0c2"/>
@@ -1857,7 +1857,6 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="attachmentOutlet" destination="IoT-HK-LWd" id="xvh-EU-ObU"/>
