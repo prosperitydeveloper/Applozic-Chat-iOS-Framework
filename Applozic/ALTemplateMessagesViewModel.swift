@@ -14,7 +14,7 @@ import Foundation
     public var leftRightPadding: CGFloat = 46.0
     public var height: CGFloat = 40.0
     
-    public var textFont = UIFont.systemFontSize(14))
+    public var textFont = UIFont.systemFontSize(14)
     
     @objc  public init(messageTemplates: [ALTemplateMessageModel]) {
         self.messageTemplates = messageTemplates
