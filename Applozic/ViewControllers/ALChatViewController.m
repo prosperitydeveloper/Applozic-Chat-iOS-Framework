@@ -557,7 +557,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 {
     [navigationController.navigationBar setTitleTextAttributes: @{
         NSForegroundColorAttributeName:[ALApplozicSettings getColorForNavigationItem],
-        NSFontAttributeName:[UIFont boldSystemFontOfSize:18]
+        NSFontAttributeName:[UIFont boldSystemFontOfSize:17]
     }];
     [navigationController.navigationBar setBarTintColor: [ALApplozicSettings getColorForNavigation]];
     [navigationController.navigationBar setTintColor:[ALApplozicSettings getColorForNavigationItem]];
