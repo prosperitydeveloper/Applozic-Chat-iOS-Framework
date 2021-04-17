@@ -1081,7 +1081,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     titleLabelButton.userInteractionEnabled = YES;
     [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
 
-    CGFloat COORDINATE_POINT_Y = 44 - 17;
+    CGFloat COORDINATE_POINT_Y = 34 - 17;
     [self.label setFrame: CGRectMake(0, COORDINATE_POINT_Y ,self.navigationController.navigationBar.frame.size.width, 30)];
     self.messageMetadata = [ALApplozicSettings getMessageMetadata];
 }
