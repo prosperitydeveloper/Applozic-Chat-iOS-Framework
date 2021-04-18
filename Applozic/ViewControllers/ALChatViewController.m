@@ -1079,8 +1079,8 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
     self.loadingIndicator = [[ALLoadingIndicator alloc] initWithFrame:CGRectZero color:UIColor.whiteColor];
     navigationView = [[UIView alloc] initWithFrame: CGRectMake(0, 0,
-                                                               self.navigationController.navigationBar.frame.size.width,
-                                                               self.navigationController.navigationBar.frame.size.height)];
+                                                               self.navigationItem.titleView.frame.size.width,
+                                                               self.navigationItem.titleView.frame.size.height)];
     navigationView.backgroundColor = [UIColor grayColor];
     labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 10, self.navigationItem.titleView.frame.size.width, 22)];
     labelName.font = [UIFont systemFontOfSize:17.0];
