@@ -1096,7 +1096,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 //    titleLabelButton.userInteractionEnabled = false;
 //    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
 
-    [self.label setFrame: CGRectMake(0, 32 ,navigationView.frame.size.width, 16)];
+    [self.label setFrame: CGRectMake(0, 32, navigationView.frame.size.width, 16)];
     [navigationView addSubview:self.label];
     self.label.backgroundColor = [UIColor yellowColor];
     self.messageMetadata = [ALApplozicSettings getMessageMetadata];
@@ -1178,8 +1178,9 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         }
        // self.navigationItem.titleView = self->titleLabelButton;
         self.navigationItem.titleView = self->navigationView;
-        self->labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 10, self->navigationView.frame.size.width, 22)];
-        [self.label setFrame: CGRectMake(0, 32 , self->navigationView.frame.size.width, 16)];
+        self->labelName.frame = CGRectMake(0, 10, self->navigationView.frame.size.width, 22);
+        self.label.frame = CGRectMake(0, 32, self->navigationView.frame.size.width, 16);
+        [self.view setNeedsLayout];
     }];
 }
 
