@@ -1088,17 +1088,14 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     //    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
     
     navigationView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, self.view.frame.size.width - 100, 38)];
-    navigationView.backgroundColor = [UIColor grayColor];
-    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 10, self.view.frame.size.width - 100, 22)];
+    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, self.view.frame.size.width - 100, 22)];
     labelName.font = [UIFont systemFontOfSize:17.0];
     labelName.textAlignment = NSTextAlignmentCenter;
-    labelName.backgroundColor = [UIColor redColor];
     labelName.adjustsFontSizeToFitWidth = false;
     labelName.lineBreakMode = NSLineBreakByTruncatingTail;
     [navigationView addSubview:labelName];
     
-    self.label.frame = CGRectMake(0, 32,  self.view.frame.size.width - 100, 16);
-    self.label.backgroundColor = [UIColor yellowColor];
+    self.label.frame = CGRectMake(0, 22,  self.view.frame.size.width - 100, 16);
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.adjustsFontSizeToFitWidth = false;
     self.label.lineBreakMode = NSLineBreakByTruncatingTail;
