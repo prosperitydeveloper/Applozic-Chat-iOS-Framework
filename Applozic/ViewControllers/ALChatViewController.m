@@ -1078,27 +1078,32 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     defaultTableRect = self.mTableView.frame;
 
     self.loadingIndicator = [[ALLoadingIndicator alloc] initWithFrame:CGRectZero color:UIColor.whiteColor];
-    navigationView = [[UIView alloc] initWithFrame: CGRectMake(0, 0,
-                                                               self.navigationItem.titleView.frame.size.width,
-                                                               self.navigationItem.titleView.frame.size.height)];
+    
+    //    titleLabelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    titleLabelButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    //    titleLabelButton.backgroundColor = [UIColor redColor];
+    //    titleLabelButton.titleLabel.font = [UIFont systemFontOfSize:17.0];
+    //   [titleLabelButton addTarget:self action:@selector(didTapTitleView:) forControlEvents:UIControlEventTouchUpInside];
+    //    titleLabelButton.userInteractionEnabled = false;
+    //    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
+    
+    navigationView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, self.view.frame.size.width - 100, 38)];
     navigationView.backgroundColor = [UIColor grayColor];
-    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 10, self.navigationItem.titleView.frame.size.width, 22)];
+    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 10, self.view.frame.size.width - 100, 22)];
     labelName.font = [UIFont systemFontOfSize:17.0];
     labelName.textAlignment = NSTextAlignmentCenter;
     labelName.backgroundColor = [UIColor redColor];
+    labelName.adjustsFontSizeToFitWidth = false;
+    labelName.lineBreakMode = NSLineBreakByTruncatingTail;
     [navigationView addSubview:labelName];
     
-//    titleLabelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    titleLabelButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-//    titleLabelButton.backgroundColor = [UIColor redColor];
-//    titleLabelButton.titleLabel.font = [UIFont systemFontOfSize:17.0];
-//   [titleLabelButton addTarget:self action:@selector(didTapTitleView:) forControlEvents:UIControlEventTouchUpInside];
-//    titleLabelButton.userInteractionEnabled = false;
-//    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
-
-    [self.label setFrame: CGRectMake(0, 32, self.navigationItem.titleView.frame.size.width, 16)];
-    [navigationView addSubview:self.label];
+    self.label.frame = CGRectMake(0, 32,  self.view.frame.size.width - 100, 16);
     self.label.backgroundColor = [UIColor yellowColor];
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.adjustsFontSizeToFitWidth = false;
+    self.label.lineBreakMode = NSLineBreakByTruncatingTail;
+    [navigationView addSubview:self.label];
+
     self.messageMetadata = [ALApplozicSettings getMessageMetadata];
 }
 
