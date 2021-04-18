@@ -1089,13 +1089,15 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     
     navigationView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, self.view.frame.size.width - 100, 38)];
     labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, self.view.frame.size.width - 100, 22)];
-    labelName.font = [UIFont systemFontOfSize:17.0];
+    labelName.font = [UIFont boldSystemFontOfSize:17.0];
     labelName.textAlignment = NSTextAlignmentCenter;
     labelName.adjustsFontSizeToFitWidth = false;
     labelName.lineBreakMode = NSLineBreakByTruncatingTail;
     [navigationView addSubview:labelName];
     
-    self.label.frame = CGRectMake(0, 22,  self.view.frame.size.width - 100, 16);
+    self.label.frame = CGRectMake(0, 22, self.view.frame.size.width - 100, 16);
+    self.label.font = [UIFont systemFontOfSize:12.0];
+    self.label.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.adjustsFontSizeToFitWidth = false;
     self.label.lineBreakMode = NSLineBreakByTruncatingTail;
