@@ -178,7 +178,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     self.photoPicker.delegate = self;
     self.placeHolderTxt = NSLocalizedStringWithDefaultValue(@"placeHolderText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Write a Message...", @"");
     self.sendMessageTextView.text = self.placeHolderTxt;
-    self.sendMessageTextView.textContainerInset = UIEdgeInsetsMake(0, 13, 0, 13);
+    self.sendMessageTextView.textContainerInset = UIEdgeInsetsMake(6, 13, 6, 13);
     self.defaultMessageViewHeight = 56.0;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateVOIPMsg)
