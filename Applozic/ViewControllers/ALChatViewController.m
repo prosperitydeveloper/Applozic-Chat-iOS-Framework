@@ -1102,14 +1102,14 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     labelDate = [[UILabel alloc] initWithFrame:CGRectMake(stringSize.width/2, 22, stringSize.width, 16)];
     labelDate.text = str;
     labelDate.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
-    labelName.font = [UIFont boldSystemFontOfSize:12.0];
+    labelDate.font = [UIFont systemFontOfSize:12.0];
     labelDate.textAlignment = NSTextAlignmentCenter;
     labelDate.adjustsFontSizeToFitWidth = false;
     labelDate.lineBreakMode = NSLineBreakByTruncatingTail;
    // [labelName sizeToFit];
     [navigationView addSubview:labelDate];
     
-    pointView = [[UIView alloc] initWithFrame: CGRectMake((self.view.frame.size.width - 100 - stringSize.width)/2 - 14, 24, 8, 8)];
+    pointView = [[UIView alloc] initWithFrame: CGRectMake((self.view.frame.size.width - stringSize.width)/2 - 14, 24, 8, 8)];
     pointView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:128/255 alpha:1];
     pointView.layer.cornerRadius = 4;
     [navigationView addSubview:pointView];
