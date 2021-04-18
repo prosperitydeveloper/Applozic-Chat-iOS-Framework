@@ -1077,8 +1077,9 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     self.loadingIndicator = [[ALLoadingIndicator alloc] initWithFrame:CGRectZero color:UIColor.whiteColor];
     titleLabelButton = [UIButton buttonWithType:UIButtonTypeCustom];
     titleLabelButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    titleLabelButton.titleLabel.font = [UIFont systemFontOfSize:17.0]
     [titleLabelButton addTarget:self action:@selector(didTapTitleView:) forControlEvents:UIControlEventTouchUpInside];
-    titleLabelButton.userInteractionEnabled = YES;
+    titleLabelButton.userInteractionEnabled = FALSE;
     [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
 
     CGFloat COORDINATE_POINT_Y = 34 - 17;
