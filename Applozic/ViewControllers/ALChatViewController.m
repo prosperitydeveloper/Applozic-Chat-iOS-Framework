@@ -2147,7 +2147,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
     for (UILabel * label in labelArray)
     {
-        label.textColor = [ALApplozicSettings getColorForNavigationItem];
+        label.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
         label.font = [UIFont systemFontOfSize:12.0];
         [self resizeLabels:label];
         [view addSubview:label];
