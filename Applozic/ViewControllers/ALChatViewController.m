@@ -1097,18 +1097,18 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     labelName.lineBreakMode = NSLineBreakByTruncatingTail;
     [navigationView addSubview:labelName];
     
-    pointView = [[UIView alloc] initWithFrame: CGRectMake(0, 24, 8, 8)];
-    pointView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:128/255 alpha:1];
-    pointView.layer.cornerRadius = 4;
-    [navigationView addSubview:pointView];
-    
-    labelName.frame = CGRectMake(14, 22, self.view.frame.size.width - 100, 16);
+    labelName.frame = CGRectMake(0, 22, self.view.frame.size.width - 100, 16);
     labelName.text = @"Date";
     labelName.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
     labelName.textAlignment = NSTextAlignmentCenter;
     labelName.adjustsFontSizeToFitWidth = false;
     labelName.lineBreakMode = NSLineBreakByTruncatingTail;
     [navigationView addSubview:labelName];
+    
+    pointView = [[UIView alloc] initWithFrame: CGRectMake(0, 24, 8, 8)];
+    pointView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:128/255 alpha:1];
+    pointView.layer.cornerRadius = 4;
+    [navigationView addSubview:pointView];
 
     self.messageMetadata = [ALApplozicSettings getMessageMetadata];
 }
