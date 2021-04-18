@@ -143,7 +143,9 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     CGFloat DATE_CELL_HEIGHT;
     CGFloat CONTACT_CELL_HEIGHT;
 
-    UIButton * titleLabelButton;
+ //   UIButton * titleLabelButton;
+    UIView * navigationView;
+    UILabel * labelName;
 
     CGRect previousRect;
     CGRect maxHeight;
@@ -1075,13 +1077,20 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     defaultTableRect = self.mTableView.frame;
 
     self.loadingIndicator = [[ALLoadingIndicator alloc] initWithFrame:CGRectZero color:UIColor.whiteColor];
-    titleLabelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    titleLabelButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-    titleLabelButton.backgroundColor = [UIColor redColor];
-    titleLabelButton.titleLabel.font = [UIFont systemFontOfSize:17.0];
-  //  [titleLabelButton addTarget:self action:@selector(didTapTitleView:) forControlEvents:UIControlEventTouchUpInside];
-    titleLabelButton.userInteractionEnabled = false;
-    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
+    navigationView = [[UIView alloc] initWithFrame: CGRectMake(0, 0,
+                                                               self.navigationController.navigationBar.frame.size.width,
+                                                               self.navigationController.navigationBar.frame.size.height)];
+    navigationView.backgroundColor = [UIColor redColor];
+    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, 30)];
+    labelName.font = [UIFont systemFontOfSize:17.0];
+    
+//    titleLabelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    titleLabelButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+//    titleLabelButton.backgroundColor = [UIColor redColor];
+//    titleLabelButton.titleLabel.font = [UIFont systemFontOfSize:17.0];
+//   [titleLabelButton addTarget:self action:@selector(didTapTitleView:) forControlEvents:UIControlEventTouchUpInside];
+//    titleLabelButton.userInteractionEnabled = false;
+//    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
 
     CGFloat COORDINATE_POINT_Y = 34 - 17;
     [self.label setFrame: CGRectMake(0, COORDINATE_POINT_Y ,self.navigationController.navigationBar.frame.size.width, 30)];
@@ -1162,7 +1171,8 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
             [self checkUserBlockStatus];
             [self enableOrDisableChatWithChannel:nil orContact:contact];
         }
-        self.navigationItem.titleView = self->titleLabelButton;
+       // self.navigationItem.titleView = self->titleLabelButton;
+        self.navigationItem.titleView = self->navigationView;
     }];
 }
 
@@ -1210,14 +1220,14 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
                  orContact:(ALContact *)contact {
     /// Contact will be present in case of one to one chat or group of two
     if (contact) {
-        [titleLabelButton setTitle:[contact getDisplayName] forState:UIControlStateNormal];
+      //  [titleLabelButton setTitle:[contact getDisplayName] forState:UIControlStateNormal];
         ALUserDetail *userDetail = [self getUserDetailFromContact:contact];
         [self updateLastSeenAtStatus:userDetail];
     } else if (channel) {
         if ([channel isConversationClosed]) {
             [self freezeView:YES];
         }
-        [titleLabelButton setTitle:channel.name forState:UIControlStateNormal];
+      //  [titleLabelButton setTitle:channel.name forState:UIControlStateNormal];
     }
 }
 
@@ -4282,7 +4292,7 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
         ALContactService *contactService = [ALContactService new];
         if ([userDetail.userId isEqualToString:self.contactIds]) {
             self.alContact = [contactService loadContactByKey:@"userId" value:userDetail.userId];
-            [titleLabelButton setTitle:[self.alContact getDisplayName] forState:UIControlStateNormal];
+          //  [titleLabelButton setTitle:[self.alContact getDisplayName] forState:UIControlStateNormal];
             isEnableOrDisableChatRequired = YES;
         }
         if (isEnableOrDisableChatRequired || [userDetail.userId isEqualToString:[ALUserDefaultsHandler getUserId]]) {
