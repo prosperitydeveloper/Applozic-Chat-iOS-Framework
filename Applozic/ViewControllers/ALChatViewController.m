@@ -1099,7 +1099,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     
     NSString* str = @"11 February 2021, 12:00 - 13:00";
     CGSize stringSize = [ALUtilityClass getSizeForText:str maxWidth:self.view.frame.size.width - 100 font:@"SanFranciscoText" fontSize:12];
-    labelDate = [[UILabel alloc] initWithFrame:CGRectMake(stringSize.width/2, 22, stringSize.width, 16)];
+    labelDate = [[UILabel alloc] initWithFrame:CGRectMake((self.view.frame.size.width - stringSize.width)/2, 22, stringSize.width, 16)];
     labelDate.text = str;
     labelDate.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
     labelDate.font = [UIFont systemFontOfSize:12.0];
