@@ -144,8 +144,9 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     CGFloat CONTACT_CELL_HEIGHT;
 
  //   UIButton * titleLabelButton;
-    UIView * navigationView;
-    UILabel * labelName;
+    UIView* navigationView;
+    UILabel* labelName;
+    UIView* pointView;
 
     CGRect previousRect;
     CGRect maxHeight;
@@ -1081,8 +1082,10 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
                                                                self.navigationController.navigationBar.frame.size.width,
                                                                self.navigationController.navigationBar.frame.size.height)];
     navigationView.backgroundColor = [UIColor redColor];
-    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, 30)];
+    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, 22)];
     labelName.font = [UIFont systemFontOfSize:17.0];
+    labelName.textAlignment = NSTextAlignmentCenter;
+    [navigationView addSubview:labelName];
     
 //    titleLabelButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //    titleLabelButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
@@ -1092,8 +1095,8 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 //    titleLabelButton.userInteractionEnabled = false;
 //    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
 
-    CGFloat COORDINATE_POINT_Y = 34 - 17;
-    [self.label setFrame: CGRectMake(0, COORDINATE_POINT_Y ,self.navigationController.navigationBar.frame.size.width, 30)];
+    [self.label setFrame: CGRectMake(0, 22 ,self.navigationController.navigationBar.frame.size.width, 16)];
+    [navigationView addSubview:self.label];
     self.messageMetadata = [ALApplozicSettings getMessageMetadata];
 }
 
@@ -1220,6 +1223,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
                  orContact:(ALContact *)contact {
     /// Contact will be present in case of one to one chat or group of two
     if (contact) {
+        labelName.text = [contact getDisplayName];
       //  [titleLabelButton setTitle:[contact getDisplayName] forState:UIControlStateNormal];
         ALUserDetail *userDetail = [self getUserDetailFromContact:contact];
         [self updateLastSeenAtStatus:userDetail];
@@ -1227,6 +1231,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         if ([channel isConversationClosed]) {
             [self freezeView:YES];
         }
+        labelName.text = channel.name;
       //  [titleLabelButton setTitle:channel.name forState:UIControlStateNormal];
     }
 }
@@ -4292,6 +4297,7 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
         ALContactService *contactService = [ALContactService new];
         if ([userDetail.userId isEqualToString:self.contactIds]) {
             self.alContact = [contactService loadContactByKey:@"userId" value:userDetail.userId];
+            labelName.text = [self.alContact getDisplayName];
           //  [titleLabelButton setTitle:[self.alContact getDisplayName] forState:UIControlStateNormal];
             isEnableOrDisableChatRequired = YES;
         }
