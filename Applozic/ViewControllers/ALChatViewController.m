@@ -1099,7 +1099,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     
     NSString* str = @"11 February 2021, 12:00 - 13:00";
     CGSize stringSize = [ALUtilityClass getSizeForText:str maxWidth:self.view.frame.size.width - 100 font:@"SanFranciscoText" fontSize:12];
-    labelName.frame = CGRectMake(0, stringSize.width/2, stringSize.width, 16);
+    labelName.frame = CGRectMake(stringSize.width/2, 22, stringSize.width, 16);
     labelName.text = str;
     labelName.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
     labelName.textAlignment = NSTextAlignmentCenter;
@@ -1108,7 +1108,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     [labelName sizeToFit];
     [navigationView addSubview:labelName];
     
-    pointView = [[UIView alloc] initWithFrame: CGRectMake(0, self.view.frame.size.width - 100 - stringSize.width/2, 8, 8)];
+    pointView = [[UIView alloc] initWithFrame: CGRectMake(self.view.frame.size.width - 100 - stringSize.width/2, 24, 8, 8)];
     pointView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:128/255 alpha:1];
     pointView.layer.cornerRadius = 4;
     [navigationView addSubview:pointView];
