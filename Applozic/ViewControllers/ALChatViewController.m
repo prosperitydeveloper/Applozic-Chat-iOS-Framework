@@ -178,6 +178,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     self.photoPicker.delegate = self;
     self.placeHolderTxt = NSLocalizedStringWithDefaultValue(@"placeHolderText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Write a Message...", @"");
     self.sendMessageTextView.text = self.placeHolderTxt;
+    self.sendMessageTextView.textContainerInset = UIEdgeInsetsMake(0, 13, 0, 13);
     self.defaultMessageViewHeight = 56.0;
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateVOIPMsg)
@@ -1096,8 +1097,6 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     [navigationView addSubview:labelName];
     
     self.label.frame = CGRectMake(0, 22, self.view.frame.size.width - 100, 16);
-    self.label.font = [UIFont systemFontOfSize:12.0];
-    self.label.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.adjustsFontSizeToFitWidth = false;
     self.label.lineBreakMode = NSLineBreakByTruncatingTail;
@@ -3840,7 +3839,7 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
         [self.sendMessageTextView setText:self.placeHolderTxt];
         [self.sendMessageTextView setTextColor:self.placeHolderColor];
     } else if (![self.sendMessageTextView isFirstResponder]) {
-        self.placeHolderTxt = NSLocalizedStringWithDefaultValue(@"placeHolderText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Write a Message...", @"");
+        self.placeHolderTxt = NSLocalizedStringWithDefaultValue(@"placeHolderText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Message...", @"");
         [self.sendMessageTextView setText:self.placeHolderTxt];
         [self.sendMessageTextView setTextColor:self.placeHolderColor];
     }
