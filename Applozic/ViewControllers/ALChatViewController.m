@@ -1082,7 +1082,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
                                                                self.navigationController.navigationBar.frame.size.width,
                                                                self.navigationController.navigationBar.frame.size.height)];
     navigationView.backgroundColor = [UIColor grayColor];
-    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, 22)];
+    labelName = [[UILabel alloc] initWithFrame: CGRectMake(0, 10, navigationView.frame.size.width, 22)];
     labelName.font = [UIFont systemFontOfSize:17.0];
     labelName.textAlignment = NSTextAlignmentCenter;
     labelName.backgroundColor = [UIColor redColor];
@@ -1096,7 +1096,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 //    titleLabelButton.userInteractionEnabled = false;
 //    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
 
-    [self.label setFrame: CGRectMake(0, 22 ,self.navigationController.navigationBar.frame.size.width, 16)];
+    [self.label setFrame: CGRectMake(0, 22 ,navigationView.frame.size.width, 16)];
     [navigationView addSubview:self.label];
     self.label.backgroundColor = [UIColor yellowColor];
     self.messageMetadata = [ALApplozicSettings getMessageMetadata];
