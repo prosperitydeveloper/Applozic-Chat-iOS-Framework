@@ -39,7 +39,7 @@ static CGFloat const DATE_HEIGHT = 20;
 static CGFloat const MSG_STATUS_WIDTH = 20;
 static CGFloat const MSG_STATUS_HEIGHT = 20;
 
-static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
+//static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
 
 @implementation ALChatCell
 {
@@ -93,10 +93,6 @@ static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
         self.mMessageLabel.numberOfLines = 0;
 
         NSString *fontName = [ALUIUtilityClass parsedALChatCostomizationPlistForKey:APPLOZIC_CHAT_FONTNAME];
-
-        if (!fontName) {
-            fontName = DEFAULT_FONT_NAME;
-        }
 
         self.mMessageLabel.font = [self getDynamicFontWithDefaultSize:[ALApplozicSettings getChatCellTextFontSize] fontName:[ALApplozicSettings getFontFace]];
         self.mMessageLabel.textColor = [UIColor grayColor];
@@ -196,16 +192,13 @@ static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
     NSString * receiverName = [alContact getDisplayName];
 
     CGSize theTextSize = [ALUtilityClass getSizeForText:alMessage.message maxWidth:viewSize.width-115
-                                                   font:self.mMessageLabel.font.fontName
                                                fontSize:self.mMessageLabel.font.pointSize];
 
     CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150
-                                                   font:self.mDateLabel.font.fontName
                                                fontSize:self.mDateLabel.font.pointSize];
 
     CGSize receiverNameSize = [ALUtilityClass getSizeForText:receiverName
                                                     maxWidth:viewSize.width - 115
-                                                        font:self.mChannelMemberName.font.fontName
                                                     fontSize:self.mChannelMemberName.font.pointSize];
 
     [self.mBubleImageView setHidden:NO];
@@ -408,7 +401,6 @@ static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
                                            - theDateSize.width - DATE_PADDING_X,
                                            self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height,
                                            theDateSize.width, DATE_HEIGHT);
-
 
         self.mDateLabel.textAlignment = NSTextAlignmentLeft;
 

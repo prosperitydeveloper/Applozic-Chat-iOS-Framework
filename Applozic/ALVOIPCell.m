@@ -45,8 +45,7 @@
     }
     [self.mMessageLabel setText:textMsg];
     
-    CGSize theTextSize = [ALUtilityClass getSizeForText:textMsg maxWidth:viewSize.width - 115
-                                                   font:self.mMessageLabel.font.fontName
+    CGSize theTextSize = [ALUtilityClass getSizeForText:textMsg maxWidth:viewSize.width - 11
                                                fontSize:self.mMessageLabel.font.pointSize];
     int padding = 10;
     

@@ -29,7 +29,6 @@
 +(CGSize)textSizeWithText:(NSString *)text andCellFrame:(CGRect)cellFrame {
     CGSize theTextSize = [ALUtilityClass getSizeForText:text
                                                maxWidth:cellFrame.size.width - 115
-                                                   font:[ALApplozicSettings getFontFace]
                                                fontSize:[ALApplozicSettings getChatCellTextFontSize]];
 
     return theTextSize;
@@ -115,7 +114,6 @@
 
         CGSize theTextSize =   [ALUtilityClass getSizeForText:linkText
                                                      maxWidth:cellFrame.size.width - widthPadding
-                                                         font:[ALApplozicSettings getFontFace]
                                                      fontSize:[ALApplozicSettings getChatCellTextFontSize]];
 
         HEIGHT = theTextSize.height + HEIGHT;
@@ -137,7 +135,6 @@
 {
     CGSize theTextSize = [ALUtilityClass getSizeForText:alMessage.message
                                                maxWidth:cellFrame.size.width - 115
-                                                   font:[ALApplozicSettings getCustomMessageFont]
                                                fontSize:[ALApplozicSettings getCustomMessageFontSize]];
     
     CGFloat HEIGHT = theTextSize.height + 40;
@@ -149,7 +146,6 @@
 {
     CGSize theTextSize = [ALUtilityClass getSizeForText:[alMessage getVOIPMessageText]
                                                maxWidth:cellFrame.size.width - 115
-                                                   font:[ALApplozicSettings getCustomMessageFont]
                                                fontSize:[ALApplozicSettings getCustomMessageFontSize]];
                                             // WORKING FOR NOW BUT NEED TO CHANGE FONT & FONT-SIZE FOR VOIP TEXT BEFORE RELEASE
     
@@ -161,7 +157,6 @@
 {
     CGSize theTextSize = [ALUtilityClass getSizeForText:alMessage.message
                                                maxWidth:cellFrame.size.width - 115
-                                                   font:[ALApplozicSettings getCustomMessageFont]
                                                fontSize:[ALApplozicSettings getChannelCellTextFontSize]];
     
     CGFloat HEIGHT = theTextSize.height + 30;    

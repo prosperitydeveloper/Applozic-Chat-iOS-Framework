@@ -294,7 +294,7 @@
     [textView setBackgroundColor:[UIColor clearColor]];
     [textView setText:self.almessage.message];
     
-    CGSize textSize = [ALUtilityClass getSizeForText:self.almessage.message maxWidth:maxWidth + 5 font:textView.font.fontName fontSize:textView.font.pointSize];
+    CGSize textSize = [ALUtilityClass getSizeForText:self.almessage.message maxWidth:maxWidth + 5 fontSize:textView.font.pointSize];
     
     bubbleView.frame = frameImage;
     imageView.frame = subFrameImage;
@@ -305,7 +305,7 @@
         
         
         
-        textSize  =  [ALUtilityClass getSizeForText:self.almessage.fileMeta.name maxWidth:maxWidth + 5 font:textView.font.fontName fontSize:textView.font.pointSize];
+        textSize  =  [ALUtilityClass getSizeForText:self.almessage.fileMeta.name maxWidth:maxWidth + 5 fontSize:textView.font.pointSize];
         [textView setFont:[UIFont systemFontOfSize:12]];
 
         [imageView setImage:[ALUIUtilityClass getImageFromFramworkBundle:@"ic_mic.png"]];
@@ -327,7 +327,6 @@
         {
             CGSize textSize = [ALUtilityClass getSizeForText:self.almessage.message
                                                     maxWidth:imageView.frame.size.width
-                                                        font:textView.font.fontName
                                                     fontSize:textView.font.pointSize];
             
             bubbleView.frame = CGRectMake(cellSize.width - 265, 10, maxWidth, self.msgHeaderHeight);
@@ -367,7 +366,7 @@
         [view addSubview:imageView];
         if(self.almessage.message.length && self.almessage.contentType == ALMESSAGE_CONTENT_ATTACHMENT)
         {
-            CGSize textSize = [ALUtilityClass getSizeForText:self.almessage.message maxWidth:imageView.frame.size.width font:textView.font.fontName fontSize:textView.font.pointSize];
+            CGSize textSize = [ALUtilityClass getSizeForText:self.almessage.message maxWidth:imageView.frame.size.width  fontSize:textView.font.pointSize];
             bubbleView.frame = CGRectMake(cellSize.width - 265, 10, maxWidth, self.msgHeaderHeight);
             textView.frame = CGRectMake(imageView.frame.origin.x, imageView.frame.origin.y + imageView.frame.size.height + 10, imageView.frame.size.width, textSize.height + 20);
             [view addSubview:textView];

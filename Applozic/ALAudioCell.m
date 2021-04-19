@@ -123,7 +123,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 45;
     [self.mChannelMemberName setHidden:YES];
     self.mBubleImageView.backgroundColor = [UIColor whiteColor];
     
-    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 font:self.mDateLabel.font.fontName fontSize:self.mDateLabel.font.pointSize];
+    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 fontSize:self.mDateLabel.font.pointSize];
     
     [self.mMessageStatusImageView setHidden:YES];
     

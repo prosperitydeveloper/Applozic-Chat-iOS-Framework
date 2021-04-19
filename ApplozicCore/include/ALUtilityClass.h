@@ -19,7 +19,7 @@
 
 + (NSString*) fileMIMEType:(NSString*) filePath;
 
-+(CGSize)getSizeForText:(NSString *)text maxWidth:(CGFloat)width font:(NSString *)fontName fontSize:(float)fontSize;
++(CGSize)getSizeForText:(NSString *)text maxWidth:(CGFloat)width fontSize:(float)fontSize;
 
 +(NSString*)getLocationUrl:(ALMessage*)almessage;
 

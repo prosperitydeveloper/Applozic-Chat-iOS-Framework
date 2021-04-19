@@ -106,12 +106,10 @@ static CGFloat const USER_PROFILE_HEIGHT = 45;
     self.mMessage = alMessage;
 
     CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:MAX_WIDTH
-                                                   font:self.mDateLabel.font.fontName
                                                fontSize:self.mDateLabel.font.pointSize];
 
     CGSize theTextSize = [ALUtilityClass getSizeForText:linkText
                                                maxWidth:viewSize.width - MAX_WIDTH_DATE
-                                                   font:self.imageWithText.font.fontName
                                                fontSize:self.imageWithText.font.pointSize];
 
     [self.mChannelMemberName setHidden:YES];

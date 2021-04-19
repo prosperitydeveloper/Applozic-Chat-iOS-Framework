@@ -98,7 +98,6 @@ static CGFloat const DATE_LABEL_WIDTH_PADDING = 70;
 
     NSString *fontName = [ALApplozicSettings getFontFace];
     CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:DATE_LABEL_WIDTH_PADDING
-                                                   font:fontName
                                                fontSize:DATE_LABEL_SIZE];
     self.dateLabelHeight.constant = roundf(theDateSize.height);
 }
@@ -121,7 +120,6 @@ static CGFloat const DATE_LABEL_WIDTH_PADDING = 70;
 
     NSString *fontName = [ALApplozicSettings getFontFace];
     CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:DATE_LABEL_WIDTH_PADDING
-                                                   font:fontName
                                                fontSize:DATE_LABEL_SIZE];
     height = height + DATE_LABEL_BOTTOM_PADDING + roundf(theDateSize.height);
     return height;

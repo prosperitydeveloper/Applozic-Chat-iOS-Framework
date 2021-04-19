@@ -354,7 +354,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     labelName.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 22);
 
     NSString* str = @"11 February 2021, 12:00 - 13:00";
-    CGSize stringSize = [ALUtilityClass getSizeForText:str maxWidth:self.view.frame.size.width - 100 font:@".SFUI-Regular" fontSize:12];
+    CGSize stringSize = [ALUtilityClass getSizeForText:str maxWidth:self.view.frame.size.width - 100 fontSize:12];
     labelDate.frame = CGRectMake(0, 22, stringSize.width, 16);
     labelDate.center = CGPointMake(labelName.center.x, labelDate.center.y);
     pointView.frame = CGRectMake(labelDate.frame.origin.x - 14, 26, 8, 8);

@@ -12,7 +12,7 @@
 #import "ALUIUtilityClass.h"
 
 static CGFloat const REPLY_VIEW_PADDING = 5;
-static NSString *const FONT_NAME = @".SFUI-Regular";
+//static NSString *const FONT_NAME = @".SFUI-Regular";
 static CGFloat const FONT_SIZE = 13;
 static CGFloat const ATTACHMENT_PREVIEW_WIDTH = 60;
 static NSString *const ATTACHMENT_TEXT_PHOTOS = @"photo";
@@ -88,7 +88,6 @@ static NSString *const SENT_MESSAGE_DISPLAY_NAME = @"You";
         maxWidth = viewSize.width-(115) -( REPLY_VIEW_PADDING + ATTACHMENT_PREVIEW_WIDTH);
     }
     CGSize size = [ALUtilityClass getSizeForText:replyMessage.message maxWidth:maxWidth
-                                            font:FONT_NAME
                                         fontSize:FONT_SIZE];
     ALContact * senderContact = [[ALContactService new] loadContactByKey:@"userId" value:replyMessage.to];
     
@@ -99,7 +98,6 @@ static NSString *const SENT_MESSAGE_DISPLAY_NAME = @"You";
     
     
     CGSize contactNameSize = [ALUtilityClass getSizeForText:senderContact.getDisplayName maxWidth:maxWidth
-                              font:FONT_NAME
                           fontSize:15];
     
     
@@ -128,7 +126,7 @@ static NSString *const SENT_MESSAGE_DISPLAY_NAME = @"You";
 {
     self.replyMessageText = [[UILabel alloc]init];
     self.replyMessageText.numberOfLines =3;
-    [self.replyMessageText setFont:[UIFont fontWithName:FONT_NAME size:FONT_SIZE]];
+    [self.replyMessageText setFont:[UIFont systemFontOfSize:FONT_SIZE]];
     
     
     self.replyMessageText.frame = CGRectMake( REPLY_VIEW_PADDING ,
@@ -167,7 +165,7 @@ static NSString *const SENT_MESSAGE_DISPLAY_NAME = @"You";
                                          REPLY_VIEW_PADDING,
                                          frame.size.width-self.attachmentImage.frame.size.width,
                                          20);
-    [self.contactName setFont:[UIFont fontWithName:FONT_NAME size:15]];
+    [self.contactName setFont:[UIFont systemFontOfSize:15]];
 }
 
 -(void)pouplateValues:(ALMessage*)replyMessage

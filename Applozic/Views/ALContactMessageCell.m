@@ -85,7 +85,7 @@ static CGFloat const AL_CONTACT_PADDING_Y = 20;
 
     NSString * theDate = [NSString stringWithFormat:@"%@",[alMessage getCreatedAtTimeChat:today]];
 
-    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 font:self.mDateLabel.font.fontName fontSize:self.mDateLabel.font.pointSize];
+    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 fontSize:self.mDateLabel.font.pointSize];
 
 
     if ([alMessage isReceivedMessage])

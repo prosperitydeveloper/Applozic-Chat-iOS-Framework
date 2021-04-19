@@ -124,7 +124,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 45;
     ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: alMessage.to];
     NSString *receiverName = [alContact getDisplayName];
     
-    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 font:self.mDateLabel.font.fontName fontSize:self.mDateLabel.font.pointSize];
+    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 fontSize:self.mDateLabel.font.pointSize];
     
     [self.replyUIView removeFromSuperview];
     

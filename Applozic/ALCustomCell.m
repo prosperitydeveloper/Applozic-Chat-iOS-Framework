@@ -40,7 +40,6 @@
     self.mMessageStatusImageView.hidden = YES;
     
     CGSize theTextSize = [ALUtilityClass getSizeForText:alMessage.message maxWidth:viewSize.width - 115
-                                                   font:self.mMessageLabel.font.fontName
                                                fontSize:self.mMessageLabel.font.pointSize];
     
     int padding  =  10;

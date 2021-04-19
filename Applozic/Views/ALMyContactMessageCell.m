@@ -88,7 +88,7 @@ static CGFloat const AL_CONTACT_ADD_BUTTON_HEIGHT_PADDING = 230;
 
     NSString * theDate = [NSString stringWithFormat:@"%@",[alMessage getCreatedAtTimeChat:today]];
 
-    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 font:self.mDateLabel.font.fontName fontSize:self.mDateLabel.font.pointSize];
+    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 fontSize:self.mDateLabel.font.pointSize];
 
 
     [self addContactButtonEnable:NO];

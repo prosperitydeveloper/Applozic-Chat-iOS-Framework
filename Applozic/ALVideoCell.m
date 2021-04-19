@@ -107,9 +107,9 @@ static CGFloat const USER_PROFILE_HEIGHT = 45;
     
     
     [self.imageWithText setHidden:YES];
-    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 font:self.mDateLabel.font.fontName fontSize:self.mDateLabel.font.pointSize];
+    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 fontSize:self.mDateLabel.font.pointSize];
     
-    CGSize theTextSize = [ALUtilityClass getSizeForText:alMessage.message maxWidth:viewSize.width - 130 font:self.imageWithText.font.fontName fontSize:self.imageWithText.font.pointSize];
+    CGSize theTextSize = [ALUtilityClass getSizeForText:alMessage.message maxWidth:viewSize.width - 130 fontSize:self.imageWithText.font.pointSize];
     
     ALContactDBService *theContactDBService = [[ALContactDBService alloc] init];
     ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: alMessage.to];

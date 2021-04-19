@@ -80,7 +80,7 @@
     
     self.mMessage = alMessage;
     
-    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 font:self.mDateLabel.font.fontName fontSize:self.mDateLabel.font.pointSize];
+    CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:150 fontSize:self.mDateLabel.font.pointSize];
     
     [self.mChannelMemberName setHidden:YES];
     [self.mNameLabel setHidden:YES];
