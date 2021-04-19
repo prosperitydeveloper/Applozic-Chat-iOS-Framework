@@ -1843,7 +1843,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                             <constraint firstItem="sTD-T1-vIc" firstAttribute="leading" secondItem="QaG-wG-Gle" secondAttribute="leadingMargin" constant="12" id="q9g-8O-blW"/>
                             <constraint firstItem="QaG-wG-Gle" firstAttribute="trailing" secondItem="Roy-PQ-nSZ" secondAttribute="trailing" id="vCc-Vx-E3G"/>
                             <constraint firstItem="Npf-hG-Fxp" firstAttribute="top" secondItem="3bd-KT-wrK" secondAttribute="bottom" identifier="typeMessageTopView" id="vKK-qV-zkZ"/>
-                            <constraint firstItem="QaG-wG-Gle" firstAttribute="bottom" secondItem="Llo-HA-CrT" secondAttribute="top" id="xtJ-hI-jyg"/>
+                            <constraint firstItem="QaG-wG-Gle" firstAttribute="bottom" secondItem="Roy-PQ-nSZ" secondAttribute="bottom" id="xtJ-hI-jyg"/>
                             <constraint firstItem="Llo-HA-CrT" firstAttribute="top" secondItem="3bd-KT-wrK" secondAttribute="bottom" id="z9P-dh-9kx"/>
                         </constraints>
                         <variation key="default">
