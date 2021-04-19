@@ -346,7 +346,6 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     minHeight = [self getMaxSizeLines:1]; //  Single Line Height
 
     [self serverCallForLastSeen];
-
 }
 
 - (void)viewWillLayoutSubviews {
@@ -357,7 +356,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     NSString* str = @"11 February 2021, 12:00 - 13:00";
     CGSize stringSize = [ALUtilityClass getSizeForText:str maxWidth:self.view.frame.size.width - 100 font:@".SFUI-Regular" fontSize:12];
     labelDate.frame = CGRectMake(0, 22, stringSize.width, 16);
-    labelDate.frame = labelName.center;
+    labelDate.center = labelName.center;
     pointView.frame = CGRectMake(labelDate.frame.origin.x - 14, 26, 8, 8);
 }
 
