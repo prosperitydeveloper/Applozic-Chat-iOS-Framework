@@ -260,10 +260,10 @@ static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
 
-        self.mBubleImageView.layer.shadowOpacity = 0.3;
-        self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
-        self.mBubleImageView.layer.shadowRadius = 1;
-        self.mBubleImageView.layer.masksToBounds = NO;
+//        self.mBubleImageView.layer.shadowOpacity = 0.3;
+//        self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
+//        self.mBubleImageView.layer.shadowRadius = 1;
+//        self.mBubleImageView.layer.masksToBounds = NO;
 
         CGFloat mMessageLabelY = self.mBubleImageView.frame.origin.y + MESSAGE_PADDING_Y;
 

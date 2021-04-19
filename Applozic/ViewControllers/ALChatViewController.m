@@ -177,7 +177,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     self.photoPicker = [[ALPhotoPicker alloc] initWithSelectionLimit:[ALApplozicSettings getPhotosSelectionLimit] loadingTitle:NSLocalizedStringWithDefaultValue(@"ExportLoadingIndicatorText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Exporting...", @"")];
 
     self.photoPicker.delegate = self;
-    self.placeHolderTxt = NSLocalizedStringWithDefaultValue(@"placeHolderText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Write a Message...", @"");
+    self.placeHolderTxt = NSLocalizedStringWithDefaultValue(@"placeHolderText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Write a Message", @"");
     self.sendMessageTextView.text = self.placeHolderTxt;
     self.sendMessageTextView.textContainerInset = UIEdgeInsetsMake(6, 13, 6, 13);
     self.defaultMessageViewHeight = 56.0;

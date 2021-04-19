@@ -53,7 +53,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
 //                                                                   self.attachmentOutlet.frame.origin.y, // Bottom
 //                                                                   self.attachmentOutlet.frame.size.width/4);   // Right
     self.sendMessageTextView.delegate = self;
-/*    self.placeHolderTxt = @"Write a Message...";
+/*    self.placeHolderTxt = @"Write a Message";
     self.sendMessageTextView.text = self.placeHolderTxt;
     */
     self.placeHolderColor = [ALApplozicSettings getPlaceHolderColor];
@@ -562,7 +562,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
 
 -(UIView *)setCustomCalendarButton
 {
-    UIImage * calsendarImage = [ALUIUtilityClass getImageFromFramworkBundle:@"bbb.png"];
+    UIImage * calsendarImage = [ALUIUtilityClass getImageFromFramworkBundle:@"calendar.pdf"];
     calsendarImage = [calsendarImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:calsendarImage];
     [imageView setFrame:CGRectMake(0, 0, 24, 24)];
