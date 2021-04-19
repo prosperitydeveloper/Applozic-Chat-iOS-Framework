@@ -561,14 +561,13 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
 
 -(UIView *)setCustomCalendarButton
 {
-    UIImage * calsendarImage = [ALUIUtilityClass getImageFromFramworkBundle:@"bbb.png"];
+    UIImage * calsendarImage = [ALUIUtilityClass getImageFromFramworkBundle:@"calendar.png"];
     calsendarImage = [calsendarImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:calsendarImage];
-    [imageView setFrame:CGRectMake(0, 0, 30, 41)];
+    [imageView setFrame:CGRectMake(0, 0, 24, 24)];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
-    view.bounds = CGRectMake(view.bounds.origin.x + 8, view.bounds.origin.y - 1, view.bounds.size.width, view.bounds.size.height);
-  
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(imageView.frame.size.width - 44, 0, imageView.frame.size.width, imageView.frame.size.height)];
+   
     [view addSubview:imageView];
     
     UITapGestureRecognizer * calendarTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(calendar:)];
@@ -577,7 +576,5 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
 
     return view;
 }
-
-
 
 @end
