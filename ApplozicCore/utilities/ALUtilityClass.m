@@ -90,22 +90,14 @@
     CGSize constraintSize;
     constraintSize.height = MAXFLOAT;
     constraintSize.width = width;
-    NSDictionary *attributesDictionary = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize], NSForegroundColorAttributeName:[UIColor blackColor]};
     
-//    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-//                                          [UIFont fontWithName:fontName size:fontSize], NSFontAttributeName,nil];
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:text attributes:attributesDictionary];
+    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                          [UIFont boldSystemFontOfSize:fontSize], NSFontAttributeName,nil];
     
-//    CGRect frame = [attributedString boundingRectWithSize:constraintSize
-//                                                  options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
-//                                               attributes:attributesDictionary
-//                                                  context:nil];
-//    CGRect frame = [attributedString boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
-//                                               attributes:attributesDictionary context:nil];
-    
-    CGRect frame = [attributedString boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
-
-
+    CGRect frame = [text boundingRectWithSize:constraintSize
+                                      options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                   attributes:attributesDictionary
+                                      context:nil];
     CGSize stringSize = frame.size;
 
     return stringSize;
