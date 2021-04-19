@@ -213,6 +213,16 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
     }
 }
 
+-(void)calendar:(id)sender {
+    
+    UIViewController *  uiController = [self.navigationController popViewControllerAnimated:YES];
+    if(!uiController ){
+        if(self.individualLaunch){
+            [self  dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
+}
+
 -(void)refreshTable:(id)sender {
     
 }
@@ -520,7 +530,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
     UIImage * backImage = [ALUIUtilityClass getImageFromFramworkBundle:@"bbb.png"];
     backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:backImage];
-    [imageView setFrame:CGRectMake(-10, 0, 30, 41)];
+    [imageView setFrame:CGRectMake(0, 0, 30, 41)];
    // [imageView setTintColor:[ALApplozicSettings getColorForNavigationItem]];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(imageView.frame.origin.x + imageView.frame.size.width - 5,
                                                                imageView.frame.origin.y + 5 , 20, 15)];
@@ -547,7 +557,27 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
     [view addGestureRecognizer:backTap];
 
     return view;
-}   
+}
+
+-(UIView *)setCustomCalendarButton
+{
+    UIImage * calsendarImage = [ALUIUtilityClass getImageFromFramworkBundle:@"bbb.png"];
+    calsendarImage = [calsendarImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:calsendarImage];
+    [imageView setFrame:CGRectMake(0, 0, 30, 41)];
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
+    view.bounds = CGRectMake(view.bounds.origin.x + 8, view.bounds.origin.y - 1, view.bounds.size.width, view.bounds.size.height);
+  
+    [view addSubview:imageView];
+    
+    UITapGestureRecognizer * calendarTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(calendar:)];
+    calendarTap.numberOfTapsRequired = 1;
+    [view addGestureRecognizer:calendarTap];
+
+    return view;
+}
+
 
 
 @end
