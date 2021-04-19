@@ -306,8 +306,11 @@ static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
         self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 13,
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
-      //  NSArray *list = [NSArray arrayWithObjects: kCALayerMaxXMinYCorner, kCALayerMinXMinYCorner, kCALayerMinXMaxYCorner, nil ];
-        self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
+        if (@available(iOS 11.0, *)) {
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
+        } else {
+            // Fallback on earlier versions
+        }
 
         self.mMessageLabel.frame = CGRectMake(self.mChannelMemberName.frame.origin.x,
                                               self.mChannelMemberName.frame.origin.y + self.mChannelMemberName.frame.size.height + MESSAGE_PADDING_Y_GRP,
@@ -385,7 +388,7 @@ static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         if (@available(iOS 11.0, *)) {
-            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
         } else {
             // Fallback on earlier versions
         }
