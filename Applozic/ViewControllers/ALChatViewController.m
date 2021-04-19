@@ -1111,6 +1111,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     NSString* str = @"11 February 2021, 12:00 - 13:00";
  
     labelDate = [[UILabel alloc] initWithFrame:CGRectZero];
+    labelDate.backgroundColor = [UIColor redColor];
     labelDate.text = str;
     labelDate.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
     labelDate.font = [UIFont systemFontOfSize:12.0];
