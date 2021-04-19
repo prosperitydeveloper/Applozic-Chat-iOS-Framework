@@ -355,9 +355,20 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     labelName.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 22);
 
     NSString* str = @"11 February 2021, 12:00 - 13:00";
-    CGSize stringSize = [ALUtilityClass getSizeForText:str maxWidth:self.view.frame.size.width - 100 font:@".SFUI-Regular" fontSize:12];
+    CGSize stringSize = [self getSizeForText:str maxWidth:self.view.frame.size.width - 100 font:@".SFUI-Regular" fontSize:12];
     labelDate.frame = CGRectMake((self.view.frame.size.width - stringSize.width)/2, 22, stringSize.width, 16);
     pointView.frame = CGRectMake((self.view.frame.size.width - stringSize.width)/2 - 14, 26, 8, 8);
+}
+
+-(CGSize)getSizeForText:(NSString *)text maxWidth:(CGFloat)width font:(NSString *)fontName fontSize:(float)fontSize
+{
+    CGRect rawRect = {};
+    rawRect.size = [text sizeWithAttributes: @{
+        NSFontAttributeName: [UIFont systemFontOfSize:fontSize],
+    }];
+
+    CGSize adjustedSize = CGRectIntegral(rawRect).size;
+    return adjustedSize;
 }
 
 -(void) handleAttachmentButtonVisibility
