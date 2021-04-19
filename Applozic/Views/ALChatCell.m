@@ -306,6 +306,8 @@ static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
         self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 13,
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
+        NSArray *list = [NSArray arrayWithObjects: kCALayerMaxXMinYCorner, kCALayerMinXMinYCorner, kCALayerMinXMaxYCorner ];
+        self.mBubleImageView.layer.maskedCorners = list;
 
         self.mMessageLabel.frame = CGRectMake(self.mChannelMemberName.frame.origin.x,
                                               self.mChannelMemberName.frame.origin.y + self.mChannelMemberName.frame.size.height + MESSAGE_PADDING_Y_GRP,
@@ -382,7 +384,9 @@ static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
         self.mBubleImageView.frame = CGRectMake((viewSize.width - requiredBubbleWidth - BUBBLE_PADDING_X_OUTBOX),
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
-
+        NSArray *list = [NSArray arrayWithObjects: kCALayerMaxXMinYCorner, kCALayerMinXMinYCorner, kCALayerMaxXMaxYCorner ];
+        self.mBubleImageView.layer.maskedCorners = list;
+  
         if(self.replyParentView.frame.size.width>theTextSize.width){
             theTextSize.width = self.replyParentView.frame.size.width;
         }
