@@ -103,7 +103,7 @@
 //    CGRect frame = [attributedString boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
 //                                               attributes:attributesDictionary context:nil];
     
-    CGRect frame = [attributedString boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    CGRect frame = [attributedString boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
 
 
     CGSize stringSize = frame.size;
