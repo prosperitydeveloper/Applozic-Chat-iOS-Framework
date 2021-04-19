@@ -567,7 +567,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
     UIImageView *imageView = [[UIImageView alloc] initWithImage:calsendarImage];
     [imageView setFrame:CGRectMake(0, 0, 24, 24)];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(imageView.frame.size.width - 44, 0, 44, 44)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
    
     [view addSubview:imageView];
     imageView.center = view.center;
