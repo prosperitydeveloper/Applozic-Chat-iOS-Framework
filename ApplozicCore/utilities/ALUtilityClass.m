@@ -88,7 +88,7 @@
 +(CGSize)getSizeForText:(NSString *)text maxWidth:(CGFloat)width font:(NSString *)fontName fontSize:(float)fontSize
 {
     CGRect rawRect = {};
-    rawRect.size = [string sizeWithAttributes: @{
+    rawRect.size = [text sizeWithAttributes: @{
         NSFontAttributeName: [UIFont systemFontOfSize:fontSize],
     }];
 
