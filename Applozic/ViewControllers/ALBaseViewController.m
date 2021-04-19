@@ -129,8 +129,9 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
 {
     
     UIBarButtonItem * barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self setCustomBackButton]];
-    UIBarButtonItem * refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-                                                                                    target:self action:@selector(refreshTable:)];
+//    UIBarButtonItem * refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+//                                                                                    target:self action:@selector(refreshTable:)];
+    UIBarButtonItem * refreshButton = [[UIBarButtonItem alloc] initWithCustomView: [self setCustomCalendarButton]];
     
     self.callButton = [[UIBarButtonItem alloc] initWithCustomView:[self customCallButtonView]];
     self.closeButton = [[UIBarButtonItem alloc] initWithCustomView:[self customCloseButtonView]];
