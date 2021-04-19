@@ -39,7 +39,7 @@ static CGFloat const DATE_HEIGHT = 20;
 static CGFloat const MSG_STATUS_WIDTH = 20;
 static CGFloat const MSG_STATUS_HEIGHT = 20;
 
-static NSString *const DEFAULT_FONT_NAME = @"SanFranciscoText-Bold";
+static NSString *const DEFAULT_FONT_NAME = @".SFUI-Semibold";
 
 @implementation ALChatCell
 {

@@ -101,7 +101,7 @@ static NSString * const reuseIdentifier = @"collectionCell";
 {
     [navigationController.navigationBar setTitleTextAttributes: @{
                                                                   NSForegroundColorAttributeName:[ALApplozicSettings getColorForNavigationItem],
-                                                                  NSFontAttributeName: [UIFont fontWithName:@"SanFranciscoText-Bold"
+                                                                  NSFontAttributeName: [UIFont fontWithName:@".SFUI-Semibold"
                                                                                                        size:18]
                                                                   }];
 

@@ -131,8 +131,8 @@
     ALPushAssist* top=[[ALPushAssist alloc] init];
     UIImage *appIcon = [UIImage imageNamed: [[[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIcons"] objectForKey:@"CFBundlePrimaryIcon"] objectForKey:@"CFBundleIconFiles"] objectAtIndex:0]];
 
-    [[TSMessageView appearance] setTitleFont:[UIFont fontWithName:@"SanFranciscoText" size:18.0]];
-    [[TSMessageView appearance] setContentFont:[UIFont fontWithName:@"SanFranciscoText" size:14]];
+    [[TSMessageView appearance] setTitleFont:[UIFont fontWithName:@".SFUI-Regular" size:18.0]];
+    [[TSMessageView appearance] setContentFont:[UIFont fontWithName:@".SFUI-Regular" size:14]];
     [[TSMessageView appearance] setTitleTextColor:[UIColor whiteColor]];
     [[TSMessageView appearance] setContentTextColor:[UIColor whiteColor]];
 
