@@ -94,11 +94,12 @@
     NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                           [UIFont boldSystemFontOfSize:fontSize], NSFontAttributeName,nil];
     
-    CGRect frame = [text boundingRectWithSize:constraintSize
-                                      options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                   attributes:attributesDictionary
-                                      context:nil];
-    CGSize stringSize = frame.size;
+//    CGRect frame = [text boundingRectWithSize:constraintSize
+//                                      options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+//                                   attributes:attributesDictionary
+//                                      context:nil];
+    CGSize stringSize = [text sizeWithAttributes:attributesDictionary];
+   // CGSize stringSize = frame.size;
 
     return stringSize;
 }
