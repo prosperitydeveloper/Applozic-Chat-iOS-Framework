@@ -21,7 +21,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
 
 static CGFloat const BUBBLE_PADDING_WIDTH = 30;
 static CGFloat const BUBBLE_PADDING_X_OUTBOX = 27;
-static CGFloat const BUBBLE_PADDING_HEIGHT = 20;
+static CGFloat const BUBBLE_PADDING_HEIGHT = 15;
 
 static CGFloat const MESSAGE_PADDING_X = 10;
 static CGFloat const MESSAGE_PADDING_Y = 10;
