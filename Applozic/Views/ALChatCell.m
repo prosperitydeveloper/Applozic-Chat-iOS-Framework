@@ -295,7 +295,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         }
 
         self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 23,
-                                                0, requiredBubbleWidth,
+                                                0, requiredBubbleWidth + 10,
                                                 requiredBubbleHeight);
         if (@available(iOS 11.0, *)) {
             self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
@@ -356,7 +356,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         CGFloat requiredBubbleHeight =  theTextSize.height + BUBBLE_PADDING_HEIGHT;
 
         self.mBubleImageView.frame = CGRectMake((viewSize.width - theTextSize.width - BUBBLE_PADDING_X_OUTBOX) , 0,
-                                                requiredBubbleWidth+10,
+                                                requiredBubbleWidth + 10,
                                                 requiredBubbleHeight);
 
 //        self.mBubleImageView.layer.shadowOpacity = 0.3;
@@ -376,7 +376,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         //resize bubble
         self.mBubleImageView.frame = CGRectMake((viewSize.width - requiredBubbleWidth - BUBBLE_PADDING_X_OUTBOX),
-                                                0, requiredBubbleWidth,
+                                                0, requiredBubbleWidth + 10,
                                                 requiredBubbleHeight);
         if (@available(iOS 11.0, *)) {
             self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
