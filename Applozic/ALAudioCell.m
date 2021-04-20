@@ -19,7 +19,7 @@ static CGFloat const DOWNLOAD_RETRY_HEIGHT = 60;
 
 static CGFloat const DATE_HEIGHT = 20;
 static CGFloat const DATE_WIDTH = 80;
-static CGFloat const DATE_PADDING_X = 40;
+static CGFloat const DATE_PADDING_X = 20;
 
 static CGFloat const MSG_STATUS_WIDTH = 20;
 static CGFloat const MSG_STATUS_HEIGHT = 20;
