@@ -229,7 +229,7 @@ UIViewController * modalCon;
                                            theDateSize.width,
                                            DATE_HEIGHT);
 
-        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 20,
+        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width ,
                                                         self.mDateLabel.frame.origin.y,
                                                         MSG_STATUS_WIDTH, MSG_STATUS_HEIGHT);
 
@@ -344,7 +344,7 @@ UIViewController * modalCon;
                                            self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height,
                                            theDateSize.width, DATE_HEIGHT);
 
-        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 20,
+        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width,
                                                         self.mDateLabel.frame.origin.y,
                                                         MSG_STATUS_WIDTH, MSG_STATUS_HEIGHT);
 
