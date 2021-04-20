@@ -81,7 +81,7 @@ static CGFloat const DATE_LABEL_SIZE = 12;
         [self.contentView addSubview:self.mDateLabel];
         
         
-        self.mMessageStatusImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width, self.mDateLabel.frame.origin.y, 20, 20)];
+        self.mMessageStatusImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 5, self.mDateLabel.frame.origin.y, 20, 20)];
         
         self.mMessageStatusImageView.contentMode = UIViewContentModeScaleToFill;
         self.mMessageStatusImageView.backgroundColor = [UIColor clearColor];

@@ -46,7 +46,7 @@
         FLOAT_CONSTANT = 5;
         ADJUST_HEIGHT = 10;
         ADJUST_WIDTH = 10;
-        ADJUST_USER_PROFILE = 13;
+        ADJUST_USER_PROFILE = 23;
         USER_PROFILE_CONSTANT = 36;
         ZERO = 0;
         DATE_HEIGHT = 21;
@@ -154,7 +154,7 @@
                                            theDateSize.width,
                                            DATE_HEIGHT);
         
-        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width,
+        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 5,
                                                         self.mDateLabel.frame.origin.y,
                                                         MSG_STATUS_CONSTANT, MSG_STATUS_CONSTANT);
         
@@ -201,7 +201,7 @@
         self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width) - theDateSize.width - 40,
                                            self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height, theDateSize.width, DATE_HEIGHT);
         
-        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width,
+        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 5,
                                                         self.mDateLabel.frame.origin.y, MSG_STATUS_CONSTANT, MSG_STATUS_CONSTANT);
 
         if ([alMessage isSentMessage] && ((self.channel && self.channel.type != OPEN) || !self.channel)) {

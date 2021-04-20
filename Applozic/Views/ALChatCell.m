@@ -402,7 +402,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         self.mDateLabel.textAlignment = NSTextAlignmentLeft;
 
-        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width,
+        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 5,
                                                         self.mDateLabel.frame.origin.y,
                                                         MSG_STATUS_WIDTH, MSG_STATUS_HEIGHT);
     }
