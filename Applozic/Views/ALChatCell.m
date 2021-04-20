@@ -19,7 +19,7 @@ static CGFloat const USER_PROFILE_PADDING_X = 5;
 static CGFloat const USER_PROFILE_WIDTH = 36;
 static CGFloat const USER_PROFILE_HEIGHT = 36;
 
-static CGFloat const BUBBLE_PADDING_WIDTH = 20;
+static CGFloat const BUBBLE_PADDING_WIDTH = 25;
 static CGFloat const BUBBLE_PADDING_X_OUTBOX = 27;
 static CGFloat const BUBBLE_PADDING_HEIGHT = 20;
 
@@ -262,7 +262,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         {
             [self.mChannelMemberName setHidden:NO];
 
-            [self.mChannelMemberName setTextColor: [ALColorUtility getColorForAlphabet:receiverName colorCodes:self.colourDictionary]];
+            [self.mChannelMemberName setTextColor: [ UIColor colorWithRed:46/256 green:170/256 blue:146/256 alpha:1]];
 
             if(theTextSize.width < receiverNameSize.width)
             {
@@ -294,8 +294,8 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
             theTextSize.width = self.replyParentView.frame.size.width;
         }
 
-        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 13,
-                                                0, requiredBubbleWidth,
+        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 10,
+                                                theDateSize.height, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         if (@available(iOS 11.0, *)) {
             self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
@@ -315,7 +315,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         self.mMessageLabel.textColor = [ALApplozicSettings getReceiveMsgTextColor];
 
         self.mDateLabel.frame = CGRectMake(self.mBubleImageView.frame.origin.x,
-                                           self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height,
+                                           0,
                                            theDateSize.width + DATE_PADDING_WIDTH, DATE_HEIGHT);
 
         self.mDateLabel.textAlignment = NSTextAlignmentLeft;
@@ -376,7 +376,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         //resize bubble
         self.mBubleImageView.frame = CGRectMake((viewSize.width - requiredBubbleWidth - BUBBLE_PADDING_X_OUTBOX),
-                                                0, requiredBubbleWidth,
+                                                theDateSize.height, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         if (@available(iOS 11.0, *)) {
             self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
@@ -397,7 +397,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width)
                                            - theDateSize.width - DATE_PADDING_X,
-                                           self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height,
+                                           0,
                                            theDateSize.width, DATE_HEIGHT);
 
         self.mDateLabel.textAlignment = NSTextAlignmentLeft;
