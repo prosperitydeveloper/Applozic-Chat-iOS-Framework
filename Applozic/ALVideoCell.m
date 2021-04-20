@@ -257,7 +257,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         
         CGFloat imageViewY = self.mBubleImageView.frame.origin.y + IMAGE_VIEW_PADDING_Y;
         
-        [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 60),
+        [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 50),
                                                   0, viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight)];
         
         if(alMessage.isAReplyMessage)
@@ -269,7 +269,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
             
         }
         
-        [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 60),
+        [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 50),
                                                   0, viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight)];
         
         [self.contentView sendSubviewToBack:self.mBubleImageView];
@@ -293,7 +293,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
             self.imageWithText.backgroundColor = [UIColor clearColor];
             self.imageWithText.textColor = [ALApplozicSettings getSendMsgTextColor];
             
-            self.mBubleImageView.frame = CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 60), 0,
+            self.mBubleImageView.frame = CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 50), 0,
                                                     viewSize.width - BUBBLE_PADDING_WIDTH,
                                                     (viewSize.width - BUBBLE_PADDING_HEIGHT) + theTextSize.height + 20);
             

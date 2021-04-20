@@ -38,7 +38,7 @@ static CGFloat const BUBBLE_PADDING_X = 23;
 static CGFloat const BUBBLE_PADDING_Y = 120;
 static CGFloat const BUBBLE_PADDING_WIDTH = 120;
 static CGFloat const BUBBLE_PADDING_HEIGHT = 120;
-static CGFloat const BUBBLE_PADDING_X_OUTBOX = 60;
+static CGFloat const BUBBLE_PADDING_X_OUTBOX = 50;
 static CGFloat const BUBBLE_PADDING_HEIGHT_TEXT = 20;
 
 static CGFloat const CHANNEL_PADDING_X = 5;
@@ -264,7 +264,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
 
         CGFloat imageViewY = self.mBubleImageView.frame.origin.y + IMAGE_VIEW_PADDING_Y;
 
-        [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 60),
+        [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 50),
                                                   0, viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight)];
 
         if(alMessage.isAReplyMessage)
@@ -276,7 +276,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
 
         }
 
-        [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 60),
+        [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 50),
                                                   0, viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight)];
 
 

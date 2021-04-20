@@ -178,7 +178,7 @@
         CGFloat imageViewY = self.mBubleImageView.frame.origin.y + FLOAT_CONSTANT;
         CGFloat imageHeight = CELL_HEIGHT;
         
-        BUBBLE_ABSCISSA = viewSize.width - self.mUserProfileImageView.frame.origin.x + 60;
+        BUBBLE_ABSCISSA = viewSize.width - self.mUserProfileImageView.frame.origin.x + 50;
         self.mBubleImageView.frame = CGRectMake(BUBBLE_ABSCISSA, ZERO, CELL_WIDTH, CELL_HEIGHT);
     
         if(alMessage.isAReplyMessage)
