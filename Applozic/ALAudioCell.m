@@ -42,7 +42,7 @@ static CGFloat const MEDIATRACKLENGTH_HEIGHT = 20;
 static CGFloat const MEDIATRACKLENGTH_WIDTH = 80;
 static CGFloat const AL_MEDIA_TRACK_PROGRESS_PADDING_Y = 30;
 
-static CGFloat const USER_PROFILE_PADDING_X = 23;
+static CGFloat const USER_PROFILE_PADDING_X = 15;
 static CGFloat const USER_PROFILE_PADDING_X_OUTBOX = 50;
 static CGFloat const USER_PROFILE_WIDTH = 36;
 static CGFloat const USER_PROFILE_HEIGHT = 36;
@@ -302,7 +302,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
                                            self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height,
                                            theDateSize.width, DATE_HEIGHT);
         
-        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 10,
+        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 20,
                                                         self.mDateLabel.frame.origin.y,
                                                         MSG_STATUS_WIDTH, MSG_STATUS_HEIGHT);
         

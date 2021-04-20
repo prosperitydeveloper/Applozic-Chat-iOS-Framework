@@ -191,7 +191,7 @@ static CGFloat const AL_CONTACT_PADDING_Y = 20;
 
         self.mDateLabel.textAlignment = NSTextAlignmentLeft;
 
-        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width -10,
+        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 20,
                                                         self.mDateLabel.frame.origin.y, 20, 20);
 
         [self.addContactButton setBackgroundColor:[UIColor grayColor]];
