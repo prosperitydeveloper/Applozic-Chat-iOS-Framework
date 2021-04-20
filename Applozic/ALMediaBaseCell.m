@@ -104,7 +104,7 @@ static CGFloat const DATE_LABEL_SIZE = 12;
         [self.contentView addSubview:self.imageWithText];
         
         self.mChannelMemberName = [[UILabel alloc] init];
-        self.mChannelMemberName.font = [UIFont boldSystemFontOfSize:15];
+        self.mChannelMemberName.font = [UIFont systemFontOfSize:12];
         self.mChannelMemberName.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.mChannelMemberName];
         

@@ -97,7 +97,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         [self.contentView addSubview:self.mMessageLabel];
 
         self.mChannelMemberName = [[UILabel alloc] init];
-        self.mChannelMemberName.font = [UIFont boldSystemFontOfSize:15];
+        self.mChannelMemberName.font = [UIFont systemFontOfSize:12];
         self.mChannelMemberName.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.mChannelMemberName];
 
