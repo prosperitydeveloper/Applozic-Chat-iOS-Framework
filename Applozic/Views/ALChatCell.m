@@ -58,7 +58,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, 36, 36)];
         self.mUserProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
-        self.mUserProfileImageView.layer.cornerRadius=self.mUserProfileImageView.frame.size.width/2;
+        self.mUserProfileImageView.layer.cornerRadius = self.mUserProfileImageView.frame.size.width/2;
         self.mUserProfileImageView.clipsToBounds = YES;
         [self.contentView addSubview:self.mUserProfileImageView];
 
@@ -247,7 +247,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         CGFloat requiredBubbleHeight =  theTextSize.height + BUBBLE_PADDING_HEIGHT;
 
 
-        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 13,
+        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 23,
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
 
@@ -294,7 +294,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
             theTextSize.width = self.replyParentView.frame.size.width;
         }
 
-        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 13,
+        self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 23,
                                                 0, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         if (@available(iOS 11.0, *)) {
@@ -402,7 +402,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         self.mDateLabel.textAlignment = NSTextAlignmentLeft;
 
-        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width,
+        self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width - 10,
                                                         self.mDateLabel.frame.origin.y,
                                                         MSG_STATUS_WIDTH, MSG_STATUS_HEIGHT);
     }
