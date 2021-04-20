@@ -12,7 +12,6 @@
 #import "ALUIUtilityClass.h"
 
 static CGFloat const REPLY_VIEW_PADDING = 5;
-//static NSString *const FONT_NAME = @".SFUI-Regular";
 static CGFloat const FONT_SIZE = 13;
 static CGFloat const ATTACHMENT_PREVIEW_WIDTH = 60;
 static NSString *const ATTACHMENT_TEXT_PHOTOS = @"photo";

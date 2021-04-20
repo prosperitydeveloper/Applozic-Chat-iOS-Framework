@@ -24,7 +24,7 @@
 
 -(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size fontName:(NSString *)fontName
 {
-    UIFont *defaultFont = [UIFont fontWithName:fontName size:size];
+    UIFont *defaultFont = [UIFont systemFontOfSize:size];
     if (!defaultFont) {
         defaultFont = [UIFont systemFontOfSize:size];
     }

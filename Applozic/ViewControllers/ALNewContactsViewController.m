@@ -196,8 +196,7 @@ static const int SHOW_GROUP = 102;
         //        self.navigationController.navigationBar.translucent = NO;
         [self.navigationController.navigationBar setTitleTextAttributes: @{
                                                                            NSForegroundColorAttributeName:[ALApplozicSettings getColorForNavigationItem],
-                                                                           NSFontAttributeName:[UIFont fontWithName:[ALApplozicSettings getFontFace]
-                                                                                                               size:18]
+                                                                           NSFontAttributeName:[UIFont systemFontOfSize:18]
                                                                            }];
         
         [self.navigationController.navigationBar addSubview:[ALUIUtilityClass setStatusBarStyle]];

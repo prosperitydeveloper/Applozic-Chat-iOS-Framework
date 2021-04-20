@@ -76,7 +76,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 45;
         
         self.mediaTrackLength = [[UILabel alloc] init];
         [self.mediaTrackLength setTextColor:[UIColor blackColor]];
-        [self.mediaTrackLength setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:DATE_LABEL_SIZE]];
+        [self.mediaTrackLength setFont:[UIFont systemFontOfSize:DATE_LABEL_SIZE]];
         [self.contentView addSubview:self.mediaTrackLength];
         
         [self.playPauseStop setImage:[ALUIUtilityClass getImageFromFramworkBundle:@"PLAY.png"] forState: UIControlStateNormal];

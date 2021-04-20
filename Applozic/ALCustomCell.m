@@ -24,8 +24,7 @@
 {
     [super populateCell:alMessage viewSize:viewSize];
 
-    [self.mMessageLabel setFont:[UIFont fontWithName:[ALApplozicSettings getCustomMessageFont]
-                                                size:[ALApplozicSettings getCustomMessageFontSize]]];
+    [self.mMessageLabel setFont:[UIFont systemFontOfSize:[ALApplozicSettings getCustomMessageFontSize]]];
     
     [self.mMessageLabel setTextAlignment:NSTextAlignmentCenter];
     [self.mMessageLabel setText:alMessage.message];

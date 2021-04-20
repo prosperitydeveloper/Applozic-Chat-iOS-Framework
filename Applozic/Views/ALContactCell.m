@@ -32,10 +32,10 @@ static const CGFloat IMAGE_NAME_LABEL_SIZE = 14;
 -(void)updateWithMessage:(ALMessage*) message
     withColourDictionary:(NSMutableDictionary *)colourDictionary {
 
-    [self.mUserNameLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:USER_NAME_LABEL_SIZE]];
-    [self.mMessageLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:MESSAGE_LABEL_SIZE]];
-    [self.mTimeLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:TIME_LABEL_SIZE]];
-    [self.imageNameLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:IMAGE_NAME_LABEL_SIZE]];
+    [self.mUserNameLabel setFont:[UIFont systemFontOfSize:USER_NAME_LABEL_SIZE]];
+    [self.mMessageLabel setFont:[UIFont systemFontOfSize:MESSAGE_LABEL_SIZE]];
+    [self.mTimeLabel setFont:[UIFont systemFontOfSize:TIME_LABEL_SIZE]];
+    [self.imageNameLabel setFont:[UIFont systemFontOfSize:IMAGE_NAME_LABEL_SIZE]];
 
     self.unreadCountLabel.backgroundColor = [ALApplozicSettings getUnreadCountLabelBGColor];
     self.unreadCountLabel.layer.cornerRadius = self.unreadCountLabel.frame.size.width/2;

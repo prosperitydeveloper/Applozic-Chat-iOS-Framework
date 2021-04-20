@@ -41,7 +41,7 @@
     [self.contentView addSubview:self.mDeletedIcon];
 
     self.mDateLabel = [[UILabel alloc] init];
-    self.mDateLabel.font = [UIFont fontWithName:[ALApplozicSettings getFontFace] size:12];
+    self.mDateLabel.font = [UIFont systemFontOfSize:12];
     self.mDateLabel.translatesAutoresizingMaskIntoConstraints = false;
     self.mDateLabel.textColor = [ALApplozicSettings getDateColor];
     self.mDateLabel.numberOfLines = 1;
@@ -74,7 +74,7 @@
 
 -(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size fontName:(NSString *)fontName
 {
-    UIFont *defaultFont = [UIFont fontWithName:fontName size:size];
+    UIFont *defaultFont = [UIFont systemFontOfSize:size];
     if (!defaultFont) {
         defaultFont = [UIFont systemFontOfSize:size];
     }

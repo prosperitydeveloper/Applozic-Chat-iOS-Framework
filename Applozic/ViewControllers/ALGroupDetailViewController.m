@@ -177,8 +177,7 @@ static NSString *const updateGroupMembersNotification = @"Updated_Group_Members"
         //        self.navigationController.navigationBar.translucent = NO;
         [self.navigationController.navigationBar setTitleTextAttributes: @{
                                                                            NSForegroundColorAttributeName:[ALApplozicSettings getColorForNavigationItem],
-                                                                           NSFontAttributeName: [UIFont fontWithName:[ALApplozicSettings getFontFace]
-                                                                                                                size:18]
+                                                                           NSFontAttributeName: [UIFont systemFontOfSize:18]
                                                                            }];
 
         [self.navigationController.navigationBar addSubview:[ALUIUtilityClass setStatusBarStyle]];
@@ -664,7 +663,7 @@ static NSString *const updateGroupMembersNotification = @"Updated_Group_Members"
         [memberCell.lastSeenTimeLabel setHidden:YES];
         [memberCell.profileImageView setHidden:YES];
         [memberCell.nameLabel setTextColor:[UIColor blackColor]];
-        [memberCell.nameLabel  setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:15]];
+        [memberCell.nameLabel  setFont:[UIFont systemFontOfSize:15]];
         [memberCell.adminLabel setHidden:YES];
         [memberCell.lastSeenTimeLabel setHidden:YES];
 

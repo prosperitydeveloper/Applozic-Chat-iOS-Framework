@@ -4170,7 +4170,7 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
 -(void)subProcessTextViewDidChange:(UITextView *)textView
 {
     CGRect textSize = [self sizeOfText:textView.text widthOfTextView:self.sendMessageTextView.textContainer.size.width
-                              withFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:textView.font.pointSize]];
+                              withFont:[UIFont systemFontOfSize:textView.font.pointSize]];
 
     if(minHeight.size.height == textSize.size.height)
     {
@@ -4255,7 +4255,7 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
     self.sendMessageTextView.text = newText;
 
     CGRect maximumHeight = [self sizeOfText:self.sendMessageTextView.text widthOfTextView:self.sendMessageTextView.textContainer.size.width
-                                   withFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:self.sendMessageTextView.font.pointSize]];
+                                   withFont:[UIFont systemFontOfSize:self.sendMessageTextView.font.pointSize]];
 
     self.sendMessageTextView.text = saveText;
     self.sendMessageTextView.hidden = NO;

@@ -104,7 +104,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         [self.contentView addSubview:self.mChannelMemberName];
 
         self.mDateLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 100, 25)];
-        self.mDateLabel.font = [UIFont fontWithName:[ALApplozicSettings getFontFace] size:DATE_LABEL_SIZE];
+        self.mDateLabel.font = [UIFont systemFontOfSize:DATE_LABEL_SIZE];
         self.mDateLabel.textColor = [ALApplozicSettings getDateColor];
         self.mDateLabel.numberOfLines = 1;
         [self.contentView addSubview:self.mDateLabel];
@@ -161,7 +161,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
 -(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size fontName:(NSString *)fontName
 {
-    UIFont *defaultFont = [UIFont fontWithName:fontName size:size];
+    UIFont *defaultFont = [UIFont systemFontOfSize:size];
     if (!defaultFont) {
         defaultFont = [UIFont systemFontOfSize:size];
     }

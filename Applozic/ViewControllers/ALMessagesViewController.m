@@ -224,8 +224,7 @@ static CGFloat const DEFAULT_TOP_PORTRAIT_CONSTANT = 64;
 
     [self.navigationController.navigationBar setTitleTextAttributes: @{
                                                                        NSForegroundColorAttributeName:[UIColor whiteColor],
-                                                                       NSFontAttributeName:[UIFont fontWithName:[ALApplozicSettings getFontFace]
-                                                                                                            size:NAVIGATION_TEXT_SIZE]
+                                                                       NSFontAttributeName:[UIFont systemFontOfSize:NAVIGATION_TEXT_SIZE]
                                                                        }];
     
     self.navigationItem.title = NSLocalizedStringWithDefaultValue(@"chatTitle", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], [ALApplozicSettings getTitleForConversationScreen], @"");
@@ -235,8 +234,7 @@ static CGFloat const DEFAULT_TOP_PORTRAIT_CONSTANT = 64;
     {
         [self.navigationController.navigationBar setTitleTextAttributes: @{
                                                                            NSForegroundColorAttributeName:[ALApplozicSettings getColorForNavigationItem],
-                                                                           NSFontAttributeName:[UIFont fontWithName:[ALApplozicSettings getFontFace]
-                                                                                                                size:NAVIGATION_TEXT_SIZE]
+                                                                           NSFontAttributeName:[UIFont systemFontOfSize:NAVIGATION_TEXT_SIZE]
                                                                            }];
         
         self.navigationController.navigationBar.translucent = NO;

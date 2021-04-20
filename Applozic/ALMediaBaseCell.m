@@ -74,7 +74,7 @@ static CGFloat const DATE_LABEL_SIZE = 12;
                                                                     self.mImageView.frame.origin.y + self.mImageView.frame.size.height + 5,
                                                                     100, 20)];
         
-        self.mDateLabel.font = [UIFont fontWithName:[ALApplozicSettings getFontFace] size:DATE_LABEL_SIZE];
+        self.mDateLabel.font = [UIFont systemFontOfSizee:DATE_LABEL_SIZE];
         self.mDateLabel.textColor = [ALApplozicSettings getDateColor];
         self.mDateLabel.numberOfLines = 1;
         
@@ -91,11 +91,11 @@ static CGFloat const DATE_LABEL_SIZE = 12;
         [self.mDowloadRetryButton setContentMode:UIViewContentModeCenter];
         [self.mDowloadRetryButton setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.6]];
         self.mDowloadRetryButton.layer.cornerRadius = 4;
-        [self.mDowloadRetryButton.titleLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:14]];
+        [self.mDowloadRetryButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
         [self.contentView addSubview:self.mDowloadRetryButton];
 
         self.imageWithText = [[UITextView alloc] init];
-        [self.imageWithText setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:[ALApplozicSettings getChatCellTextFontSize]]];
+        [self.imageWithText setFont:[UIFont systemFontOfSize:[ALApplozicSettings getChatCellTextFontSize]]];
         self.imageWithText.editable = NO;
         self.imageWithText.scrollEnabled = NO;
         self.imageWithText.textContainerInset = UIEdgeInsetsZero;

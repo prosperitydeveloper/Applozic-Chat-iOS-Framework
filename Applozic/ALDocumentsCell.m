@@ -91,7 +91,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 45;
         self.downloadRetryView.layer.masksToBounds = YES;
         
         self.sizeLabel = [UILabel new];
-        [self.sizeLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:14]];
+        [self.sizeLabel setFont:[UIFont systemFontOfSize:14]];
         [self.sizeLabel setTextAlignment:NSTextAlignmentCenter];
         [self.sizeLabel setTextColor:[UIColor clearColor]];
         [self.sizeLabel setTextColor:[UIColor whiteColor]];

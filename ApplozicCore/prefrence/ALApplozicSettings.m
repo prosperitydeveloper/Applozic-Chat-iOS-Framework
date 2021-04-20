@@ -750,11 +750,11 @@
     [userDefaults synchronize];
 }
 
-+(NSString *)getCustomMessageFont
-{   NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
-    NSString * font = [userDefaults valueForKey:AL_CUSTOM_MSG_FONT];
-    return font ? font : @".SFUI-Regular";
-}
+//+(NSString *)getCustomMessageFont
+//{   NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
+//    NSString * font = [userDefaults valueForKey:AL_CUSTOM_MSG_FONT];
+//    return font ? font : @".SFUI-Regular";
+//}
 
 +(void)setGroupInfoDisabled:(BOOL)flag
 {   NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
@@ -1611,11 +1611,11 @@
     [userDefaults setValue:font forKey:AL_AUDIO_RECORD_VIEW_FONT];
     [userDefaults synchronize];
 }
-+(NSString *)getFontForAudioView {
-    NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
-    NSString * font = [userDefaults valueForKey:AL_AUDIO_RECORD_VIEW_FONT];
-    return font ? font : @".SFUI-Regular";
-}
+//+(NSString *)getFontForAudioView {
+//    NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
+//    NSString * font = [userDefaults valueForKey:AL_AUDIO_RECORD_VIEW_FONT];
+//    return font ? font : @".SFUI-Regular";
+//}
 
 + (void)enableNewAudioDesign:(BOOL)enable {
     NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;

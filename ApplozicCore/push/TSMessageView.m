@@ -297,7 +297,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
         CGFloat fontSize = [[current valueForKey:@"titleFontSize"] floatValue];
         NSString *fontName = [current valueForKey:@"titleFontName"];
         if (fontName != nil) {
-            [self.titleLabel setFont:[UIFont fontWithName:fontName size:fontSize]];
+            [self.titleLabel setFont:[UIFont systemFontOfSize:fontSize]];
         } else {
             [self.titleLabel setFont:[UIFont boldSystemFontOfSize:fontSize]];
         }
@@ -326,7 +326,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
             CGFloat fontSize = [[current valueForKey:@"contentFontSize"] floatValue];
             NSString *fontName = [current valueForKey:@"contentFontName"];
             if (fontName != nil) {
-                [self.contentLabel setFont:[UIFont fontWithName:fontName size:fontSize]];
+                [self.contentLabel setFont:[UIFont systemFontOfSize:fontSize]];
             } else {
                 [self.contentLabel setFont:[UIFont systemFontOfSize:fontSize]];
             }

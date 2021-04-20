@@ -120,7 +120,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
     [mLoadEarlierMessagesButton setBackgroundColor:[UIColor whiteColor]];
     mLoadEarlierMessagesButton.layer.cornerRadius = 3;
     [mLoadEarlierMessagesButton addTarget:self action:@selector(loadChatView) forControlEvents:UIControlEventTouchUpInside];
-    [mLoadEarlierMessagesButton.titleLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:14]];
+    [mLoadEarlierMessagesButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
     [self.mTableHeaderView addSubview:mLoadEarlierMessagesButton];
 
 }
@@ -171,14 +171,14 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
     
     self.label = [[UILabel alloc] init];
     self.label.backgroundColor = [UIColor clearColor];
-    [self.label setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:LAST_SEEN_LABEL_SIZE]];
+    [self.label setFont:[UIFont systemFontOfSize:LAST_SEEN_LABEL_SIZE]];
     self.label.textAlignment = NSTextAlignmentCenter;
     [self.navigationController.navigationBar addSubview:self.label];
     
     typingIndicatorHeight = 30;
     self.typingLabel.backgroundColor = [ALApplozicSettings getBGColorForTypingLabel];
     self.typingLabel.textColor = [ALApplozicSettings getTextColorForTypingLabel];
-    [self.typingLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:TYPING_LABEL_SIZE]];
+    [self.typingLabel setFont:[UIFont systemFontOfSize:TYPING_LABEL_SIZE]];
     self.typingLabel.textAlignment = NSTextAlignmentLeft;
 
     if([ALApplozicSettings isDropShadowInNavigationBarEnabled])
@@ -239,8 +239,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
 
     [self.navigationController.navigationBar setTitleTextAttributes: @{
                                                                        NSForegroundColorAttributeName:[UIColor whiteColor],
-                                                                       NSFontAttributeName:[UIFont fontWithName:[ALApplozicSettings getFontFace]
-                                                                                                            size:NAVIGATION_TEXT_SIZE]
+                                                                       NSFontAttributeName:[UIFont systemFontOfSize:NAVIGATION_TEXT_SIZE]
                                                                        }];
     
     if([ALApplozicSettings getColorForNavigation] && [ALApplozicSettings getColorForNavigationItem])
@@ -248,8 +247,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
         
         [self.navigationController.navigationBar setTitleTextAttributes: @{
                                                                            NSForegroundColorAttributeName:[ALApplozicSettings getColorForNavigationItem],
-                                                                           NSFontAttributeName:[UIFont fontWithName:[ALApplozicSettings getFontFace]
-                                                                                                               size:NAVIGATION_TEXT_SIZE]
+                                                                           NSFontAttributeName:[UIFont systemFontOfSize:NAVIGATION_TEXT_SIZE]
                                                                            }];
         self.navigationController.navigationBar.translucent = NO;
         [self.navigationController.navigationBar setBarTintColor:[ALApplozicSettings getColorForNavigation]];

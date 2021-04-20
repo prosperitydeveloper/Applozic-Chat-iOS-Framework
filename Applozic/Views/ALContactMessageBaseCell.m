@@ -31,21 +31,21 @@
         self.userContact = [[UILabel alloc] init];
         [self.userContact setBackgroundColor:[UIColor clearColor]];
         [self.userContact setTextColor:[UIColor blackColor]];
-        [self.userContact setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:14]];
+        [self.userContact setFont:[UIFont systemFontOfSize:14]];
         [self.userContact setNumberOfLines:2];
         [self.contentView addSubview:self.userContact];
 
         self.emailId = [[UILabel alloc] init];
         [self.emailId setBackgroundColor:[UIColor clearColor]];
         [self.emailId setTextColor:[UIColor blackColor]];
-        [self.emailId setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:14]];
+        [self.emailId setFont:[UIFont systemFontOfSize:14]];
         [self.emailId setNumberOfLines:2];
         [self.contentView addSubview:self.emailId];
 
         self.contactPerson = [[UILabel alloc] init];
         [self.contactPerson setBackgroundColor:[UIColor clearColor]];
         [self.contactPerson setTextColor:[UIColor blackColor]];
-        [self.contactPerson setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:14]];
+        [self.contactPerson setFont:[UIFont systemFontOfSize:14]];
         [self.contentView addSubview:self.contactPerson];
 
         if ([UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {

@@ -64,7 +64,7 @@ static CGFloat const AL_CONTACT_PADDING_Y = 20;
         self.addContactButton = [[UIButton alloc] init];
         [self.addContactButton setTitle: NSLocalizedStringWithDefaultValue(@"addContactButtonText", [ALApplozicSettings getLocalizableName],[NSBundle mainBundle], @"ADD CONTACT", @"") forState:UIControlStateNormal];
         [self.addContactButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self.addContactButton.titleLabel setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:14]];
+        [self.addContactButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
         [self.addContactButton addTarget:self action:@selector(addButtonAction) forControlEvents:UIControlEventTouchUpInside];
         [self.addContactButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
         [self.contentView addSubview:self.addContactButton];

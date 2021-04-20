@@ -169,8 +169,7 @@
 {
     [navigationController.navigationBar setTitleTextAttributes: @{
         NSForegroundColorAttributeName:[ALApplozicSettings getColorForNavigationItem],
-        NSFontAttributeName:[UIFont fontWithName:[ALApplozicSettings getFontFace]
-                                            size:18]
+        NSFontAttributeName:[UIFont systemFontOfSize:18]
     }];
     
     [navigationController.navigationBar setBarTintColor: [ALApplozicSettings getColorForNavigation]];
