@@ -40,8 +40,8 @@ static CGFloat const DOWNLOAD_RETRY_Y = 20;
 
 static CGFloat const USER_PROFILE_PADDING_X = 5;
 static CGFloat const USER_PROFILE_PADDING_X_OUTBOX = 50;
-static CGFloat const USER_PROFILE_WIDTH = 45;
-static CGFloat const USER_PROFILE_HEIGHT = 45;
+static CGFloat const USER_PROFILE_WIDTH = 36;
+static CGFloat const USER_PROFILE_HEIGHT = 36;
 
 @implementation ALVideoCell
 {

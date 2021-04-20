@@ -44,8 +44,8 @@ static CGFloat const AL_MEDIA_TRACK_PROGRESS_PADDING_Y = 30;
 
 static CGFloat const USER_PROFILE_PADDING_X = 5;
 static CGFloat const USER_PROFILE_PADDING_X_OUTBOX = 50;
-static CGFloat const USER_PROFILE_WIDTH = 45;
-static CGFloat const USER_PROFILE_HEIGHT = 45;
+static CGFloat const USER_PROFILE_WIDTH = 36;
+static CGFloat const USER_PROFILE_HEIGHT = 36;
 
 @interface ALAudioCell()
 

@@ -56,7 +56,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         self.backgroundColor = [UIColor clearColor];
 
-        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 36, 36)];
+        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, 36, 36)];
         self.mUserProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
         self.mUserProfileImageView.layer.cornerRadius=self.mUserProfileImageView.frame.size.width/2;
         self.mUserProfileImageView.clipsToBounds = YES;

@@ -27,7 +27,7 @@ static CGFloat const DATE_LABEL_SIZE = 12;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.backgroundColor = [UIColor clearColor];
         
-        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 45, 45)];
+        self.mUserProfileImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 5, 36, 36)];
         self.mUserProfileImageView.contentMode = UIViewContentModeScaleAspectFill;
         self.mUserProfileImageView.clipsToBounds = YES;
         self.mUserProfileImageView.layer.cornerRadius = self.mUserProfileImageView.frame.size.width/2;
