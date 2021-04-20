@@ -1112,7 +1112,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
  
     labelDate = [[UILabel alloc] initWithFrame:CGRectZero];
     labelDate.text = str;
-    labelDate.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
+    labelDate.textColor = [UIColor colorWithRed:138.0/255 green:138.0/255 blue:141.0/255 alpha:1];
     labelDate.font = [UIFont systemFontOfSize:12.0];
     labelDate.textAlignment = NSTextAlignmentCenter;
     labelDate.adjustsFontSizeToFitWidth = false;
@@ -1121,7 +1121,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     [navigationView addSubview:labelDate];
     
     pointView = [[UIView alloc] initWithFrame: CGRectZero];
-    pointView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:128/255 alpha:1];
+    pointView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:128.0/255 alpha:1];
     pointView.layer.cornerRadius = 4;
     [navigationView addSubview:pointView];
 
@@ -2169,7 +2169,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
     for (UILabel * label in labelArray)
     {
-        label.textColor = [UIColor colorWithRed:138/255 green:138/255 blue:141/255 alpha:1];
+        label.textColor = [UIColor colorWithRed:138.0/255 green:138.0/255 blue:141.0/255 alpha:1];
         label.font = [UIFont systemFontOfSize:12.0];
         [self resizeLabels:label];
         [view addSubview:label];

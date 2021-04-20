@@ -12,8 +12,8 @@
 
 static CGFloat const DATE_LABEL_SIZE = 12;
 
-static CGFloat const USER_PROFILE_WIDTH = 45;
-static CGFloat const USER_PROFILE_HEIGHT = 45;
+static CGFloat const USER_PROFILE_WIDTH = 36;
+static CGFloat const USER_PROFILE_HEIGHT = 36;
 static CGFloat const USER_PROFILE_LEFT_PADDING = 5;
 static CGFloat const USER_PROFILE_TOP_PADDING = 5;
 
