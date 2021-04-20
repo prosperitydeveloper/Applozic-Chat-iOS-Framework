@@ -20,6 +20,7 @@ static CGFloat const USER_PROFILE_WIDTH = 36;
 static CGFloat const USER_PROFILE_HEIGHT = 36;
 
 static CGFloat const BUBBLE_PADDING_WIDTH = 25;
+static CGFloat const BUBBLE_PADDING_Y = 5;
 static CGFloat const BUBBLE_PADDING_X_OUTBOX = 27;
 static CGFloat const BUBBLE_PADDING_HEIGHT = 20;
 
@@ -262,7 +263,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         {
             [self.mChannelMemberName setHidden:NO];
 
-            [self.mChannelMemberName setTextColor: [ UIColor colorWithRed:46/256 green:170/256 blue:146/256 alpha:1]];
+            [self.mChannelMemberName setTextColor:[UIColor colorWithRed:46/255 green:170/255 blue:146/255 alpha:1]];
 
             if(theTextSize.width < receiverNameSize.width)
             {
@@ -295,7 +296,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         }
 
         self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 10,
-                                                theDateSize.height, requiredBubbleWidth,
+                                                theDateSize.height + BUBBLE_PADDING_Y, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         if (@available(iOS 11.0, *)) {
             self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
@@ -349,7 +350,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         {
             self.mBubleImageView.backgroundColor = [UIColor whiteColor];
         }
-        self.mUserProfileImageView.alpha = 0;
+        self.mUserProfileImageView.alpha = 1;
         self.mUserProfileImageView.frame = CGRectMake(viewSize.width - 53, 0, 0, 45);
 
         CGFloat requiredBubbleWidth = theTextSize.width + BUBBLE_PADDING_X_OUTBOX;
@@ -376,7 +377,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         //resize bubble
         self.mBubleImageView.frame = CGRectMake((viewSize.width - requiredBubbleWidth - BUBBLE_PADDING_X_OUTBOX),
-                                                theDateSize.height, requiredBubbleWidth,
+                                                theDateSize.height + BUBBLE_PADDING_Y, requiredBubbleWidth,
                                                 requiredBubbleHeight);
         if (@available(iOS 11.0, *)) {
             self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
