@@ -14,7 +14,7 @@
 
 static NSString *const APPLOZIC_TOPBAR_COLOR = @"ApplozicTopbarColor";
 static NSString *const APPLOZIC_CHAT_BACKGROUND_COLOR = @"ApplozicChatBackgroundColor";
-static NSString *const APPLOZIC_CHAT_FONTNAME = @"ApplozicChatFontName";
+//static NSString *const APPLOZIC_CHAT_FONTNAME = @"ApplozicChatFontName";
 static NSString *const APPLOGIC_TOPBAR_TITLE_COLOR = @"ApplozicTopbarTitleColor";
 static NSString *const APPLOGIC_IMAGEDOWNLOAD_BASEURL = @"https://applozic.appspot.com/rest/ws/file";
 

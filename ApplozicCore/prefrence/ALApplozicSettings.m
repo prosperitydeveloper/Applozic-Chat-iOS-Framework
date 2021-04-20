@@ -744,11 +744,11 @@
     return size ? size : 14;
 }
 
-+(void)setCustomMessageFont:(NSString *)font
-{   NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
-    [userDefaults setValue:font forKey:AL_CUSTOM_MSG_FONT];
-    [userDefaults synchronize];
-}
+//+(void)setCustomMessageFont:(NSString *)font
+//{   NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;
+//    [userDefaults setValue:font forKey:AL_CUSTOM_MSG_FONT];
+//    [userDefaults synchronize];
+//}
 
 //+(NSString *)getCustomMessageFont
 //{   NSUserDefaults * userDefaults  =  ALApplozicSettings.getUserDefaults;

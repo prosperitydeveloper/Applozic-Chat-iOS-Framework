@@ -22,7 +22,7 @@
     return self;
 }
 
--(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size fontName:(NSString *)fontName
+-(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size
 {
     UIFont *defaultFont = [UIFont systemFontOfSize:size];
     if (!defaultFont) {
@@ -41,7 +41,7 @@
 {
     [super populateCell:alMessage viewSize:viewSize];
     
-    [self.mMessageLabel setFont:[self getDynamicFontWithDefaultSize:[ALApplozicSettings getChannelCellTextFontSize] fontName:[ALApplozicSettings getCustomMessageFont]]];
+    [self.mMessageLabel setFont:[self getDynamicFontWithDefaultSize:[ALApplozicSettings getChannelCellTextFontSize]]];
     
     [self.mMessageLabel setTextAlignment:NSTextAlignmentCenter];
     [self.mMessageLabel setText:alMessage.message];

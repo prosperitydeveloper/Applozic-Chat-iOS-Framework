@@ -295,13 +295,9 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
         [self.titleLabel setTextColor:fontColor];
         [self.titleLabel setBackgroundColor:[UIColor clearColor]];
         CGFloat fontSize = [[current valueForKey:@"titleFontSize"] floatValue];
-        NSString *fontName = [current valueForKey:@"titleFontName"];
-        if (fontName != nil) {
-            [self.titleLabel setFont:[UIFont systemFontOfSize:fontSize]];
-        } else {
-            [self.titleLabel setFont:[UIFont boldSystemFontOfSize:fontSize]];
-        }
-        
+      
+        [self.titleLabel setFont:[UIFont systemFontOfSize:fontSize]];
+  
 //        [self.titleLabel setShadowColor:[UIColor colorWithHexString:[current valueForKey:@"shadowColor"]]];
 //        [self.titleLabel setShadowOffset:CGSizeMake([[current valueForKey:@"shadowOffsetX"] floatValue],
 //                                                    [[current valueForKey:@"shadowOffsetY"] floatValue])];
@@ -324,12 +320,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
             [self.contentLabel setTextColor:contentTextColor];
             [self.contentLabel setBackgroundColor:[UIColor clearColor]];
             CGFloat fontSize = [[current valueForKey:@"contentFontSize"] floatValue];
-            NSString *fontName = [current valueForKey:@"contentFontName"];
-            if (fontName != nil) {
-                [self.contentLabel setFont:[UIFont systemFontOfSize:fontSize]];
-            } else {
-                [self.contentLabel setFont:[UIFont systemFontOfSize:fontSize]];
-            }
+            [self.contentLabel setFont:[UIFont systemFontOfSize:fontSize]];
             [self.contentLabel setShadowColor:self.titleLabel.shadowColor];
             [self.contentLabel setShadowOffset:self.titleLabel.shadowOffset];
             self.contentLabel.lineBreakMode = self.titleLabel.lineBreakMode;

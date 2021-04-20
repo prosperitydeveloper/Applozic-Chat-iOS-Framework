@@ -116,7 +116,6 @@ static CGFloat const DATE_LABEL_WIDTH_PADDING = 70;
     BOOL today = [[NSCalendar currentCalendar] isDateInToday:[NSDate dateWithTimeIntervalSince1970:[message.createdAtTime doubleValue]/1000]];
     NSString * theDate = [NSString stringWithFormat:@"%@", [message getCreatedAtTimeChat:today]];
 
-    NSString *fontName = [ALApplozicSettings getFontFace];
     CGSize theDateSize = [ALUtilityClass getSizeForText:theDate maxWidth:DATE_LABEL_WIDTH_PADDING
                                                fontSize:DATE_LABEL_SIZE];
     self.dateLabelHeight.constant = roundf(theDateSize.height);

@@ -92,9 +92,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
         self.mMessageLabel = [[ALHyperLabel alloc] init];
         self.mMessageLabel.numberOfLines = 0;
 
-        NSString *fontName = [ALUIUtilityClass parsedALChatCostomizationPlistForKey:APPLOZIC_CHAT_FONTNAME];
-
-        self.mMessageLabel.font = [self getDynamicFontWithDefaultSize:[ALApplozicSettings getChatCellTextFontSize] fontName:[ALApplozicSettings getFontFace]];
+        self.mMessageLabel.font = [self getDynamicFontWithDefaultSize:[ALApplozicSettings getChatCellTextFontSize]];
         self.mMessageLabel.textColor = [UIColor grayColor];
         [self.contentView addSubview:self.mMessageLabel];
 
@@ -159,7 +157,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
 }
 
--(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size fontName:(NSString *)fontName
+-(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size
 {
     UIFont *defaultFont = [UIFont systemFontOfSize:size];
     if (!defaultFont) {
@@ -450,7 +448,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
     /*    ====================================== END =================================  */
 
-    self.mMessageLabel.font = [self getDynamicFontWithDefaultSize:[ALApplozicSettings getChatCellTextFontSize] fontName:[ALApplozicSettings getFontFace]];
+    self.mMessageLabel.font = [self getDynamicFontWithDefaultSize:[ALApplozicSettings getChatCellTextFontSize]];
     if(alMessage.contentType == ALMESSAGE_CONTENT_TEXT_HTML)
     {
 

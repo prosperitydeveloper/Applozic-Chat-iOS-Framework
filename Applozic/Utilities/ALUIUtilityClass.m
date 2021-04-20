@@ -172,9 +172,6 @@
         if (color) {
             value = [ALUIUtilityClass colorWithHexString:color];
         }
-    }else if ([key isEqualToString:APPLOZIC_CHAT_FONTNAME]) {
-
-        value = [values valueForKey:APPLOZIC_CHAT_FONTNAME];
     }else if ([key isEqualToString:APPLOGIC_TOPBAR_TITLE_COLOR]){
         NSString *color = [values valueForKey:APPLOGIC_TOPBAR_TITLE_COLOR];
         if (color) {

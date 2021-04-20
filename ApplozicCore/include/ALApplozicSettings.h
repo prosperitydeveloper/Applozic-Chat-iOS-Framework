@@ -358,8 +358,8 @@ static NSString *const AL_SUPPORT_CONTACT_USER_ID = @"com.applozic.userdefault.A
 +(float)getCustomMessageFontSize;
 +(void)setCustomMessageFontSize:(float)fontSize;
 
-+(NSString *)getCustomMessageFont;
-+(void)setCustomMessageFont:(NSString *)font;
+//+(NSString *)getCustomMessageFont;
+//+(void)setCustomMessageFont:(NSString *)font;
 
 +(void) setGroupInfoDisabled:(BOOL)flag;
 +(BOOL) isGroupInfoDisabled;

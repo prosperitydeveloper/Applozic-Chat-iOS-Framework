@@ -51,7 +51,7 @@
     self.mMessageLabel.numberOfLines = 0;
     self.mMessageLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.mMessageLabel.textAlignment = NSTextAlignmentCenter;
-    self.mMessageLabel.font = [self getDynamicFontWithDefaultSize:[ALApplozicSettings getChatCellTextFontSize] fontName:[ALApplozicSettings getFontFace]];
+    self.mMessageLabel.font = [self getDynamicFontWithDefaultSize:[ALApplozicSettings getChatCellTextFontSize]];
     [self.contentView addSubview:self.mMessageLabel];
 
     self.frontView = [[ALTappableView alloc] init];
@@ -72,7 +72,7 @@
 -(void)addViewConstraints {
 }
 
--(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size fontName:(NSString *)fontName
+-(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size
 {
     UIFont *defaultFont = [UIFont systemFontOfSize:size];
     if (!defaultFont) {
