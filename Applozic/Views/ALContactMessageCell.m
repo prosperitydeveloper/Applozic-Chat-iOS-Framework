@@ -15,7 +15,7 @@
 #import "ALVCardClass.h"
 #import "ALUIUtilityClass.h"
 
-static CGFloat const USER_PROFILE_PADDING_X = 5;
+static CGFloat const USER_PROFILE_PADDING_X = 15;
 static CGFloat const USER_PROFILE_WIDTH = 36;
 static CGFloat const USER_PROFILE_HEIGHT = 36;
 static CGFloat const BUBBLE_PADDING_X = 13;

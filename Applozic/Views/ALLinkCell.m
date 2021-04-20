@@ -45,7 +45,7 @@ static CGFloat const CHANNEL_PADDING_X = 5;
 static CGFloat const CHANNEL_PADDING_Y = 5;
 static CGFloat const CHANNEL_PADDING_HEIGHT = 20;
 
-static CGFloat const USER_PROFILE_PADDING_X = 5;
+static CGFloat const USER_PROFILE_PADDING_X = 15;
 static CGFloat const USER_PROFILE_PADDING_X_OUTBOX = 50;
 static CGFloat const USER_PROFILE_HEIGHT = 36;
 

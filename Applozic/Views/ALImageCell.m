@@ -47,7 +47,7 @@ static CGFloat const CHANNEL_PADDING_HEIGHT = 20;
 
 static CGFloat const USER_PROFILE_PADDING_X_OUTBOX = 50;
 static CGFloat const USER_PROFILE_HEIGHT = 36;
-static CGFloat const USER_PROFILE_PADDING_X = 5;
+static CGFloat const USER_PROFILE_PADDING_X = 15;
 
 @implementation ALImageCell
 {

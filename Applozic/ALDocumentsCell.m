@@ -51,7 +51,7 @@ static CGFloat const DOWNLOAD_RETRY_BUTTON_PADDING_Y = 0;
 static CGFloat const DOWNLOAD_RETRY_BUTTON_PADDING_WIDTH = 40;
 static CGFloat const DOWNLOAD_RETRY_BUTTON_PADDING_HEIGHT = 40;
 
-static CGFloat const USER_PROFILE_PADDING_X = 5;
+static CGFloat const USER_PROFILE_PADDING_X = 15;
 static CGFloat const USER_PROFILE_PADDING_X_OUTBOX = 50;
 static CGFloat const USER_PROFILE_WIDTH = 36;
 static CGFloat const USER_PROFILE_HEIGHT = 36;

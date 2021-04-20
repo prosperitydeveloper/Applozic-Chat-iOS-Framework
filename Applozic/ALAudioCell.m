@@ -42,7 +42,7 @@ static CGFloat const MEDIATRACKLENGTH_HEIGHT = 20;
 static CGFloat const MEDIATRACKLENGTH_WIDTH = 80;
 static CGFloat const AL_MEDIA_TRACK_PROGRESS_PADDING_Y = 30;
 
-static CGFloat const USER_PROFILE_PADDING_X = 5;
+static CGFloat const USER_PROFILE_PADDING_X = 1;
 static CGFloat const USER_PROFILE_PADDING_X_OUTBOX = 50;
 static CGFloat const USER_PROFILE_WIDTH = 36;
 static CGFloat const USER_PROFILE_HEIGHT = 36;
