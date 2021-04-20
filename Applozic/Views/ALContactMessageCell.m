@@ -136,7 +136,7 @@ static CGFloat const AL_CONTACT_PADDING_Y = 20;
         {
             [self.mChannelMemberName setHidden:NO];
             [self.mChannelMemberName setText:receiverName];
-            [self.mChannelMemberName setTextColor: [self.mChannelMemberName [UIColor colorWithRed:46/255 green:170/255 blue:146/255 alpha:1]];
+            [self.mChannelMemberName setTextColor: [UIColor colorWithRed:46/255 green:170/255 blue:146/255 alpha:1]];
             self.mChannelMemberName.frame = CGRectMake(self.mBubleImageView.frame.origin.x + CHANNEL_PADDING_X,
                                                        self.mBubleImageView.frame.origin.y + CHANNEL_PADDING_Y,
                                                        self.mBubleImageView.frame.size.width + CHANNEL_PADDING_WIDTH, CHANNEL_PADDING_HEIGHT);
