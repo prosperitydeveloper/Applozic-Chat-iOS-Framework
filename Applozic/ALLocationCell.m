@@ -28,6 +28,7 @@
     CGFloat msgFrameHeight;
     CGFloat DATE_HEIGHT;
     CGFloat MSG_STATUS_CONSTANT;
+    CGFloat DATE_PADDING_WIDTH;
     
     NSURL * theUrl;
 }
@@ -51,6 +52,7 @@
         ZERO = 0;
         DATE_HEIGHT = 21;
         MSG_STATUS_CONSTANT = 20;
+        DATE_PADDING_WIDTH = 25;
         
         if ([UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
             self.transform = CGAffineTransformMakeScale(-1.0, 1.0);
@@ -198,7 +200,7 @@
         msgFrameHeight = self.mBubleImageView.frame.size.height;
         self.mDateLabel.textAlignment = NSTextAlignmentLeft;
         
-        self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width) - theDateSize.width - 20,
+        self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width) - theDateSize.width - DATE_PADDING_WIDTH,
                                            self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height, theDateSize.width, DATE_HEIGHT);
         
         self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width + 5,

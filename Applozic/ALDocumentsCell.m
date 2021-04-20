@@ -29,7 +29,7 @@ static CGFloat const IMAGE_VIEW_PADDING_Y = 10;
 static CGFloat const IMAGE_VIEW_WIDTH = 60;
 static CGFloat const IMAGE_VIEW_HEIGHT = 60;
 
-static CGFloat const DATE_PADDING_WIDTH = 20;
+static CGFloat const DATE_PADDING_WIDTH = 25;
 static CGFloat const DATE_HEIGHT = 20;
 static CGFloat const DATE_WIDTH = 80;
 
