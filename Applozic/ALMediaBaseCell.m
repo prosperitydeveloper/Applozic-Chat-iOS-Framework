@@ -74,7 +74,7 @@ static CGFloat const DATE_LABEL_SIZE = 12;
                                                                     self.mImageView.frame.origin.y + self.mImageView.frame.size.height + 5,
                                                                     100, 20)];
         
-        self.mDateLabel.font = [UIFont systemFontOfSizee:DATE_LABEL_SIZE];
+        self.mDateLabel.font = [UIFont systemFontOfSize:DATE_LABEL_SIZE];
         self.mDateLabel.textColor = [ALApplozicSettings getDateColor];
         self.mDateLabel.numberOfLines = 1;
         
