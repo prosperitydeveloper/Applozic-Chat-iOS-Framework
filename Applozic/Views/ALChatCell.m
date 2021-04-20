@@ -24,7 +24,7 @@ static CGFloat const BUBBLE_PADDING_X_OUTBOX = 27;
 static CGFloat const BUBBLE_PADDING_HEIGHT = 15;
 
 static CGFloat const MESSAGE_PADDING_X = 10;
-static CGFloat const MESSAGE_PADDING_Y = 10;
+static CGFloat const MESSAGE_PADDING_Y = 8;
 static CGFloat const MESSAGE_PADDING_Y_GRP = 5;
 
 static CGFloat const CHANNEL_PADDING_X = 10;

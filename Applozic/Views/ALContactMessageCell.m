@@ -40,7 +40,7 @@ static CGFloat const BUTTON_Y = 50;
 static CGFloat const BUTTON_WIDTH = 20;
 static CGFloat const BUTTON_HEIGHT = 40;
 
-static CGFloat const CHANNEL_PADDING_X = 5;
+static CGFloat const CHANNEL_PADDING_X = 10;
 static CGFloat const CHANNEL_PADDING_Y = 2;
 static CGFloat const CHANNEL_PADDING_WIDTH = 5;
 static CGFloat const CHANNEL_PADDING_HEIGHT = 20;

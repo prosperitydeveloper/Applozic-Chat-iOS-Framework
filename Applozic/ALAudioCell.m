@@ -27,7 +27,7 @@ static CGFloat const BUBBLE_PADDING_X = 23;
 static CGFloat const BUBBLE_PADDING_WIDTH = 50;
 static CGFloat const BUBBLE_PADDING_HEIGHT = 70;
 
-static CGFloat const CHANNEL_PADDING_X = 5;
+static CGFloat const CHANNEL_PADDING_X = 10;
 static CGFloat const CHANNEL_PADDING_Y = 2;
 static CGFloat const CHANNEL_PADDING_WIDTH = 5;
 static CGFloat const CHANNEL_HEIGHT = 20;
