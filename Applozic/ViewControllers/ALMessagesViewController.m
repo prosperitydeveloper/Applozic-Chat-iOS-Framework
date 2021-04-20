@@ -337,10 +337,10 @@ static CGFloat const DEFAULT_TOP_PORTRAIT_CONSTANT = 64;
 
 -(void)dropShadowInNavigationBar
 {
-    self.navigationController.navigationBar.layer.shadowOpacity = 0.5;
-    self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(0, 0);
-    self.navigationController.navigationBar.layer.shadowRadius = 10;
-    self.navigationController.navigationBar.layer.masksToBounds = NO;
+//    self.navigationController.navigationBar.layer.shadowOpacity = 0.5;
+//    self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(0, 0);
+//    self.navigationController.navigationBar.layer.shadowRadius = 10;
+//    self.navigationController.navigationBar.layer.masksToBounds = NO;
 }
 
 -(void)emptyConversationAlertLabel

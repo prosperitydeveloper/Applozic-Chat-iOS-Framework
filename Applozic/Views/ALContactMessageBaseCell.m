@@ -89,10 +89,10 @@
         [super.delegate downloadRetryButtonActionDelegate:(int)self.tag andMessage:self.mMessage];
     }
 
-    self.mBubleImageView.layer.shadowOpacity = 0.3;
-    self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
-    self.mBubleImageView.layer.shadowRadius = 1;
-    self.mBubleImageView.layer.masksToBounds = NO;
+//    self.mBubleImageView.layer.shadowOpacity = 0.3;
+//    self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
+//    self.mBubleImageView.layer.shadowRadius = 1;
+//    self.mBubleImageView.layer.masksToBounds = NO;
 
     return self;
 

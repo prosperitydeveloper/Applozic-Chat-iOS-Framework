@@ -2161,11 +2161,11 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 
 -(void)setLabelViews:(NSArray*)labelArray onView:(UIView*)view
 {
-    view.backgroundColor = [ALApplozicSettings getColorForNavigation];
-    view.layer.shadowColor = [[UIColor blackColor] CGColor];
-    view.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
-    view.layer.shadowRadius = 3.0f;
-    view.layer.shadowOpacity = 1.0f;
+//    view.backgroundColor = [ALApplozicSettings getColorForNavigation];
+//    view.layer.shadowColor = [[UIColor blackColor] CGColor];
+//    view.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+//    view.layer.shadowRadius = 3.0f;
+//    view.layer.shadowOpacity = 1.0f;
 
     for (UILabel * label in labelArray)
     {

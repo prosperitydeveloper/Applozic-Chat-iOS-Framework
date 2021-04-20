@@ -28,10 +28,10 @@
     self.mBubleImageView.contentMode = UIViewContentModeScaleToFill;
     self.mBubleImageView.layer.cornerRadius = 5;
     self.mBubleImageView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.mBubleImageView.layer.shadowOpacity = 0.3;
-    self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
-    self.mBubleImageView.layer.shadowRadius = 1;
-    self.mBubleImageView.layer.masksToBounds = NO;
+//    self.mBubleImageView.layer.shadowOpacity = 0.3;
+//    self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
+//    self.mBubleImageView.layer.shadowRadius = 1;
+//    self.mBubleImageView.layer.masksToBounds = NO;
     [self.contentView addSubview:self.mBubleImageView];
 
     self.mDeletedIcon = [[UIImageView alloc] init];

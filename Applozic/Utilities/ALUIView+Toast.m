@@ -184,10 +184,10 @@ NSString * const CSToastPositionBottom          = @"bottom";
     activityView.layer.cornerRadius = CSToastCornerRadius;
     
     if (CSToastDisplayShadow) {
-        activityView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
-        activityView.layer.shadowOpacity = CSToastShadowOpacity;
-        activityView.layer.shadowRadius = CSToastShadowRadius;
-        activityView.layer.shadowOffset = CSToastShadowOffset;
+//        activityView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+//        activityView.layer.shadowOpacity = CSToastShadowOpacity;
+//        activityView.layer.shadowRadius = CSToastShadowRadius;
+//        activityView.layer.shadowOffset = CSToastShadowOffset;
     }
     
     UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -270,10 +270,10 @@ NSString * const CSToastPositionBottom          = @"bottom";
     wrapperView.layer.cornerRadius = CSToastCornerRadius;
     
     if (CSToastDisplayShadow) {
-        wrapperView.layer.shadowColor = [UIColor clearColor].CGColor;
-        wrapperView.layer.shadowOpacity = CSToastShadowOpacity;
-        wrapperView.layer.shadowRadius = CSToastShadowRadius;
-        wrapperView.layer.shadowOffset = CSToastShadowOffset;
+//        wrapperView.layer.shadowColor = [UIColor clearColor].CGColor;
+//        wrapperView.layer.shadowOpacity = CSToastShadowOpacity;
+//        wrapperView.layer.shadowRadius = CSToastShadowRadius;
+//        wrapperView.layer.shadowOffset = CSToastShadowOffset;
     }
 
     wrapperView.backgroundColor = [[UIColor darkGrayColor]colorWithAlphaComponent:1];

@@ -154,10 +154,10 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + BUBBLE_PADDING_X,
                                                 0, viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight);
 
-        self.mBubleImageView.layer.shadowOpacity = 0.3;
-        self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
-        self.mBubleImageView.layer.shadowRadius = 1;
-        self.mBubleImageView.layer.masksToBounds = NO;
+//        self.mBubleImageView.layer.shadowOpacity = 0.3;
+//        self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
+//        self.mBubleImageView.layer.shadowRadius = 1;
+//        self.mBubleImageView.layer.masksToBounds = NO;
 
 
         if(alMessage.getGroupId)
@@ -254,10 +254,10 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         self.mBubleImageView.frame = CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + BUBBLE_PADDING_X_OUTBOX),
                                                 0, viewSize.width - BUBBLE_PADDING_WIDTH, viewSize.width - BUBBLE_PADDING_HEIGHT);
 
-        self.mBubleImageView.layer.shadowOpacity = 0.3;
-        self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
-        self.mBubleImageView.layer.shadowRadius = 1;
-        self.mBubleImageView.layer.masksToBounds = NO;
+//        self.mBubleImageView.layer.shadowOpacity = 0.3;
+//        self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
+//        self.mBubleImageView.layer.shadowRadius = 1;
+//        self.mBubleImageView.layer.masksToBounds = NO;
 
         CGFloat requiredHeight = viewSize.width - BUBBLE_PADDING_HEIGHT;
         CGFloat imageViewHeight = requiredHeight -IMAGE_VIEW_PADDING_HEIGHT;

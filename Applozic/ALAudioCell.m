@@ -100,10 +100,10 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
 
 -(void) addShadowEffects
 {
-    self.mBubleImageView.layer.shadowOpacity = 0.3;
-    self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
-    self.mBubleImageView.layer.shadowRadius = 1;
-    self.mBubleImageView.layer.masksToBounds = NO;
+//    self.mBubleImageView.layer.shadowOpacity = 0.3;
+//    self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
+//    self.mBubleImageView.layer.shadowRadius = 1;
+//    self.mBubleImageView.layer.masksToBounds = NO;
 }
 
 -(instancetype) populateCell:(ALMessage *) alMessage viewSize:(CGSize)viewSize
