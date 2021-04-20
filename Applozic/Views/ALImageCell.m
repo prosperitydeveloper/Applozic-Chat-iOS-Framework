@@ -132,12 +132,12 @@ UIViewController * modalCon;
         if([ALApplozicSettings isUserProfileHidden])
         {
             self.mUserProfileImageView.frame = CGRectMake(USER_PROFILE_PADDING_X, 0, 0,
-                                                          45);
+                                                          36);
         }
         else
         {
             self.mUserProfileImageView.frame = CGRectMake(USER_PROFILE_PADDING_X, 0,
-                                                          45,45);
+                                                          36,36);
         }
 
         self.mBubleImageView.backgroundColor = [ALApplozicSettings getReceiveMsgColor];

@@ -47,7 +47,7 @@
         ADJUST_HEIGHT = 10;
         ADJUST_WIDTH = 10;
         ADJUST_USER_PROFILE = 13;
-        USER_PROFILE_CONSTANT = 45;
+        USER_PROFILE_CONSTANT = 36;
         ZERO = 0;
         DATE_HEIGHT = 21;
         MSG_STATUS_CONSTANT = 20;
