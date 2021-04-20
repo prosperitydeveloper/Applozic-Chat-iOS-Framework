@@ -266,12 +266,12 @@
     
     UIImageView *bubbleView = [[UIImageView alloc] init];
     [bubbleView setBackgroundColor:[ALApplozicSettings getSendMsgColor]];
-    bubbleView.layer.cornerRadius = 5;
+    bubbleView.layer.cornerRadius = 10;
     bubbleView.layer.masksToBounds = YES;
     
     UIImageView *imageView = [[UIImageView alloc] init];
     [imageView setBackgroundColor:[UIColor whiteColor]];
-    imageView.layer.cornerRadius = 5;
+    imageView.layer.cornerRadius = 10;
     imageView.layer.masksToBounds = YES;
     
     CGRect frameImage = CGRectMake(cellSize.width - 265, 10, maxWidth, maxWidth);

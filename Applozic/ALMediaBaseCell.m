@@ -44,13 +44,13 @@ static CGFloat const DATE_LABEL_SIZE = 12;
         
         self.mBubleImageView = [[UIImageView alloc] init];
         self.mBubleImageView.contentMode = UIViewContentModeScaleToFill;
-        self.mBubleImageView.layer.cornerRadius = 5;
+        self.mBubleImageView.layer.cornerRadius = 10;
         self.mBubleImageView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:self.mBubleImageView];
         
         self.replyParentView = [[UIView alloc] init];
         self.replyParentView.contentMode = UIViewContentModeScaleToFill;
-        self.replyParentView.layer.cornerRadius = 5;
+        self.replyParentView.layer.cornerRadius = 10;
         self.replyParentView.backgroundColor = [UIColor greenColor];
         [self.replyParentView setUserInteractionEnabled:YES];
         
@@ -68,7 +68,7 @@ static CGFloat const DATE_LABEL_SIZE = 12;
         self.mImageView.clipsToBounds = YES;
         self.mImageView.backgroundColor = [UIColor grayColor];
         self.mImageView.userInteractionEnabled = YES;
-        self.mImageView.layer.cornerRadius = 5;
+        self.mImageView.layer.cornerRadius = 10;
         
         self.mDateLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.mBubleImageView.frame.origin.x + 5,
                                                                     self.mImageView.frame.origin.y + self.mImageView.frame.size.height + 5,

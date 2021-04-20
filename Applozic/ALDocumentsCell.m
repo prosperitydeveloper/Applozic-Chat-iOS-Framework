@@ -87,7 +87,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         self.downloadRetryView = [UIView new];
         [self.downloadRetryView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.6]];
         [self.contentView addSubview:self.downloadRetryView];
-        self.downloadRetryView.layer.cornerRadius = 5;
+        self.downloadRetryView.layer.cornerRadius = 10;
         self.downloadRetryView.layer.masksToBounds = YES;
         
         self.sizeLabel = [UILabel new];

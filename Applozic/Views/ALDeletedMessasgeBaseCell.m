@@ -26,7 +26,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.mBubleImageView = [[UIImageView alloc] init];
     self.mBubleImageView.contentMode = UIViewContentModeScaleToFill;
-    self.mBubleImageView.layer.cornerRadius = 5;
+    self.mBubleImageView.layer.cornerRadius = 10;
     self.mBubleImageView.translatesAutoresizingMaskIntoConstraints = NO;
 //    self.mBubleImageView.layer.shadowOpacity = 0.3;
 //    self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);

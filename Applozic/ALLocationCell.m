@@ -99,7 +99,7 @@
     {
         [self.contentView bringSubviewToFront:self.mChannelMemberName];
         
-        USER_PROFILE_ABSCISSA = 8;
+        USER_PROFILE_ABSCISSA = 15;
         
         self.mUserProfileImageView.frame = CGRectMake(USER_PROFILE_ABSCISSA, ZERO, USER_PROFILE_CONSTANT, USER_PROFILE_CONSTANT);
         
@@ -195,9 +195,10 @@
                                            self.mBubleImageView.frame.size.width - ADJUST_WIDTH,
                                            imageHeight - ADJUST_HEIGHT);
         
-        msgFrameHeight = self.mBubleImageView.frame.size.height;        self.mDateLabel.textAlignment = NSTextAlignmentLeft;
+        msgFrameHeight = self.mBubleImageView.frame.size.height;
+        self.mDateLabel.textAlignment = NSTextAlignmentLeft;
         
-        self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width) - theDateSize.width,
+        self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width) - theDateSize.width - 40;,
                                            self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height, theDateSize.width, DATE_HEIGHT);
         
         self.mMessageStatusImageView.frame = CGRectMake(self.mDateLabel.frame.origin.x + self.mDateLabel.frame.size.width,
