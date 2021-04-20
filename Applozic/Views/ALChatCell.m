@@ -27,7 +27,7 @@ static CGFloat const MESSAGE_PADDING_X = 10;
 static CGFloat const MESSAGE_PADDING_Y = 10;
 static CGFloat const MESSAGE_PADDING_Y_GRP = 5;
 
-static CGFloat const CHANNEL_PADDING_X = 10;
+static CGFloat const CHANNEL_PADDING_X = 5;
 static CGFloat const CHANNEL_PADDING_Y = 2;
 static CGFloat const CHANNEL_PADDING_WIDTH = 100;
 static CGFloat const CHANNEL_PADDING_HEIGHT = 20;
