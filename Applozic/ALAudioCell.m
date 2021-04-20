@@ -246,14 +246,14 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         }
     
     
-    }else
+    } else
     {
 
         [self.mUserProfileImageView setFrame:CGRectMake(viewSize.width - USER_PROFILE_PADDING_X_OUTBOX, 0, 0, USER_PROFILE_HEIGHT)];
         
         self.mBubleImageView.backgroundColor = [ALApplozicSettings getSendMsgColor];
         
-        [self.mBubleImageView setFrame:CGRectMake(viewSize.width - (viewSize.width/2 + 50) - 10,
+        [self.mBubleImageView setFrame:CGRectMake(viewSize.width - (viewSize.width/2 + 50) - 20,
                                                   self.mUserProfileImageView.frame.origin.y,
                                                   viewSize.width/2 + BUBBLE_PADDING_WIDTH, BUBBLE_PADDING_HEIGHT)];
   
@@ -261,7 +261,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         {
             [self processReplyOfChat:alMessage andViewSize:viewSize ];
             
-            [self.mBubleImageView setFrame:CGRectMake(viewSize.width - (viewSize.width/2 + 50) - 10,
+            [self.mBubleImageView setFrame:CGRectMake(viewSize.width - (viewSize.width/2 + 50) - 20,
                                                       self.mUserProfileImageView.frame.origin.y,
                                                       viewSize.width/2 + BUBBLE_PADDING_WIDTH, BUBBLE_PADDING_HEIGHT+ self.replyParentView.frame.size.height)];
             [self.playPauseStop setFrame:CGRectMake(self.mBubleImageView.frame.origin.x + BUTTON_PADDING_X,

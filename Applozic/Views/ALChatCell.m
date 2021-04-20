@@ -24,13 +24,13 @@ static CGFloat const BUBBLE_PADDING_X_OUTBOX = 27;
 static CGFloat const BUBBLE_PADDING_HEIGHT = 15;
 
 static CGFloat const MESSAGE_PADDING_X = 10;
-static CGFloat const MESSAGE_PADDING_Y = 10;
+static CGFloat const MESSAGE_PADDING_Y = 5;
 static CGFloat const MESSAGE_PADDING_Y_GRP = 5;
 
 static CGFloat const CHANNEL_PADDING_X = 5;
 static CGFloat const CHANNEL_PADDING_Y = 2;
 static CGFloat const CHANNEL_PADDING_WIDTH = 100;
-static CGFloat const CHANNEL_PADDING_HEIGHT = 20;
+static CGFloat const CHANNEL_PADDING_HEIGHT = 10;
 
 static CGFloat const DATE_PADDING_X = 40;
 static CGFloat const DATE_PADDING_WIDTH = 20;
@@ -277,7 +277,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
             [self.mChannelMemberName setText:receiverName];
 
-            mMessageLabelY = mMessageLabelY +  self.mChannelMemberName.frame.size.height;
+            mMessageLabelY = mMessageLabelY + self.mChannelMemberName.frame.size.height;
             requiredBubbleHeight = requiredBubbleHeight + self.mChannelMemberName.frame.size.height;
         }
 
