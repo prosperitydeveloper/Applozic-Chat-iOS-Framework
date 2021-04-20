@@ -23,7 +23,7 @@ static CGFloat const DATE_PADDING_X = 20;
 
 static CGFloat const MSG_STATUS_WIDTH = 20;
 static CGFloat const MSG_STATUS_HEIGHT = 20;
-static CGFloat const BUBBLE_PADDING_X = 13;
+static CGFloat const BUBBLE_PADDING_X = 23;
 static CGFloat const BUBBLE_PADDING_WIDTH = 50;
 static CGFloat const BUBBLE_PADDING_HEIGHT = 70;
 

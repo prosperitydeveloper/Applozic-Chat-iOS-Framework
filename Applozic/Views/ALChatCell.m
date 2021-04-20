@@ -248,7 +248,7 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
 
         self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 23,
-                                                0, requiredBubbleWidth,
+                                                0, requiredBubbleWidth + 10,
                                                 requiredBubbleHeight);
 
 //        self.mBubleImageView.layer.shadowOpacity = 0.3;
