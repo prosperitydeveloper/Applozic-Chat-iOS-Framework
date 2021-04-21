@@ -307,6 +307,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         [self.mediaTrackLength setFrame:CGRectMake(self.mediaTrackProgress.frame.origin.x,
                                                    self.mediaTrackProgress.frame.origin.y + self.mediaTrackProgress.frame.size.height,
                                                    MEDIATRACKLENGTH_WIDTH, MEDIATRACKLENGTH_HEIGHT)];
+        [self.mediaTrackProgress setTintColor: [UIColor colorWithRed:33.0/255 green:120.0/255 blue:103.0/255 alpha:1]];
         
         self.mDateLabel.frame = CGRectMake((self.mBubleImageView.frame.origin.x + self.mBubleImageView.frame.size.width) -
                                            theDateSize.width - DATE_PADDING_X,
