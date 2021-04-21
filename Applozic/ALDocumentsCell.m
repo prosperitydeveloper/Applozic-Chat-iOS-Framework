@@ -159,7 +159,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         {
             [self.mChannelMemberName setText:receiverName];
             [self.mChannelMemberName setHidden:NO];
-            [self.mChannelMemberName setTextColor: [UIColor colorWithRed:46.0/255 green:170.0/255 blue:146.0/255 alpha:1]];
+            [self.mChannelMemberName setTextColor: [UIColor colorWithRed:33.0/255 green:120.0/255 blue:103.0/255 alpha:1]];
             
             
             self.mChannelMemberName.frame = CGRectMake(self.mBubleImageView.frame.origin.x + CHANNEL_PADDING_X,

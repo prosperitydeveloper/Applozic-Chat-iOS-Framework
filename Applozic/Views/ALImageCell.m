@@ -173,7 +173,7 @@ UIViewController * modalCon;
             [self.mChannelMemberName setHidden:NO];
             [self.mChannelMemberName setText:receiverName];
 
-            [self.mChannelMemberName setTextColor: [UIColor colorWithRed:46.0/255 green:170.0/255 blue:146.0/255 alpha:1]];
+            [self.mChannelMemberName setTextColor: [UIColor colorWithRed:33.0/255 green:120.0/255 blue:103.0/255 alpha:1]];
 
 
             self.mChannelMemberName.frame = CGRectMake(self.mBubleImageView.frame.origin.x + CHANNEL_PADDING_X,
