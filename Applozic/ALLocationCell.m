@@ -146,7 +146,7 @@
         
         
         self.mImageView.frame = CGRectMake(self.mBubleImageView.frame.origin.x + FLOAT_CONSTANT,
-                                           imageViewY + 3,
+                                           imageViewY,
                                            self.mBubleImageView.frame.size.width - ADJUST_WIDTH,
                                            imageHeight - ADJUST_HEIGHT);
         
