@@ -127,12 +127,13 @@ static CGFloat const AL_CONTACT_ADD_BUTTON_HEIGHT_PADDING = 230;
 
         self.mBubleImageView.frame = CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + BUBBLE_PADDING_X_OUTBOX), 0,
                                                 viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight);
+   
         if (@available(iOS 11.0, *)) {
-            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
         } else {
             // Fallback on earlier versions
         }
-
+        
         [self.contactProfileImage setFrame:CGRectMake(self.mBubleImageView.frame.origin.x + CNT_PROFILE_X,
                                                       self.mBubleImageView.frame.origin.y + CNT_PROFILE_Y,
                                                       CNT_PROFILE_WIDTH, CNT_PROFILE_HEIGHT)];

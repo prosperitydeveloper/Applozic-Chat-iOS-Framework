@@ -160,6 +160,12 @@ static CGFloat const AL_CONTACT_PADDING_Y = 20;
 
         [self.mBubleImageView setFrame:CGRectMake(self.mUserProfileImageView.frame.size.width + BUBBLE_PADDING_X , 0,viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight)];
         
+        if (@available(iOS 11.0, *)) {
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
+        } else {
+            // Fallback on earlier versions
+        }
+        
         if(!alMessage.groupId){
             contactProfileViewY =  self.mUserProfileImageView.frame.origin.x + 20;
         }
