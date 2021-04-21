@@ -153,7 +153,12 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
 
         self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + BUBBLE_PADDING_X,
                                                 0, viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight);
-
+        if (@available(iOS 11.0, *)) {
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
+        } else {
+            // Fallback on earlier versions
+        }
+    
 //        self.mBubleImageView.layer.shadowOpacity = 0.3;
 //        self.mBubleImageView.layer.shadowOffset = CGSizeMake(0, 2);
 //        self.mBubleImageView.layer.shadowRadius = 1;
@@ -267,6 +272,11 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + 50),
                                                   0, viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight)];
 
+        if (@available(iOS 11.0, *)) {
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
+        } else {
+            // Fallback on earlier versions
+        }
         if(alMessage.isAReplyMessage)
         {
             [self processReplyOfChat:alMessage andViewSize:viewSize ];

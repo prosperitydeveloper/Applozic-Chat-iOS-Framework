@@ -144,7 +144,12 @@
         }
         self.mBubleImageView.frame = CGRectMake(BUBBLE_ABSCISSA, ZERO, CELL_WIDTH, CELL_HEIGHT);
         
-        
+        if (@available(iOS 11.0, *)) {
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
+        } else {
+            // Fallback on earlier versions
+        }
+                
         self.mImageView.frame = CGRectMake(self.mBubleImageView.frame.origin.x + FLOAT_CONSTANT,
                                            imageViewY,
                                            self.mBubleImageView.frame.size.width - ADJUST_WIDTH,
@@ -191,7 +196,13 @@
             
         }
         
-      self.mBubleImageView.frame = CGRectMake(BUBBLE_ABSCISSA, ZERO, CELL_WIDTH, CELL_HEIGHT);
+        self.mBubleImageView.frame = CGRectMake(BUBBLE_ABSCISSA, ZERO, CELL_WIDTH, CELL_HEIGHT);
+
+        if (@available(iOS 11.0, *)) {
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
+        } else {
+            // Fallback on earlier versions
+        }
         
         self.mImageView.frame = CGRectMake(self.mBubleImageView.frame.origin.x + FLOAT_CONSTANT,imageViewY,
                                            self.mBubleImageView.frame.size.width - ADJUST_WIDTH,

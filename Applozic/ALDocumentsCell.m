@@ -186,6 +186,12 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
                                                   self.mUserProfileImageView.frame.origin.y,
                                                   viewSize.width - BUBBLE_PADDING_WIDTH, requiredHeight)];
         
+        if (@available(iOS 11.0, *)) {
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMaxXMaxYCorner;
+        } else {
+            // Fallback on earlier versions
+        }
+  
         [self.mImageView setFrame:CGRectMake(self.mBubleImageView.frame.origin.x,
                                              imageViewY,
                                              IMAGE_VIEW_WIDTH, IMAGE_VIEW_HEIGHT)];
@@ -269,6 +275,11 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         [self.mBubleImageView setFrame:CGRectMake((viewSize.width - self.mUserProfileImageView.frame.origin.x + BUBBLE_PADDING_X_OUTBOX),
                                                   self.mUserProfileImageView.frame.origin.y,
                                                   viewSize.width - BUBBLE_PADDING_WIDTH, BUBBLE_HEIGHT)];
+        if (@available(iOS 11.0, *)) {
+            self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner;
+        } else {
+            // Fallback on earlier versions
+        }
         [self.mImageView setFrame:CGRectMake(self.mBubleImageView.frame.origin.x,
                                              self.mBubleImageView.frame.origin.y ,
                                              IMAGE_VIEW_WIDTH, IMAGE_VIEW_HEIGHT)];
