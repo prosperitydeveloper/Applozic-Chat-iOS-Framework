@@ -30,7 +30,7 @@ static CGFloat const MESSAGE_PADDING_Y_GRP = 5;
 static CGFloat const CHANNEL_PADDING_X = 10;
 static CGFloat const CHANNEL_PADDING_Y = 5;
 static CGFloat const CHANNEL_PADDING_WIDTH = 100;
-static CGFloat const CHANNEL_PADDING_HEIGHT = 10;
+static CGFloat const CHANNEL_PADDING_HEIGHT = 20;
 
 static CGFloat const DATE_PADDING_X = 25;
 static CGFloat const DATE_PADDING_WIDTH = 20;

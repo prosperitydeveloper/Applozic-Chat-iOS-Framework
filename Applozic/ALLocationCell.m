@@ -127,9 +127,9 @@
             [self.mChannelMemberName setTextColor: [UIColor colorWithRed:46.0/255 green:170.0/255 blue:146.0/255 alpha:1]];
             [self.mChannelMemberName setText:receiverName];
             [self.mChannelMemberName setHidden:NO];
-            self.mChannelMemberName.frame = CGRectMake(self.mBubleImageView.frame.origin.x + 5,
-                                                       self.mBubleImageView.frame.origin.y + 2,
-                                                       self.mBubleImageView.frame.size.width -5, 20);
+            self.mChannelMemberName.frame = CGRectMake(self.mBubleImageView.frame.origin.x + 10,
+                                                       self.mBubleImageView.frame.origin.y + 5,
+                                                       self.mBubleImageView.frame.size.width - 10, 20);
             
             CELL_HEIGHT = CELL_HEIGHT + self.mChannelMemberName.frame.size.height ;
             imageViewY = imageViewY + self.mChannelMemberName.frame.size.height;
