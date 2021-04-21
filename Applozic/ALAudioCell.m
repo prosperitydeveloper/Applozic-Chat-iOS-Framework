@@ -227,6 +227,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         [self.mDateLabel setFrame:CGRectMake(self.mBubleImageView.frame.origin.x,
                                              self.mBubleImageView.frame.size.height + self.mBubleImageView.frame.origin.y,
                                              DATE_WIDTH, DATE_HEIGHT)];
+        [self.mediaTrackProgress setTintColor: [UIColor colorWithRed:33.0/255 green:120.0/255 blue:103.0/255 alpha:1]];
         
         if (alMessage.imageFilePath == nil)
         {
