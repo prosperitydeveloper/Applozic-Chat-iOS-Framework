@@ -44,9 +44,9 @@
         [self.frontView addGestureRecognizer:tapper];
         [self.contentView addSubview:self.mImageView];
         
-        FLOAT_CONSTANT = 5;
-        ADJUST_HEIGHT = 10;
-        ADJUST_WIDTH = 10;
+        FLOAT_CONSTANT = 1;
+        ADJUST_HEIGHT = 1;
+        ADJUST_WIDTH = 1;
         ADJUST_USER_PROFILE = 23;
         USER_PROFILE_CONSTANT = 36;
         ZERO = 0;
