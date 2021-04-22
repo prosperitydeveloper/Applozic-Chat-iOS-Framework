@@ -23,10 +23,10 @@ static CGFloat const CHANNEL_PADDING_X = 10;
 static CGFloat const CHANNEL_PADDING_Y = 5;
 static CGFloat const CHANNEL_PADDING_HEIGHT = 20;
 
-static CGFloat const IMAGE_VIEW_PADDING_X = 5;
-static CGFloat const IMAGE_VIEW_PADDING_Y = 5;
-static CGFloat const IMAGE_VIEW_WIDTH = 10;
-static CGFloat const IMAGE_VIEW_HEIGHT = 10;
+static CGFloat const IMAGE_VIEW_PADDING_X = 1;
+static CGFloat const IMAGE_VIEW_PADDING_Y = 2;
+static CGFloat const IMAGE_VIEW_WIDTH = 2;
+static CGFloat const IMAGE_VIEW_HEIGHT = 2;
 
 static CGFloat const DATE_PADDING_WIDTH = 25;
 static CGFloat const DATE_HEIGHT = 20;
@@ -202,6 +202,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
                                                                                            self.mBubleImageView.frame.origin.y + self.mImageView.frame.size.height + 10,
                                                                                            self.mImageView.frame.size.width, theTextSize.height);
                                                  }
+    
         
         [self.mDateLabel setFrame:CGRectMake(self.mBubleImageView.frame.origin.x,
                                              self.mBubleImageView.frame.origin.y + self.mBubleImageView.frame.size.height,

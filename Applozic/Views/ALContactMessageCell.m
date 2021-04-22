@@ -201,7 +201,7 @@ static CGFloat const AL_CONTACT_PADDING_Y = 20;
                                                         self.mDateLabel.frame.origin.y, 20, 20);
 
         [self.addContactButton setBackgroundColor:[UIColor colorWithRed:33.0/255 green:120.0/255 blue:103.0/255 alpha:1]];
-        self.addContactButton.layer.cornerRadius = 5;
+        self.addContactButton.layer.cornerRadius = 10;
 
     }
 

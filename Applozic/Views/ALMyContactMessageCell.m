@@ -161,6 +161,7 @@ static CGFloat const AL_CONTACT_ADD_BUTTON_HEIGHT_PADDING = 230;
             self.msgFrameHeight = self.mBubleImageView.frame.size.height - (self.addContactButton.frame.size.height + self.addContactButton.frame.size.height/2);
             
             [self.addContactButton setBackgroundColor:[UIColor whiteColor]];
+            self.addContactButton.layer.cornerRadius = 10
 
         }else{
             self.msgFrameHeight = self.mBubleImageView.frame.size.height;

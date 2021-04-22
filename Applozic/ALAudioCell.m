@@ -249,8 +249,6 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         {
             self.progresLabel.alpha = 0;
         }
-    
-    
     } else
     {
 

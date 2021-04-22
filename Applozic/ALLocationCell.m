@@ -45,8 +45,8 @@
         [self.contentView addSubview:self.mImageView];
         
         FLOAT_CONSTANT = 1;
-        ADJUST_HEIGHT = 1;
-        ADJUST_WIDTH = 1;
+        ADJUST_HEIGHT = 2;
+        ADJUST_WIDTH = 2;
         ADJUST_USER_PROFILE = 23;
         USER_PROFILE_CONSTANT = 36;
         ZERO = 0;
