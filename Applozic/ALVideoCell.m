@@ -24,7 +24,7 @@ static CGFloat const CHANNEL_PADDING_Y = 5;
 static CGFloat const CHANNEL_PADDING_HEIGHT = 20;
 
 static CGFloat const IMAGE_VIEW_PADDING_X = 1;
-static CGFloat const IMAGE_VIEW_PADDING_Y = 2;
+static CGFloat const IMAGE_VIEW_PADDING_Y = 1;
 static CGFloat const IMAGE_VIEW_WIDTH = 2;
 static CGFloat const IMAGE_VIEW_HEIGHT = 2;
 
