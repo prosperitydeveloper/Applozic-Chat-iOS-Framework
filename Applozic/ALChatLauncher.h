@@ -21,7 +21,7 @@
 @property (nonatomic, strong) id <ALChatLauncherDelegate> chatLauncherDelegate;
 @property (nonatomic, assign) NSString * applicationId;
 @property (nonatomic, strong) NSNumber * chatLauncherFLAG;
-@property (nonatomic, strong) NSNumber * dateAppointment;
+@property (nonatomic, strong) NSString * dateAppointment;
 
 -(instancetype)initWithApplicationId:(NSString *) applicationId;
 
