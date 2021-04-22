@@ -2959,6 +2959,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 -(void) showActionAlert
 {
     UIAlertController * theController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    theController.view.tintColor = [UIColor colorWithRed:33.0/255 green:120.0/255 blue:103.0/255 alpha:1];
 
     [ALUIUtilityClass setAlertControllerFrame:theController andViewController:self];
 
