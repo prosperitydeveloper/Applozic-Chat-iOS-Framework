@@ -249,7 +249,7 @@ static CGFloat const USER_PROFILE_HEIGHT = 36;
         {
             self.progresLabel.alpha = 0;
         }
-        [self.mDowloadRetryButton setBackgroundColor: [UIColor colorWithRed:33.0/255 green:120.0/255 blue:103.0/255 alpha:0.15]];
+        [self.mDowloadRetryButton setBackgroundColor: [UIColor colorWithRed:33.0/255 green:120.0/255 blue:103.0/255 alpha:1]];
     } else
     {
 
