@@ -24,7 +24,7 @@ static CGFloat const MAX_WIDTH = 150;
 static CGFloat const MAX_WIDTH_DATE = 130;
 
 static CGFloat const IMAGE_VIEW_PADDING_X = 1;
-static CGFloat const IMAGE_VIEW_PADDING_Y = 10;
+static CGFloat const IMAGE_VIEW_PADDING_Y = 1;
 static CGFloat const IMAGE_VIEW_PADDING_WIDTH = 2;
 static CGFloat const IMAGE_VIEW_PADDING_HEIGHT = 2;
 
