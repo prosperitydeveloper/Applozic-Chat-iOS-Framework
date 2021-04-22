@@ -4160,7 +4160,9 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
 
     if ([[textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 && isAudioRecordingEnabled) {
         [self showMicButton];
+        self.sendButton.tintColor = [UIColor colorWithRed:196.0/255 green:196.0/255 blue:(198.0/255) alpha:1.0];
     } else if(isAudioRecordingEnabled) {
+        self.sendButton.tintColor = [UIColor colorWithRed:55.0/255 green:213.0/255 blue:181.0/255 alpha:1.0];
         [self showSendButton];
         [self hideSoundRecordingView];
     }
