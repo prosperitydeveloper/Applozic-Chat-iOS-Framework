@@ -1734,7 +1734,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         [self.sendButton setHidden: YES];
         isMicButtonVisible = YES;
     }else {
-        UIImage* micImage = [ALUIUtilityClass getImageFromFramworkBundle:@"mic_icon.png"];
+        UIImage* micImage = [ALUIUtilityClass getImageFromFramworkBundle:@"audio_mic.png"];
         [self.sendButton setImage:micImage forState:UIControlStateNormal];
         isMicButtonVisible = YES;
     }

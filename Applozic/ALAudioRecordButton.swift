@@ -57,7 +57,7 @@ import Foundation
         
         self.addConstraints([NSLayoutConstraint(item: recordButton, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0)])
         
-        var image = UIImage.init(named: "mic_icon", in: Bundle(for: ALChatViewController.self), compatibleWith: nil)
+        var image = UIImage.init(named: "audio_mic", in: Bundle(for: ALChatViewController.self), compatibleWith: nil)
         if #available(iOS 9.0, *) {
             image = image?.imageFlippedForRightToLeftLayoutDirection()
         } else {
