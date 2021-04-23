@@ -1683,7 +1683,6 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                             <constraint firstAttribute="height" constant="44" identifier="sendButtonHeight" id="3Xa-rx-R9F"/>
                                             <constraint firstAttribute="width" constant="44" identifier="sendButtonWidth" id="4Tu-uT-hOx"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="SendButton20"/>
                                         <connections>
                                             <action selector="sendAction:" destination="rWz-Vg-7Ha" eventType="touchDown" id="FNG-6d-x1V"/>
@@ -1708,7 +1707,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoT-HK-LWd">
+                                    <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoT-HK-LWd">
                                         <rect key="frame" x="6" y="5" width="44" height="44"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
