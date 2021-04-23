@@ -1677,12 +1677,13 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npf-hG-Fxp">
                                 <rect key="frame" x="0.0" y="754" width="390" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XL-ms-PBf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XL-ms-PBf">
                                         <rect key="frame" x="338" y="5" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" identifier="sendButtonHeight" id="3Xa-rx-R9F"/>
                                             <constraint firstAttribute="width" constant="44" identifier="sendButtonWidth" id="4Tu-uT-hOx"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="SendButton20"/>
                                         <connections>
                                             <action selector="sendAction:" destination="rWz-Vg-7Ha" eventType="touchDown" id="FNG-6d-x1V"/>
@@ -1725,6 +1726,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" identifier="OuterUIViewHeight" id="0E1-3f-wRQ"/>
                                     <constraint firstItem="IoT-HK-LWd" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" constant="-5" id="0U7-ZZ-LRT"/>
+                                    <constraint firstItem="6XL-ms-PBf" firstAttribute="top" secondItem="Npf-hG-Fxp" secondAttribute="top" constant="5" id="7ck-fA-fjI"/>
                                     <constraint firstItem="6XL-ms-PBf" firstAttribute="trailing" secondItem="Npf-hG-Fxp" secondAttribute="trailingMargin" identifier="SendButtonTrailing" id="8rK-OD-RNv"/>
                                     <constraint firstItem="oVG-6b-cXM" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" constant="-2" identifier="BeakTop" id="Ed8-jm-hLn"/>
                                     <constraint firstItem="IoT-HK-LWd" firstAttribute="leading" secondItem="Npf-hG-Fxp" secondAttribute="leading" constant="6" id="FDq-LG-EPN"/>
