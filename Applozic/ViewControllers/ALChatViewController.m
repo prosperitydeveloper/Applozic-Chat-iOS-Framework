@@ -1764,7 +1764,8 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         [micButton setHidden: YES];
         [self.sendButton setHidden: NO];
     }
-    UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
+  
+    UIImage* sendImage = [[ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.sendButton setImage:sendImage forState:UIControlStateNormal];
     self.sendButton.tintColor = [UIColor colorWithRed:55.0/255 green:213.0/255 blue:181.0/255 alpha:1.0];
     isMicButtonVisible = NO;
@@ -4161,13 +4162,13 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
 
     if ([[textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 && isAudioRecordingEnabled) {
         [self showMicButton];
-        UIImage *image = [[UIImage imageNamed:@"SendButton20"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        [self.sendButton setImage:image forState:UIControlStateNormal];
+        UIImage* sendImage = [[ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [self.sendButton setImage:sendImage forState:UIControlStateNormal];
        // self.sendButton.tintColor = [UIColor colorWithRed:196.0/255 green:196.0/255 blue:(198.0/255) alpha:1.0];
         self.sendButton.tintColor = [UIColor colorWithRed:55.0/255 green:213.0/255 blue:181.0/255 alpha:1.0];
     } else if(isAudioRecordingEnabled) {
-        UIImage *image = [[UIImage imageNamed:@"SendButton20"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        [self.sendButton setImage:image forState:UIControlStateNormal];
+        UIImage* sendImage = [[ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [self.sendButton setImage:sendImage forState:UIControlStateNormal];
         self.sendButton.tintColor = [UIColor colorWithRed:55.0/255 green:213.0/255 blue:181.0/255 alpha:1.0];
         [self showSendButton];
         [self hideSoundRecordingView];
