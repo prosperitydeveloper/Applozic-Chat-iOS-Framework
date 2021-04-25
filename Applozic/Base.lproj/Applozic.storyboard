@@ -368,7 +368,9 @@
                                     <constraint firstAttribute="height" constant="40" id="dIO-X6-Z12"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Send Location"/>
+                                <state key="normal" title="Send Location">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="sendLocation:" destination="Jcz-BB-dxz" eventType="touchDown" id="Qop-GW-H2J"/>
                                 </connections>
@@ -1027,6 +1029,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="dDy-BV-9iS"/>
                                 </constraints>
+                                <color key="tintColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SEND"/>
                                 <connections>
                                     <action selector="sendButtonAction:" destination="iR0-H2-IEH" eventType="touchDown" id="Aj0-GE-bOr"/>
@@ -1044,6 +1047,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IS-FH-0AW">
                                 <rect key="frame" x="430" y="492" width="150" height="30"/>
+                                <color key="tintColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="RECORD"/>
                                 <connections>
                                     <action selector="recordAction:" destination="iR0-H2-IEH" eventType="touchDown" id="JZ5-xD-ft4"/>
@@ -1051,6 +1055,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-Kg-9lK">
                                 <rect key="frame" x="20" y="492" width="100" height="30"/>
+                                <color key="tintColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="PLAY"/>
                                 <connections>
                                     <action selector="playButtonAction:" destination="iR0-H2-IEH" eventType="touchDown" id="mMe-K9-cHf"/>
@@ -1061,6 +1066,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="YlG-2B-eMr"/>
                                 </constraints>
+                                <color key="tintColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="CANCEL"/>
                                 <connections>
                                     <action selector="cancelAction:" destination="iR0-H2-IEH" eventType="touchDown" id="Rcb-V6-8sj"/>
@@ -1068,6 +1074,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdj-qH-xjU">
                                 <rect key="frame" x="20" y="539" width="100" height="30"/>
+                                <color key="tintColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="PAUSE"/>
                                 <connections>
                                     <action selector="pauseButtonAction:" destination="iR0-H2-IEH" eventType="touchDown" id="GtX-w5-B6B"/>
@@ -1075,6 +1082,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw2-gw-jej">
                                 <rect key="frame" x="430" y="539" width="150" height="30"/>
+                                <color key="tintColor" red="0.12941176469999999" green="0.47058823529999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="STOP "/>
                                 <connections>
                                     <action selector="stopButtonAction:" destination="iR0-H2-IEH" eventType="touchDown" id="JTd-iW-Fcq"/>
@@ -1673,18 +1681,18 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                 <rect key="frame" x="0.0" y="544" width="600" height="56"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XL-ms-PBf">
-                                        <rect key="frame" x="552" y="8" width="40" height="40"/>
+                                        <rect key="frame" x="548" y="4" width="44" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" identifier="sendButtonHeight" id="3Xa-rx-R9F"/>
-                                            <constraint firstAttribute="width" constant="40" identifier="sendButtonWidth" id="4Tu-uT-hOx"/>
+                                            <constraint firstAttribute="height" constant="44" identifier="sendButtonHeight" id="3Xa-rx-R9F"/>
+                                            <constraint firstAttribute="width" constant="44" identifier="sendButtonWidth" id="4Tu-uT-hOx"/>
                                         </constraints>
                                         <state key="normal" image="SendButton20"/>
                                         <connections>
                                             <action selector="sendAction:" destination="rWz-Vg-7Ha" eventType="touchDown" id="FNG-6d-x1V"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="oVG-6b-cXM">
-                                        <rect key="frame" x="508" y="8" width="40" height="17"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="oVG-6b-cXM">
+                                        <rect key="frame" x="504" y="4" width="44" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" identifier="beakHeight" id="R36-n0-JWM"/>
                                         </constraints>
@@ -1693,22 +1701,20 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Au-pr-u6p" customClass="PSPDFTextView">
-                                        <rect key="frame" x="46" y="8" width="489" height="40"/>
+                                        <rect key="frame" x="56" y="6" width="475" height="44"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" identifier="textView-Height" id="ZEF-sY-zaa"/>
-                                        </constraints>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoT-HK-LWd">
-                                        <rect key="frame" x="6" y="8" width="40" height="40"/>
+                                        <rect key="frame" x="6" y="4" width="44" height="44"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="oOD-ac-EA7"/>
+                                            <constraint firstAttribute="height" constant="44" id="9xK-zg-66z"/>
+                                            <constraint firstAttribute="width" constant="44" id="oOD-ac-EA7"/>
                                         </constraints>
                                         <state key="normal" image="attachments"/>
                                         <connections>
@@ -1719,19 +1725,19 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                 <color key="backgroundColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" identifier="OuterUIViewHeight" id="0E1-3f-wRQ"/>
-                                    <constraint firstItem="IoT-HK-LWd" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" id="0U7-ZZ-LRT"/>
+                                    <constraint firstItem="IoT-HK-LWd" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" constant="-2" id="0U7-ZZ-LRT"/>
                                     <constraint firstItem="6XL-ms-PBf" firstAttribute="trailing" secondItem="Npf-hG-Fxp" secondAttribute="trailingMargin" identifier="SendButtonTrailing" id="8rK-OD-RNv"/>
-                                    <constraint firstItem="oVG-6b-cXM" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" identifier="BeakTop" id="Ed8-jm-hLn"/>
+                                    <constraint firstItem="oVG-6b-cXM" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" constant="-2" identifier="BeakTop" id="Ed8-jm-hLn"/>
                                     <constraint firstItem="IoT-HK-LWd" firstAttribute="leading" secondItem="Npf-hG-Fxp" secondAttribute="leading" constant="6" id="FDq-LG-EPN"/>
                                     <constraint firstAttribute="trailing" secondItem="oVG-6b-cXM" secondAttribute="trailing" constant="52" identifier="beakTrailing" id="Gme-zY-KoW"/>
-                                    <constraint firstItem="4Au-pr-u6p" firstAttribute="leading" secondItem="IoT-HK-LWd" secondAttribute="trailing" id="OTK-I0-0Qz"/>
-                                    <constraint firstItem="IoT-HK-LWd" firstAttribute="bottom" secondItem="4Au-pr-u6p" secondAttribute="bottom" id="Uvs-xg-wDE"/>
+                                    <constraint firstItem="4Au-pr-u6p" firstAttribute="leading" secondItem="IoT-HK-LWd" secondAttribute="trailing" constant="6" id="OTK-I0-0Qz"/>
+                                    <constraint firstItem="IoT-HK-LWd" firstAttribute="bottom" secondItem="4Au-pr-u6p" secondAttribute="bottom" constant="-2" id="Uvs-xg-wDE"/>
                                     <constraint firstItem="oVG-6b-cXM" firstAttribute="leading" secondItem="4Au-pr-u6p" secondAttribute="trailing" constant="-27" identifier="BeakLeading" id="b3o-YC-mEx"/>
-                                    <constraint firstItem="4Au-pr-u6p" firstAttribute="bottom" secondItem="6XL-ms-PBf" secondAttribute="bottom" identifier="sendMessageTextViewBottom" id="cyR-uC-0VF"/>
+                                    <constraint firstItem="4Au-pr-u6p" firstAttribute="bottom" secondItem="6XL-ms-PBf" secondAttribute="bottom" constant="2" identifier="sendMessageTextViewBottom" id="cyR-uC-0VF"/>
                                     <constraint firstItem="4Au-pr-u6p" firstAttribute="top" relation="lessThanOrEqual" secondItem="Npf-hG-Fxp" secondAttribute="top" constant="8" id="dft-Vb-CWP"/>
                                     <constraint firstItem="6XL-ms-PBf" firstAttribute="leading" secondItem="4Au-pr-u6p" secondAttribute="trailing" constant="17" identifier="sednButtomLEading" id="e9x-Mi-ywy"/>
                                     <constraint firstAttribute="bottom" secondItem="6XL-ms-PBf" secondAttribute="bottom" constant="8" identifier="SendButtonToBottom" id="mwc-na-VjY"/>
-                                    <constraint firstItem="6XL-ms-PBf" firstAttribute="leading" secondItem="JFb-Gb-Lfr" secondAttribute="trailing" constant="8" identifier="sednButtonLeading" id="n1h-KM-mYO"/>
+                                    <constraint firstItem="6XL-ms-PBf" firstAttribute="leading" secondItem="JFb-Gb-Lfr" secondAttribute="trailing" constant="6" identifier="sednButtonLeading" id="n1h-KM-mYO"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -1879,7 +1885,6 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                         <outlet property="tableViewTop2Constraint" destination="bVW-y4-4Ob" id="mGg-yg-jmY"/>
                         <outlet property="tableViewViewBottomConstraint" destination="vKK-qV-zkZ" id="rUa-SS-Un2"/>
                         <outlet property="textMessageViewHeightConstaint" destination="0E1-3f-wRQ" id="19k-Io-OLm"/>
-                        <outlet property="textViewHeightConstraint" destination="ZEF-sY-zaa" id="oSE-bH-yuE"/>
                         <outlet property="typeMsgBG" destination="JFb-Gb-Lfr" id="i2a-Kn-w4d"/>
                         <outlet property="typingLabel" destination="1sI-lr-lrM" id="Rqi-6s-8qY"/>
                         <outlet property="typingLabelBottomConstraint" destination="fxQ-VQ-Ib3" id="5Wy-6r-Kd1"/>
@@ -2075,11 +2080,11 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
     <resources>
         <image name="DELETEIOSX" width="50" height="50"/>
         <image name="Path" width="360" height="186"/>
-        <image name="SendButton20" width="20" height="20"/>
+        <image name="SendButton20" width="44" height="44"/>
         <image name="applozic_edit" width="18" height="18"/>
-        <image name="applozic_group_icon" width="100" height="100"/>
+        <image name="applozic_group_icon" width="84" height="84"/>
         <image name="applozic_uploadCamera" width="20" height="16"/>
-        <image name="attachments" width="28" height="13"/>
+        <image name="attachments" width="44" height="44"/>
         <image name="audio_mic" width="462" height="726"/>
         <image name="ic_action_camera" width="64" height="64"/>
         <image name="ic_phone_gray" width="30" height="32"/>
