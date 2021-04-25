@@ -354,7 +354,6 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     navigationView.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 38);
     labelName.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 22);
 
-
     NSString* strDate = [ALApplozicSettings getDateAppointment];
     CGSize stringSize = [ALUtilityClass getSizeForText:strDate maxWidth:self.view.frame.size.width - 100 fontSize:12];
     labelDate.frame = CGRectMake(0, 22, stringSize.width, 16);
@@ -1110,10 +1109,10 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     labelName.lineBreakMode = NSLineBreakByTruncatingTail;
     [navigationView addSubview:labelName];
     
-    NSString* str = @"11 February 2021, 12:00 - 13:00";
+    NSString* strDate = [ALApplozicSettings getDateAppointment];
  
     labelDate = [[UILabel alloc] initWithFrame:CGRectZero];
-    labelDate.text = str;
+    labelDate.text = strDate;
     labelDate.textColor = [UIColor colorWithRed:138.0/255 green:138.0/255 blue:141.0/255 alpha:1];
     labelDate.font = [UIFont systemFontOfSize:12.0];
     labelDate.textAlignment = NSTextAlignmentCenter;
