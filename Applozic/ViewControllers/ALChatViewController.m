@@ -2545,7 +2545,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     }
 
     [self.mTableView setBackgroundColor:[ALApplozicSettings getChatViewControllerBackgroundColor]];
-    [self.mTableView.superview setBackgroundColor:[ALApplozicSettings getMessagesViewBackgroundColour]];
+    [self.mTableView.superview setBackgroundColor:[UIColor colorWithRed:250.0/255 green:250.0/255 blue:250.0/255 alpha:1]];
 }
 
 //==============================================================================================================================================

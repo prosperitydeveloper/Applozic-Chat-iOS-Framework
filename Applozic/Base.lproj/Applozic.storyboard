@@ -1651,7 +1651,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="90" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-KT-wrK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="553"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="rWz-Vg-7Ha" id="CFM-FP-heF"/>
@@ -1820,7 +1820,6 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3bd-KT-wrK" firstAttribute="trailing" secondItem="QaG-wG-Gle" secondAttribute="trailing" identifier="trailing" id="0ea-Ef-fir"/>
@@ -2091,9 +2090,6 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
         <image name="online_show" width="200" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
