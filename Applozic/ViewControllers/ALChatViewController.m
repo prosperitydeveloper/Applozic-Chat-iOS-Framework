@@ -169,8 +169,8 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 //            isNewAudioDesignEnabled = FALSE;
 //        }
         isNewAudioDesignEnabled = FALSE;
-     //   [self setUpSoundRecordingView];
-    //    [self showMicButton];
+       [self setUpSoundRecordingView];
+      [self showMicButton];
         isAudioRecordingEnabled = FALSE;
 //    }
 
@@ -1770,7 +1770,6 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20Green.png"];
     [self.sendButton setImage:sendImage forState:UIControlStateNormal];
     isMicButtonVisible = NO;
-    NSLog(@"showSendButton");
 }
 
 //==============================================================================================================================================
@@ -4162,12 +4161,12 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
         [self.mqttObject sendTypingStatus:[ALUserDefaultsHandler getApplicationKey] userID:self.contactIds andChannelKey:self.channelKey typing:typingStat];
     }
 
-    if ([[textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 && isAudioRecordingEnabled) {
+    if ([[textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
         [self showMicButton];
         UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
         [self.sendButton setImage:sendImage forState:UIControlStateNormal];
         NSLog(@"textViewDidChange == 0");
-    } else if(isAudioRecordingEnabled) {
+    } else  {
         [self showSendButton];
         [self hideSoundRecordingView];
         NSLog(@"textViewDidChange != 0");
