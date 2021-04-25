@@ -169,7 +169,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
             isNewAudioDesignEnabled = YES;
         }
         [self setUpSoundRecordingView];
-        [self showMicButton];
+       // [self showMicButton];
         isAudioRecordingEnabled = YES;
     }
 
@@ -1637,9 +1637,9 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     self.startIndex = self.startIndex + 1;
     [self sendMessage:theMessage withUserDisplayName:self.displayName];
 
-    if(isAudioRecordingEnabled) {
-        [self showMicButton];
-    }
+//    if(isAudioRecordingEnabled) {
+//        [self showMicButton];
+//    }
 
     if(typingStat == YES)
     {
@@ -1761,13 +1761,12 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 -(void)showSendButton
 {
     if(@available(ios 9.0, *)) {
-        [micButton setHidden: YES];
+ //       [micButton setHidden: YES];
         [self.sendButton setHidden: NO];
     }
   
     UIImage* sendImage = [[ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.sendButton setImage:sendImage forState:UIControlStateNormal];
-    self.sendButton.tintColor = [UIColor colorWithRed:55.0/255 green:213.0/255 blue:181.0/255 alpha:1.0];
     isMicButtonVisible = NO;
 }
 
@@ -4161,15 +4160,12 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
     }
 
     if ([[textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 && isAudioRecordingEnabled) {
-        [self showMicButton];
-        UIImage* sendImage = [[ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+      //  [self showMicButton];
+        UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
         [self.sendButton setImage:sendImage forState:UIControlStateNormal];
-       // self.sendButton.tintColor = [UIColor colorWithRed:196.0/255 green:196.0/255 blue:(198.0/255) alpha:1.0];
-        self.sendButton.tintColor = [UIColor colorWithRed:55.0/255 green:213.0/255 blue:181.0/255 alpha:1.0];
     } else if(isAudioRecordingEnabled) {
-        UIImage* sendImage = [[ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20Green.png"];
         [self.sendButton setImage:sendImage forState:UIControlStateNormal];
-        self.sendButton.tintColor = [UIColor colorWithRed:55.0/255 green:213.0/255 blue:181.0/255 alpha:1.0];
         [self showSendButton];
         [self hideSoundRecordingView];
     }
