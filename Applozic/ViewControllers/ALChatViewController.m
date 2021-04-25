@@ -169,8 +169,8 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 //            isNewAudioDesignEnabled = FALSE;
 //        }
         isNewAudioDesignEnabled = FALSE;
-       [self setUpSoundRecordingView];
-      [self showMicButton];
+//       [self setUpSoundRecordingView];
+//      [self showMicButton];
         isAudioRecordingEnabled = FALSE;
 //    }
 
