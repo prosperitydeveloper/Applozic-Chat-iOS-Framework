@@ -1935,4 +1935,15 @@
     return [userDefaults valueForKey:AL_SUPPORT_CONTACT_USER_ID];
 }
 
++(void)setDateAppointment:(NSString *)date {
+    NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
+    [userDefaults setValue:date forKey:DUULY_APPOINTMENT_DATE];
+    [userDefaults synchronize];
+}
+
++(NSString *)getDateAppointment {
+    NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
+    return [userDefaults valueForKey:DUULY_APPOINTMENT_DATE];
+}
+
 @end
