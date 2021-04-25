@@ -165,12 +165,13 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     [super viewDidLoad];
     // Setup quick recording if it's enabled in the settings
     if([ALApplozicSettings isQuickAudioRecordingEnabled]) {
-        if ([ALApplozicSettings isNewAudioDesignEnabled]) {
-            isNewAudioDesignEnabled = YES;
-        }
-        [self setUpSoundRecordingView];
+//        if ([ALApplozicSettings isNewAudioDesignEnabled]) {
+//            isNewAudioDesignEnabled = FALSE;
+//        }
+        isNewAudioDesignEnabled = FALSE;
+     //   [self setUpSoundRecordingView];
         [self showMicButton];
-        isAudioRecordingEnabled = YES;
+        isAudioRecordingEnabled = FALSE;
     }
 
     [self initialSetUp];
