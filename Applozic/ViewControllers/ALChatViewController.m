@@ -164,15 +164,15 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
 {
     [super viewDidLoad];
     // Setup quick recording if it's enabled in the settings
-    if([ALApplozicSettings isQuickAudioRecordingEnabled]) {
+//    if([ALApplozicSettings isQuickAudioRecordingEnabled]) {
 //        if ([ALApplozicSettings isNewAudioDesignEnabled]) {
 //            isNewAudioDesignEnabled = FALSE;
 //        }
         isNewAudioDesignEnabled = FALSE;
      //   [self setUpSoundRecordingView];
-        [self showMicButton];
+    //    [self showMicButton];
         isAudioRecordingEnabled = FALSE;
-    }
+//    }
 
     [self initialSetUp];
     self.photoPicker = [[ALPhotoPicker alloc] initWithSelectionLimit:[ALApplozicSettings getPhotosSelectionLimit] loadingTitle:NSLocalizedStringWithDefaultValue(@"ExportLoadingIndicatorText", [ALApplozicSettings getLocalizableName], [NSBundle mainBundle], @"Exporting...", @"")];
