@@ -1681,7 +1681,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                 <rect key="frame" x="0.0" y="553" width="600" height="47"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XL-ms-PBf">
-                                        <rect key="frame" x="548" y="-5" width="44" height="44"/>
+                                        <rect key="frame" x="548" y="1" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" identifier="sendButtonHeight" id="3Xa-rx-R9F"/>
                                             <constraint firstAttribute="width" constant="44" identifier="sendButtonWidth" id="4Tu-uT-hOx"/>
@@ -1708,7 +1708,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoT-HK-LWd">
-                                        <rect key="frame" x="6" y="3.5" width="44" height="44"/>
+                                        <rect key="frame" x="6" y="1.5" width="44" height="44"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                         </accessibility>
@@ -1725,7 +1725,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                 <color key="backgroundColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" identifier="OuterUIViewHeight" id="0E1-3f-wRQ"/>
-                                    <constraint firstItem="IoT-HK-LWd" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" constant="-2" id="0U7-ZZ-LRT"/>
+                                    <constraint firstItem="IoT-HK-LWd" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" constant="-4" id="0U7-ZZ-LRT"/>
                                     <constraint firstItem="6XL-ms-PBf" firstAttribute="trailing" secondItem="Npf-hG-Fxp" secondAttribute="trailingMargin" identifier="SendButtonTrailing" id="8rK-OD-RNv"/>
                                     <constraint firstItem="oVG-6b-cXM" firstAttribute="top" secondItem="4Au-pr-u6p" secondAttribute="top" constant="-2" identifier="BeakTop" id="Ed8-jm-hLn"/>
                                     <constraint firstItem="IoT-HK-LWd" firstAttribute="leading" secondItem="Npf-hG-Fxp" secondAttribute="leading" constant="6" id="FDq-LG-EPN"/>
@@ -1736,7 +1736,7 @@ Upload Image Button.centerX = scd_profile_BG.centerX + 50</string>
                                     <constraint firstItem="4Au-pr-u6p" firstAttribute="top" relation="lessThanOrEqual" secondItem="Npf-hG-Fxp" secondAttribute="top" constant="6" id="dft-Vb-CWP"/>
                                     <constraint firstItem="6XL-ms-PBf" firstAttribute="leading" secondItem="4Au-pr-u6p" secondAttribute="trailing" constant="17" identifier="sednButtomLEading" id="e9x-Mi-ywy"/>
                                     <constraint firstItem="6XL-ms-PBf" firstAttribute="leading" secondItem="JFb-Gb-Lfr" secondAttribute="trailing" constant="6" identifier="sednButtonLeading" id="n1h-KM-mYO"/>
-                                    <constraint firstItem="6XL-ms-PBf" firstAttribute="top" secondItem="Npf-hG-Fxp" secondAttribute="top" constant="-5" id="rkV-gI-VIa"/>
+                                    <constraint firstItem="6XL-ms-PBf" firstAttribute="top" secondItem="Npf-hG-Fxp" secondAttribute="top" constant="1" id="rkV-gI-VIa"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
