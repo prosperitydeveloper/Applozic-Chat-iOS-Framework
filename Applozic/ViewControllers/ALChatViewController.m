@@ -1092,15 +1092,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     defaultTableRect = self.mTableView.frame;
 
     self.loadingIndicator = [[ALLoadingIndicator alloc] initWithFrame:CGRectZero color:UIColor.whiteColor];
-    
-    //    titleLabelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    //    titleLabelButton.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-    //    titleLabelButton.backgroundColor = [UIColor redColor];
-    //    titleLabelButton.titleLabel.font = [UIFont systemFontOfSize:17.0];
-    //   [titleLabelButton addTarget:self action:@selector(didTapTitleView:) forControlEvents:UIControlEventTouchUpInside];
-    //    titleLabelButton.userInteractionEnabled = false;
-    //    [titleLabelButton setTitleColor:[ALApplozicSettings getColorForNavigationItem] forState:UIControlStateNormal];
-    
+
     navigationView = [[UIView alloc] initWithFrame: CGRectZero];
     labelName = [[UILabel alloc] initWithFrame: CGRectZero];
     labelName.font = [UIFont boldSystemFontOfSize:17.0];
