@@ -215,6 +215,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
 }
 
 -(void)calendar:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
     [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"UserTapCalendarInChat" object:self]];
 }
 
