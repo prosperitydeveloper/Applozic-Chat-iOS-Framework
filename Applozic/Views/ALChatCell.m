@@ -241,12 +241,8 @@ static CGFloat const MSG_STATUS_HEIGHT = 20;
 
         //  ===== Intial bubble View image =========//
 
-       // CGFloat requiredBubbleWidth = theTextSize.width + BUBBLE_PADDING_WIDTH;
-        CGSize screenSize = [UIScreen mainScreen].bounds.size;
-        
-        CGFloat requiredBubbleWidth = screenSize.width - 120 + BUBBLE_PADDING_WIDTH;
+        CGFloat requiredBubbleWidth = theTextSize.width + BUBBLE_PADDING_WIDTH;
         CGFloat requiredBubbleHeight =  theTextSize.height + BUBBLE_PADDING_HEIGHT;
-
 
         self.mBubleImageView.frame = CGRectMake(self.mUserProfileImageView.frame.size.width + 23,
                                                 0, requiredBubbleWidth + 10,

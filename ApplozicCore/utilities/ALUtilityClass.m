@@ -87,13 +87,30 @@
 
 +(CGSize)getSizeForText:(NSString *)text maxWidth:(CGFloat)width fontSize:(float)fontSize
 {
-    CGRect rawRect = {};
-    rawRect.size = [text sizeWithAttributes: @{
-        NSFontAttributeName: [UIFont systemFontOfSize:fontSize],
-    }];
+    CGSize constraintSize;
+    constraintSize.height = MAXFLOAT;
+    constraintSize.width = width;
+    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                          [UIFont systemFontOfSize:fontSize], NSFontAttributeName,nil];
+    
+    CGRect frame = [text boundingRectWithSize:constraintSize
+                                      options:NSStringDrawingUsesLineFragmentOrigin
+                                   attributes:attributesDictionary
+                                      context:nil];
+    CGSize stringSize = frame.size;
 
-    CGSize adjustedSize = CGRectIntegral(rawRect).size;
-    return adjustedSize;
+    return stringSize;
+    
+    
+    
+    
+//    CGRect rawRect = {};
+//    rawRect.size = [text sizeWithAttributes: @{
+//        NSFontAttributeName: [UIFont systemFontOfSize:fontSize],
+//    }];
+//
+//    CGSize adjustedSize = CGRectIntegral(rawRect).size;
+//    return adjustedSize;
 }
 
 
