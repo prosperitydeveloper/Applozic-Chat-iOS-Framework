@@ -1626,6 +1626,9 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     // save message to db
     [self showNoConversationLabel];
     [self.sendMessageTextView setText:nil];
+    UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
+    [self.sendButton setImage:sendImage forState:UIControlStateNormal];
+    
     self.mTotalCount = self.mTotalCount + 1;
     self.startIndex = self.startIndex + 1;
     [self sendMessage:theMessage withUserDisplayName:self.displayName];
@@ -4995,9 +4998,6 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
 }
 
 - (void)onSendButtonClick:(NSString * _Nullable)filePath withReplyMessageKey:(NSString *)messageKey{
-    UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
-    [self.sendButton setImage:sendImage forState:UIControlStateNormal];
-
     self.messageReplyId = messageKey;
     [self processAttachment:filePath andMessageText:nil andContentType:ALMESSAGE_CONTENT_ATTACHMENT withMessageMetadata:self.messageMetadata];
 }
