@@ -19,6 +19,12 @@
     [self.contentView setUserInteractionEnabled:YES];
     [self.contentView addGestureRecognizer:tapGesture];
     
+    if (@available(iOS 11.0, *)) {
+        self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner | kCALayerMaxXMinYCorner;
+    } else {
+        // Fallback on earlier versions
+    }
+
     return self;
 }
 

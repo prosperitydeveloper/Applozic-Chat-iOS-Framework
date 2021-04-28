@@ -100,17 +100,6 @@
     CGSize stringSize = frame.size;
 
     return stringSize;
-    
-    
-    
-    
-//    CGRect rawRect = {};
-//    rawRect.size = [text sizeWithAttributes: @{
-//        NSFontAttributeName: [UIFont systemFontOfSize:fontSize],
-//    }];
-//
-//    CGSize adjustedSize = CGRectIntegral(rawRect).size;
-//    return adjustedSize;
 }
 
 
