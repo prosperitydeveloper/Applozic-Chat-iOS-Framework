@@ -4154,13 +4154,13 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
     }
 
     if ([[textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
-        [self showMicButton];
+       // [self showMicButton];
         UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
         [self.sendButton setImage:sendImage forState:UIControlStateNormal];
         NSLog(@"textViewDidChange == 0");
     } else  {
         [self showSendButton];
-        [self hideSoundRecordingView];
+    //    [self hideSoundRecordingView];
         NSLog(@"textViewDidChange != 0");
     }
 
@@ -4995,6 +4995,8 @@ withMessageMetadata:(NSMutableDictionary *)messageMetadata {
 }
 
 - (void)onSendButtonClick:(NSString * _Nullable)filePath withReplyMessageKey:(NSString *)messageKey{
+    UIImage* sendImage = [ALUIUtilityClass getImageFromFramworkBundle:@"SendButton20.png"];
+    [self.sendButton setImage:sendImage forState:UIControlStateNormal];
 
     self.messageReplyId = messageKey;
     [self processAttachment:filePath andMessageText:nil andContentType:ALMESSAGE_CONTENT_ATTACHMENT withMessageMetadata:self.messageMetadata];

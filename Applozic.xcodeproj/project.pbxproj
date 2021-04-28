@@ -459,6 +459,8 @@
 		29CBF2031C0303A700BE6A20 /* ALColorUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CBF2011C0303A700BE6A20 /* ALColorUtility.m */; };
 		29D6F86B1D193D9D00A75369 /* PSPDFTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 29D6F8691D193D9D00A75369 /* PSPDFTextView.h */; };
 		29D6F86C1D193D9D00A75369 /* PSPDFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6F86A1D193D9D00A75369 /* PSPDFTextView.m */; };
+		3DE8E9792636879F0015C545 /* ALChatHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE8E9772636879F0015C545 /* ALChatHeader.h */; };
+		3DE8E97A2636879F0015C545 /* ALChatHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE8E9782636879F0015C545 /* ALChatHeader.m */; };
 		463E49201DB7B45D00CDFFE6 /* ALVCardClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 463E491E1DB7B45D00CDFFE6 /* ALVCardClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		463E49211DB7B45D00CDFFE6 /* ALVCardClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 463E491F1DB7B45D00CDFFE6 /* ALVCardClass.m */; };
 		465EBAF11E9624C100E7B79B /* ALSubViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 465EBAEF1E9624C100E7B79B /* ALSubViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1019,6 +1021,8 @@
 		29CBF2011C0303A700BE6A20 /* ALColorUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALColorUtility.m; sourceTree = "<group>"; };
 		29D6F8691D193D9D00A75369 /* PSPDFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPDFTextView.h; sourceTree = "<group>"; };
 		29D6F86A1D193D9D00A75369 /* PSPDFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPDFTextView.m; sourceTree = "<group>"; };
+		3DE8E9772636879F0015C545 /* ALChatHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALChatHeader.h; sourceTree = "<group>"; };
+		3DE8E9782636879F0015C545 /* ALChatHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALChatHeader.m; sourceTree = "<group>"; };
 		463E491E1DB7B45D00CDFFE6 /* ALVCardClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALVCardClass.h; sourceTree = "<group>"; };
 		463E491F1DB7B45D00CDFFE6 /* ALVCardClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALVCardClass.m; sourceTree = "<group>"; };
 		465EBAEF1E9624C100E7B79B /* ALSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSubViewController.h; sourceTree = "<group>"; };
@@ -1969,6 +1973,8 @@
 				6D7757321D5B84BE0025560B /* ALUIConstant.m */,
 				6D6DF0941BC5364C00EBA00F /* ALImagePickerHandler.m */,
 				6D6DF0931BC5364C00EBA00F /* ALImagePickerHandler.h */,
+				3DE8E9772636879F0015C545 /* ALChatHeader.h */,
+				3DE8E9782636879F0015C545 /* ALChatHeader.m */,
 			);
 			name = message;
 			sourceTree = "<group>";
@@ -2289,6 +2295,7 @@
 				1814A788252F31C2004E836B /* SDWebImageDownloaderResponseModifier.h in Headers */,
 				C76D314B1F0AAFCE0087291F /* ALAudioVideoBaseVC.h in Headers */,
 				1814A76E252F31C2004E836B /* SDImageLoader.h in Headers */,
+				3DE8E9792636879F0015C545 /* ALChatHeader.h in Headers */,
 				C76D31451F0AAFB30087291F /* ALVOIPCell.h in Headers */,
 				1814A738252F31C2004E836B /* SDAnimatedImageView+WebCache.h in Headers */,
 				6D46B6C51BD025060014A5D3 /* ALMapViewController.h in Headers */,
@@ -2565,6 +2572,7 @@
 				6D6DF1651BC5364C00EBA00F /* ALNewContactCell.m in Sources */,
 				8B170C212122CEFF003A14B3 /* ALCustomPickerViewController.swift in Sources */,
 				1814A76C252F31C2004E836B /* SDImageFrame.m in Sources */,
+				3DE8E97A2636879F0015C545 /* ALChatHeader.m in Sources */,
 				465EBAF21E9624C100E7B79B /* ALSubViewController.m in Sources */,
 				6D77573E1D5B84E70025560B /* ALAudioCell.m in Sources */,
 				1814A730252F31C2004E836B /* SDImageCachesManagerOperation.m in Sources */,
