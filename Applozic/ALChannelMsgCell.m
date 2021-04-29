@@ -37,7 +37,7 @@
     return defaultFont;
 }
 
--(instancetype)populateCell:(ALMessage*) alMessage viewSize:(CGSize)viewSize
+-(instancetype)populateCell:(ALMessage*) alMessage viewSize:(CGSize)viewSize chanel:(ALChannel*)alChanel
 {
     [super populateCell:alMessage viewSize:viewSize];
     
@@ -78,7 +78,20 @@
     } else {
         // Fallback on earlier versions
     }
-    self.backgroundColor = [UIColor redColor];
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.minimumLineSpacing = 20.0f;
+    flowLayout.minimumInteritemSpacing = 10.0f;
+    flowLayout.itemSize = CGSizeMake(40.0f, 40.0f);
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
+    
+    CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 20, 40);
+    UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+    [collectionView setDataSource: self];
+    [collectionView setDelegate: self];
+    collectionView.backgroundColor = [UIColor greenColor];
+    
     return self;
 }
 

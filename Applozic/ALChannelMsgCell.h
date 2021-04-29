@@ -10,8 +10,8 @@
 #import <ApplozicCore/ApplozicCore.h>
 #import "ALChatCell.h"
 
-@interface ALChannelMsgCell : ALChatCell
+@interface ALChannelMsgCell : ALChatCell<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
--(instancetype)populateCell:(ALMessage*) alMessage viewSize:(CGSize)viewSize;
+-(instancetype)populateCell:(ALMessage*) alMessage viewSize:(CGSize)viewSize chanel:(ALChannel*)alChanel;
 
 @end
