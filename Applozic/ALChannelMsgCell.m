@@ -21,7 +21,7 @@ static NSString *identifier = @"UserCell";
     tapGesture.numberOfTapsRequired = 1;
     [self.contentView setUserInteractionEnabled:YES];
     [self.contentView addGestureRecognizer:tapGesture];
-  
+    
     return self;
 }
 
@@ -31,7 +31,7 @@ static NSString *identifier = @"UserCell";
     if (!defaultFont) {
         defaultFont = [UIFont systemFontOfSize:size];
     }
-
+    
     if ([ALApplozicSettings getChatChannelCellFontTextStyle] && [ALApplozicSettings isTextStyleInCellEnabled]) {
         if (@available(iOS 10.0, *)) {
             return [UIFont preferredFontForTextStyle:[ALApplozicSettings getChatChannelCellFontTextStyle]];
@@ -50,7 +50,7 @@ static NSString *identifier = @"UserCell";
     [self.mMessageLabel setText:alMessage.message];
     [self.mMessageLabel setBackgroundColor:[UIColor clearColor]];
     [self.mMessageLabel setTextColor:[ALApplozicSettings getChannelActionMessageTextColor]];
-
+    
     [self.mDateLabel setHidden:YES];
     self.mUserProfileImageView.alpha = 0;
     self.mNameLabel.hidden = YES;
@@ -82,7 +82,7 @@ static NSString *identifier = @"UserCell";
         // Fallback on earlier versions
     }
     
-//    if (self.channel != nil) {
+    //    if (self.channel != nil) {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumLineSpacing = 20.0f;
     flowLayout.minimumInteritemSpacing = 10.0f;
@@ -98,7 +98,7 @@ static NSString *identifier = @"UserCell";
     [self addSubview:collectionView];
     [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
     //}
-
+    
     return self;
 }
 
@@ -117,9 +117,18 @@ static NSString *identifier = @"UserCell";
     static NSString *identifier = @"UserCell";
     
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-  
+    
+    for (UIView *subview in [cell.contentView subviews]) {
+        [subview removeFromSuperview];
+    }
+    
     if (@available(iOS 13.0, *)) {
-        cell.largeContentImage = [ALUIUtilityClass getImageFromFramworkBundle:@"contact_default_placeholder"];
+        UIImage* image = [ALUIUtilityClass getImageFromFramworkBundle:@"contact_default_placeholder"];
+        UIImageView* imageView = [[UIImageView alloc] initWithFrame: CGRectZero];
+        imageView.image = image;
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.clipsToBounds = YES;
+        [cell.contentView addSubview:imageView];
     } else {
         // Fallback on earlier versions
     }
