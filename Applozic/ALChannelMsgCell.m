@@ -9,8 +9,6 @@
 #import "ALChannelMsgCell.h"
 #import "ALUIUtilityClass.h"
 
-static NSString* reuseIdentifier = @"reuseIdentifier";
-
 @implementation ALChannelMsgCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -113,7 +111,9 @@ static NSString* reuseIdentifier = @"reuseIdentifier";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    static NSString *identifier = @"UserCell";
+    
+    UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
   
     if (@available(iOS 13.0, *)) {
         cell.largeContentImage = [ALUIUtilityClass getImageFromFramworkBundle:@"contact_default_placeholder"];
