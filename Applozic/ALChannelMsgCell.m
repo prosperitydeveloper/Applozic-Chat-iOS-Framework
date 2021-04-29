@@ -86,7 +86,7 @@ static NSString *identifier = @"UserCell";
         // Fallback on earlier versions
     }
     
-    if (self.channel != nil) {
+    if (self.isShowUsers) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.minimumLineSpacing = -5.0f;
         flowLayout.minimumInteritemSpacing = 10.0f;
@@ -96,20 +96,22 @@ static NSString *identifier = @"UserCell";
         CGFloat widht = 5 + 35 * self.channel.userCount.intValue;
         CGRect rect;
         if (UIScreen.mainScreen.bounds.size.width - 40 - widht < 0) {
-            rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 40, 40);
+            rect = CGRectMake(20, self.mBubleImageView.frame.size.height + padding * 2, UIScreen.mainScreen.bounds.size.width - 40, 40);
         } else {
-            rect= CGRectMake(20, 0, widht, 40);
-            self.collectionView.center = CGPointMake(self.center.x, 0);
+            rect = CGRectMake(20, self.mBubleImageView.frame.size.height + padding * 2, widht, 40);
         }
+        
         self.collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
         self.collectionView.center = CGPointMake(self.center.x, 0);
-        [self.collectionView setDataSource: (id)self];
-        [self.collectionView setDelegate: (id)self];
+        self.collectionView.dataSource = (id)self;
+        self.collectionView.delegate = (id)self;
         self.collectionView.backgroundColor = [UIColor greenColor];
         self.collectionView.showsVerticalScrollIndicator = false;
         self.collectionView.showsHorizontalScrollIndicator = false;
         
         [self addSubview: self.collectionView];
+        self.collectionView.center = CGPointMake(self.center.x, 0);
+        
         [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
     }
     
