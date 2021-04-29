@@ -137,7 +137,7 @@ static NSString *identifier = @"UserCell";
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
         ALContactDBService *theContactDBService = [[ALContactDBService alloc] init];
-        ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: alMessage.to];
+      //  ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: alMessage.to];
 
         [cell.contentView addSubview:imageView];
     } else {

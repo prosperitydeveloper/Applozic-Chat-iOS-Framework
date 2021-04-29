@@ -10,7 +10,7 @@
 #import <ApplozicCore/ApplozicCore.h>
 #import "ALChatCell.h"
 
-@interface ALChannelMsgCell : ALChatCell<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ALChannelMsgCell: ALChatCell<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UICollectionView* collectionView;
 
