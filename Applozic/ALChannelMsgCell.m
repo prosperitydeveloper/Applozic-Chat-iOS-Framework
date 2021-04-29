@@ -18,9 +18,9 @@
     tapGesture.numberOfTapsRequired = 1;
     [self.contentView setUserInteractionEnabled:YES];
     [self.contentView addGestureRecognizer:tapGesture];
-    
+  
     if (@available(iOS 11.0, *)) {
-        self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner | kCALayerMaxXMinYCorner;
+        self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner | kCALayerMaxXMaxYCorner;
     } else {
         // Fallback on earlier versions
     }
