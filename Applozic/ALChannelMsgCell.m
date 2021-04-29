@@ -28,7 +28,7 @@ static NSString *identifier = @"UserCell";
 -(void) layoutSubviews {
     [super layoutSubviews];
     CGFloat widht = 40 + 35 * self.channel.userCount.intValue;
-    if (UIScreen.mainScreen.bounds.size.width - 40 - widht > 0) {
+    if (UIScreen.mainScreen.bounds.size.width - 40 - widht < 0) {
         self.collectionView.frame = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 40, 40);
     } else {
         self.collectionView.frame = CGRectMake(20, 0, widht, 40);
