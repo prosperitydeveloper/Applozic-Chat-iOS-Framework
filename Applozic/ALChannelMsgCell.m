@@ -9,6 +9,8 @@
 #import "ALChannelMsgCell.h"
 #import "ALUIUtilityClass.h"
 
+static NSString *identifier = @"UserCell";
+
 @implementation ALChannelMsgCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -94,6 +96,7 @@
         [collectionView setDelegate: (id)self];
         collectionView.backgroundColor = [UIColor greenColor];
         [self addSubview:collectionView];
+        collectionView.register(UICollectionViewCell.self, forCellReuseIdentifier: identifier)
     //}
 
     return self;
