@@ -124,7 +124,7 @@ static NSString *identifier = @"UserCell";
     
     if (@available(iOS 13.0, *)) {
         UIImage* image = [ALUIUtilityClass getImageFromFramworkBundle:@"contact_default_placeholder"];
-        UIImageView* imageView = [[UIImageView alloc] initWithFrame: CGRectZero];
+        UIImageView* imageView = [[UIImageView alloc] initWithFrame: CGRectMake(0, 0, 40, 40)];
         imageView.image = image;
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
