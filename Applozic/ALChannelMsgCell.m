@@ -34,7 +34,6 @@ static NSString *identifier = @"UserCell";
         self.collectionView.frame = CGRectMake(20, 0, widht, 40);
         self.collectionView.center = CGPointMake(self.center.x, 0);
     }
-    
 }
 
 -(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size
