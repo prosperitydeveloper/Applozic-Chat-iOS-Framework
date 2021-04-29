@@ -92,7 +92,7 @@ static NSString *identifier = @"UserCell";
         flowLayout.minimumInteritemSpacing = 10.0f;
         flowLayout.itemSize = CGSizeMake(40.0f, 40.0f);
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
+        //flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
         
         CGFloat widht = 5 + 35 * self.channel.userCount.intValue;
         CGRect rect;
