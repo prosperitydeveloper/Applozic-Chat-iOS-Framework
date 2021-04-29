@@ -92,8 +92,7 @@ static NSString *identifier = @"UserCell";
         flowLayout.minimumInteritemSpacing = 10.0f;
         flowLayout.itemSize = CGSizeMake(40.0f, 40.0f);
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        //flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
-        
+      
         CGFloat widht = 5 + 35 * self.channel.userCount.intValue;
         CGRect rect;
         if (UIScreen.mainScreen.bounds.size.width - 40 - widht < 0) {
@@ -102,16 +101,16 @@ static NSString *identifier = @"UserCell";
             rect= CGRectMake(20, 0, widht, 40);
             self.collectionView.center = CGPointMake(self.center.x, 0);
         }
-        UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
-        collectionView.center = CGPointMake(self.center.x, 0);
-        [collectionView setDataSource: (id)self];
-        [collectionView setDelegate: (id)self];
-        collectionView.backgroundColor = [UIColor greenColor];
-        collectionView.showsVerticalScrollIndicator = false;
-        collectionView.showsHorizontalScrollIndicator = false;
+        self.collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+        self.collectionView.center = CGPointMake(self.center.x, 0);
+        [self.collectionView setDataSource: (id)self];
+        [self.collectionView setDelegate: (id)self];
+        self.collectionView.backgroundColor = [UIColor greenColor];
+        self.collectionView.showsVerticalScrollIndicator = false;
+        self.collectionView.showsHorizontalScrollIndicator = false;
         
-        [self addSubview:collectionView];
-        [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
+        [self addSubview: self.collectionView];
+        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
     }
     
     return self;
@@ -151,22 +150,6 @@ static NSString *identifier = @"UserCell";
         // Fallback on earlier versions
     }
     return cell;
-}
-
--(void)snapToCenter {
-    CGPoint centerPoint = [self convertPoint:self.center toView: self.collectionView];
-    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:centerPoint];
-    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:true];
- }
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self snapToCenter];
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    if (!decelerate) {
-        [self snapToCenter];
-    }
 }
 
 -(void) processKeyBoardHideTap
