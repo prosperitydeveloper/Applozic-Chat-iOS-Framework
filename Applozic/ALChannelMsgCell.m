@@ -84,7 +84,7 @@ static NSString *identifier = @"UserCell";
     
     //    if (self.channel != nil) {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumLineSpacing = 20.0f;
+    flowLayout.minimumLineSpacing = -5.0f;
     flowLayout.minimumInteritemSpacing = 10.0f;
     flowLayout.itemSize = CGSizeMake(40.0f, 40.0f);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
