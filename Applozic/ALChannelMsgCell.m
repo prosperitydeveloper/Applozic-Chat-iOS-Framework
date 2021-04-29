@@ -78,7 +78,7 @@
     } else {
         // Fallback on earlier versions
     }
-    
+    self.backgroundColor = [UIColor redColor];
     return self;
 }
 
