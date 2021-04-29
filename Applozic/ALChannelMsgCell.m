@@ -19,12 +19,6 @@
     [self.contentView setUserInteractionEnabled:YES];
     [self.contentView addGestureRecognizer:tapGesture];
   
-    if (@available(iOS 11.0, *)) {
-        self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner | kCALayerMaxXMaxYCorner;
-    } else {
-        // Fallback on earlier versions
-    }
-
     return self;
 }
 
@@ -79,6 +73,11 @@
     [self.mMessageLabel setFrame: CGRectMake(self.mBubleImageView.frame.origin.x + padding ,padding,
                                              theTextSize.width,
                                              theTextSize.height)];
+    if (@available(iOS 11.0, *)) {
+        self.mBubleImageView.layer.maskedCorners = kCALayerMaxXMinYCorner | kCALayerMinXMinYCorner | kCALayerMinXMaxYCorner | kCALayerMaxXMaxYCorner;
+    } else {
+        // Fallback on earlier versions
+    }
     
     return self;
 }
