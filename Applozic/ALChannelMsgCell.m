@@ -95,13 +95,15 @@ static NSString *identifier = @"UserCell";
         flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
         
         CGFloat widht = 5 + 35 * self.channel.userCount.intValue;
+        CGRect rect;
         if (UIScreen.mainScreen.bounds.size.width - 40 - widht < 0) {
-            self.collectionView.frame = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 40, 40);
+            rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 40, 40);
         } else {
-            self.collectionView.frame = CGRectMake(20, 0, widht, 40);
+            rect= CGRectMake(20, 0, widht, 40);
             self.collectionView.center = CGPointMake(self.center.x, 0);
         }
         UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+        collectionView.center = CGPointMake(self.center.x, 0);
         [collectionView setDataSource: (id)self];
         [collectionView setDelegate: (id)self];
         collectionView.backgroundColor = [UIColor greenColor];
