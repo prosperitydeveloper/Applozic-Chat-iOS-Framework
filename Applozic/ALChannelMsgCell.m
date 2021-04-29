@@ -87,22 +87,25 @@ static NSString *identifier = @"UserCell";
         // Fallback on earlier versions
     }
     
-    //    if (self.channel != nil) {
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumLineSpacing = -5.0f;
-    flowLayout.minimumInteritemSpacing = 10.0f;
-    flowLayout.itemSize = CGSizeMake(40.0f, 40.0f);
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
-    
-    CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 40, 40);
-    UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
-    [collectionView setDataSource: (id)self];
-    [collectionView setDelegate: (id)self];
-    collectionView.backgroundColor = [UIColor greenColor];
-    [self addSubview:collectionView];
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
-    //}
+    if (self.channel != nil) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.minimumLineSpacing = -5.0f;
+        flowLayout.minimumInteritemSpacing = 10.0f;
+        flowLayout.itemSize = CGSizeMake(40.0f, 40.0f);
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
+        
+        CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 40, 40);
+        UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+        [collectionView setDataSource: (id)self];
+        [collectionView setDelegate: (id)self];
+        collectionView.backgroundColor = [UIColor greenColor];
+        collectionView.showsVerticalScrollIndicator = false;
+        collectionView.showsHorizontalScrollIndicator = false;
+        
+        [self addSubview:collectionView];
+        [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
+    }
     
     return self;
 }
@@ -114,8 +117,7 @@ static NSString *identifier = @"UserCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    //return self.channel.userCount.intValue;
-    return  40;
+    return self.channel.userCount.intValue;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -134,11 +136,30 @@ static NSString *identifier = @"UserCell";
         imageView.image = image;
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
+        ALContactDBService *theContactDBService = [[ALContactDBService alloc] init];
+        ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: alMessage.to];
+
         [cell.contentView addSubview:imageView];
     } else {
         // Fallback on earlier versions
     }
     return cell;
+}
+
+-(void)snapToCenter {
+    CGPoint centerPoint = [self convertPoint:self.center toView: self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:centerPoint];
+    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:true];
+ }
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self snapToCenter];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate) {
+        [self snapToCenter];
+    }
 }
 
 -(void) processKeyBoardHideTap
