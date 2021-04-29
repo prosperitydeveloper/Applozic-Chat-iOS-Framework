@@ -25,9 +25,9 @@ static NSString *identifier = @"UserCell";
     return self;
 }
 
--(void) viewDidLayoutSubviews {
-    CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 20, 40);
-    self.collectionView.frame = rect;
+-(void) layoutSubviews {
+    [super layoutSubviews];
+    self.collectionView.frame = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 20, 40);
 }
 
 -(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size
@@ -95,7 +95,8 @@ static NSString *identifier = @"UserCell";
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
     
-    UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 20, 40);
+    UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
     [collectionView setDataSource: (id)self];
     [collectionView setDelegate: (id)self];
     collectionView.backgroundColor = [UIColor greenColor];
@@ -113,7 +114,8 @@ static NSString *identifier = @"UserCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.channel.userCount.intValue;
+    //return self.channel.userCount.intValue;
+    return  40;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
