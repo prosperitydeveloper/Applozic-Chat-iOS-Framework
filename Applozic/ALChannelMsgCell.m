@@ -7,6 +7,9 @@
 //
 
 #import "ALChannelMsgCell.h"
+#import "ALUIUtilityClass.h"
+
+static NSString* reuseIdentifier = @"reuseIdentifier";
 
 @implementation ALChannelMsgCell
 
@@ -37,7 +40,7 @@
     return defaultFont;
 }
 
--(instancetype)populateCell:(ALMessage*) alMessage viewSize:(CGSize)viewSize chanel:(ALChannel*)alChanel
+-(instancetype)populateCell:(ALMessage*) alMessage viewSize:(CGSize)viewSize
 {
     [super populateCell:alMessage viewSize:viewSize];
     
@@ -79,20 +82,45 @@
         // Fallback on earlier versions
     }
     
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumLineSpacing = 20.0f;
-    flowLayout.minimumInteritemSpacing = 10.0f;
-    flowLayout.itemSize = CGSizeMake(40.0f, 40.0f);
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
-    
-    CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 20, 40);
-    UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
-    [collectionView setDataSource: self];
-    [collectionView setDelegate: self];
-    collectionView.backgroundColor = [UIColor greenColor];
-    
+//    if (self.channel != nil) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.minimumLineSpacing = 20.0f;
+        flowLayout.minimumInteritemSpacing = 10.0f;
+        flowLayout.itemSize = CGSizeMake(40.0f, 40.0f);
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
+        
+        CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 20, 40);
+        UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+        [collectionView setDataSource: (id)self];
+        [collectionView setDelegate: (id)self];
+        collectionView.backgroundColor = [UIColor greenColor];
+        [self addSubview:collectionView];
+    //}
+
     return self;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.channel.userCount.intValue;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+  
+    if (@available(iOS 13.0, *)) {
+        cell.largeContentImage = [ALUIUtilityClass getImageFromFramworkBundle:@"contact_default_placeholder"];
+    } else {
+        // Fallback on earlier versions
+    }
+    return cell;
 }
 
 -(void) processKeyBoardHideTap
