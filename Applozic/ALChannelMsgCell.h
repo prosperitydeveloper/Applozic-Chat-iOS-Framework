@@ -12,6 +12,8 @@
 
 @interface ALChannelMsgCell : ALChatCell<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property (nonatomic, strong) UICollectionView* collectionView;
+
 -(instancetype)populateCell:(ALMessage*) alMessage viewSize:(CGSize)viewSize;
 
 @end

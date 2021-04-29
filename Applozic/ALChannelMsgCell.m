@@ -25,6 +25,11 @@ static NSString *identifier = @"UserCell";
     return self;
 }
 
+-(void) viewDidLayoutSubviews {
+    CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 20, 40);
+    self.collectionView.frame = rect;
+}
+
 -(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size
 {
     UIFont *defaultFont = [UIFont systemFontOfSize:size];
@@ -90,8 +95,7 @@ static NSString *identifier = @"UserCell";
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     flowLayout.sectionInset = UIEdgeInsetsMake(10.0f, 20.0f, 10.0f, 20.0f);
     
-    CGRect rect = CGRectMake(20, 0, UIScreen.mainScreen.bounds.size.width - 20, 40);
-    UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
+    UICollectionView* collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     [collectionView setDataSource: (id)self];
     [collectionView setDelegate: (id)self];
     collectionView.backgroundColor = [UIColor greenColor];
