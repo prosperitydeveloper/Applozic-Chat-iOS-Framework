@@ -27,6 +27,7 @@ static NSString *identifier = @"UserCell";
 
 -(void) layoutSubviews {
     [super layoutSubviews];
+    self.collectionView.center = CGPointMake(self.center.x, self.mBubleImageView.frame.size.height + 10);
 }
 
 -(UIFont *)getDynamicFontWithDefaultSize:(CGFloat)size
@@ -102,7 +103,6 @@ static NSString *identifier = @"UserCell";
         }
         
         self.collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
-        self.collectionView.center = CGPointMake(self.center.x, 0);
         self.collectionView.dataSource = (id)self;
         self.collectionView.delegate = (id)self;
         self.collectionView.backgroundColor = [UIColor greenColor];
