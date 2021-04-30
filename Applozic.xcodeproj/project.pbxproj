@@ -459,8 +459,6 @@
 		29CBF2031C0303A700BE6A20 /* ALColorUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CBF2011C0303A700BE6A20 /* ALColorUtility.m */; };
 		29D6F86B1D193D9D00A75369 /* PSPDFTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 29D6F8691D193D9D00A75369 /* PSPDFTextView.h */; };
 		29D6F86C1D193D9D00A75369 /* PSPDFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6F86A1D193D9D00A75369 /* PSPDFTextView.m */; };
-		3D3A0F8F263A959400D2EAD6 /* ALUsersTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3A0F8D263A959400D2EAD6 /* ALUsersTableViewCell.h */; };
-		3D3A0F90263A959400D2EAD6 /* ALUsersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3A0F8E263A959400D2EAD6 /* ALUsersTableViewCell.m */; };
 		3DE8E9792636879F0015C545 /* ALChatHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE8E9772636879F0015C545 /* ALChatHeader.h */; };
 		3DE8E97A2636879F0015C545 /* ALChatHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE8E9782636879F0015C545 /* ALChatHeader.m */; };
 		463E49201DB7B45D00CDFFE6 /* ALVCardClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 463E491E1DB7B45D00CDFFE6 /* ALVCardClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1023,8 +1021,6 @@
 		29CBF2011C0303A700BE6A20 /* ALColorUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALColorUtility.m; sourceTree = "<group>"; };
 		29D6F8691D193D9D00A75369 /* PSPDFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPDFTextView.h; sourceTree = "<group>"; };
 		29D6F86A1D193D9D00A75369 /* PSPDFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPDFTextView.m; sourceTree = "<group>"; };
-		3D3A0F8D263A959400D2EAD6 /* ALUsersTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALUsersTableViewCell.h; sourceTree = "<group>"; };
-		3D3A0F8E263A959400D2EAD6 /* ALUsersTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALUsersTableViewCell.m; sourceTree = "<group>"; };
 		3DE8E9772636879F0015C545 /* ALChatHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALChatHeader.h; sourceTree = "<group>"; };
 		3DE8E9782636879F0015C545 /* ALChatHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALChatHeader.m; sourceTree = "<group>"; };
 		463E491E1DB7B45D00CDFFE6 /* ALVCardClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALVCardClass.h; sourceTree = "<group>"; };
@@ -1604,8 +1600,6 @@
 				18A5CC9F24EFB5830016F354 /* ALFriendDeletedMessage.m */,
 				18A5CCA224EFBA810016F354 /* ALDeletedMessasgeBaseCell.h */,
 				18A5CCA324EFBA810016F354 /* ALDeletedMessasgeBaseCell.m */,
-				3D3A0F8D263A959400D2EAD6 /* ALUsersTableViewCell.h */,
-				3D3A0F8E263A959400D2EAD6 /* ALUsersTableViewCell.m */,
 			);
 			name = "Chat Cell";
 			sourceTree = "<group>";
@@ -2286,7 +2280,6 @@
 				1814A76D252F31C2004E836B /* SDImageIOCoder.h in Headers */,
 				6D81979A1CC55B5700E53EC3 /* ALCollectionReusableView.h in Headers */,
 				6D73B2FD1D4F0FF0007D3D72 /* ALReceiverUserProfileVC.h in Headers */,
-				3D3A0F8F263A959400D2EAD6 /* ALUsersTableViewCell.h in Headers */,
 				1814A798252F31C3004E836B /* SDAssociatedObject.h in Headers */,
 				6D0D107A1D4CD7B6009853FB /* ALImagePickerController.h in Headers */,
 				6DEAEE8C1D4CDBC700360060 /* ALUserProfileVC.h in Headers */,
@@ -2691,7 +2684,6 @@
 				1814A729252F31C2004E836B /* SDImageGIFCoder.m in Sources */,
 				18B6037324C051990072F197 /* ALSearchResultViewController.m in Sources */,
 				6D77572E1D5B84940025560B /* ALCustomCell.m in Sources */,
-				3D3A0F90263A959400D2EAD6 /* ALUsersTableViewCell.m in Sources */,
 				18A5CCA524EFBA810016F354 /* ALDeletedMessasgeBaseCell.m in Sources */,
 				6D46B6C61BD025060014A5D3 /* ALMapViewController.m in Sources */,
 				6DEAEE8D1D4CDBC700360060 /* ALUserProfileVC.m in Sources */,

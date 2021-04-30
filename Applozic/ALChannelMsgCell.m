@@ -11,6 +11,12 @@
 
 static NSString *identifier = @"UserCell";
 
+@interface ALChannelMsgCell ()
+
+@property (nonatomic, strong) UICollectionView* collectionView;
+
+@end
+
 @implementation ALChannelMsgCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -87,7 +93,7 @@ static NSString *identifier = @"UserCell";
         // Fallback on earlier versions
     }
     
-    if (self.isShowUsers) {
+    if ([alMessage.message containsString: @"created group"]) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.minimumLineSpacing = -5.0f;
         flowLayout.minimumInteritemSpacing = 10.0f;
@@ -139,13 +145,14 @@ static NSString *identifier = @"UserCell";
     }
     
     if (@available(iOS 13.0, *)) {
-        UIImage* image = [ALUIUtilityClass getImageFromFramworkBundle:@"contact_default_placeholder"];
         UIImageView* imageView = [[UIImageView alloc] initWithFrame: CGRectMake(0, 0, 40, 40)];
-        imageView.image = image;
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
         ALContactDBService *theContactDBService = [[ALContactDBService alloc] init];
-      //  ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: alMessage.to];
+        for (NSString * memberName in self.channel.membersName) {
+            ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: memberName];
+            [ALUIUtilityClass downloadImageUrlAndSet:alContact.contactImageUrl imageView:imageView defaultImage:@"contact_default_placeholder"];
+        }
 
         [cell.contentView addSubview:imageView];
     } else {
