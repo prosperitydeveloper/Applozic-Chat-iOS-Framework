@@ -105,6 +105,7 @@ static NSString *identifier = @"UserCell";
         self.collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:flowLayout];
         self.collectionView.dataSource = (id)self;
         self.collectionView.delegate = (id)self;
+        self.collectionView.backgroundColor = [UIColor whiteColor];
         self.collectionView.showsVerticalScrollIndicator = false;
         self.collectionView.showsHorizontalScrollIndicator = false;
         
