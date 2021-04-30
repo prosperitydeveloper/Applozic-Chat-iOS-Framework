@@ -414,10 +414,10 @@ dispatch_queue_t channelUserbackgroundQueue;
 {
     NSMutableDictionary *grpMetaData = [NSMutableDictionary new];
     
-    [grpMetaData setObject:@":adminName has invited you to join the appointment" forKey:AL_CREATE_GROUP_MESSAGE];
-    [grpMetaData setObject:@":userName decline the appointment" forKey:AL_REMOVE_MEMBER_MESSAGE];
+    [grpMetaData setObject:@":adminName created group" forKey:AL_CREATE_GROUP_MESSAGE];
+    [grpMetaData setObject:@":userName removed" forKey:AL_REMOVE_MEMBER_MESSAGE];
     [grpMetaData setObject:@":userName added" forKey:AL_ADD_MEMBER_MESSAGE];
-    [grpMetaData setObject:@":userName accepded the appointment" forKey:AL_JOIN_MEMBER_MESSAGE];
+    [grpMetaData setObject:@":userName joined" forKey:AL_JOIN_MEMBER_MESSAGE];
     [grpMetaData setObject:@"Group renamed to :groupName" forKey:AL_GROUP_NAME_CHANGE_MESSAGE];
     [grpMetaData setObject:@":groupName icon changed" forKey:AL_GROUP_ICON_CHANGE_MESSAGE];
     [grpMetaData setObject:@":userName left" forKey:AL_GROUP_LEFT_MESSAGE];
