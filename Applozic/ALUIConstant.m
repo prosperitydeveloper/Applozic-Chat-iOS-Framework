@@ -159,7 +159,7 @@
                                                maxWidth:cellFrame.size.width - 115
                                                fontSize:[ALApplozicSettings getChannelCellTextFontSize]];
     
-    CGFloat HEIGHT = theTextSize.height + 30;    
+    CGFloat HEIGHT = theTextSize.height + 80;    
     return HEIGHT;
 }
 
