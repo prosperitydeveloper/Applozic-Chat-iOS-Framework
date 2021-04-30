@@ -77,7 +77,7 @@ static NSString *identifier = @"UserCell";
     [self.mBubleImageView setFrame:frame];
     [self.mBubleImageView setHidden:NO];
     
-    [self.mMessageLabel setFrame: CGRectMake(self.mBubleImageView.frame.origin.x + padding ,padding,
+    [self.mMessageLabel setFrame: CGRectMake(self.mBubleImageView.frame.origin.x + padding, padding,
                                              theTextSize.width,
                                              theTextSize.height)];
     if (@available(iOS 11.0, *)) {

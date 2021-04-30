@@ -1891,6 +1891,9 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
         theCell.delegate = self;
         theCell.channel = channel;
         theCell.colourDictionary = self.alphabetiColorCodesDictionary;
+        if ([theMessage.message containsString: @"has invited you to join the appointment"]) {
+            theCell.isShowUsers = TRUE;
+        }
         [theCell populateCell:theMessage viewSize:self.view.frame.size];
         [self.view layoutIfNeeded];
         return theCell;
