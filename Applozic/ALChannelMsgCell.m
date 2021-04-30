@@ -145,13 +145,16 @@ static NSString *identifier = @"UserCell";
     }
     
     if (@available(iOS 13.0, *)) {
+        UIImage* image = [ALUIUtilityClass getImageFromFramworkBundle:@"contact_default_placeholder"];
         UIImageView* imageView = [[UIImageView alloc] initWithFrame: CGRectMake(0, 0, 40, 40)];
+        imageView.image = image;
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
-        ALContactDBService *theContactDBService = [[ALContactDBService alloc] init];
         [cell.contentView addSubview:imageView];
-        ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: self.channel.membersName[indexPath.row]];
+        ALContactDBService *theContactDBService = [[ALContactDBService alloc] init];
+        ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: self.channel.membersId[indexPath.row]];
         [ALUIUtilityClass downloadImageUrlAndSet:alContact.contactImageUrl imageView:imageView defaultImage:@"contact_default_placeholder"];
+        
     } else {
         // Fallback on earlier versions
     }
