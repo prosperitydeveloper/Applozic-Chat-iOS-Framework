@@ -189,7 +189,6 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     [self.attachmentOutlet setTintColor:[ALApplozicSettings getAttachmentIconColour]];
     [self.sendButton setTintColor:[ALApplozicSettings getSendIconColour]];
     self.alphabetiColorCodesDictionary = [ALApplozicSettings getUserIconFirstNameColorCodes];
-
 }
 
 -(void)viewDidAppear:(BOOL)animated
