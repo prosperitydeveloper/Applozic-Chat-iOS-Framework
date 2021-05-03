@@ -93,6 +93,10 @@ static NSString *identifier = @"UserCell";
         // Fallback on earlier versions
     }
     
+    if (self.collectionView != nil) {
+        [self.collectionView removeFromSuperview];
+    }
+    
     if ([alMessage.message containsString: @"created group"]) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.minimumLineSpacing = -5.0f;
