@@ -159,7 +159,7 @@ static NSString *identifier = @"UserCell";
 //        [ALUIUtilityClass downloadImageUrlAndSet:self.channel.channelImageURL imageView:imageView defaultImage:@"contact_default_placeholder"];
         
         ALContactDBService *theContactDBService = [[ALContactDBService alloc] init];
-        ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: self.channel.membersId[indexPath.row]];
+        ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: self.mMessage.to];
         [ALUIUtilityClass downloadImageUrlAndSet:alContact.contactImageUrl imageView:imageView defaultImage:@"contact_default_placeholder"];
         
     } else {
