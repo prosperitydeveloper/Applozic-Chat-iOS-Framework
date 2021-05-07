@@ -155,10 +155,8 @@ static NSString *identifier = @"UserCell";
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.clipsToBounds = YES;
         [cell.contentView addSubview:imageView];
-        ALContactDBService *theContactDBService = [[ALContactDBService alloc] init];
-        ALContact *alContact = [theContactDBService loadContactByKey:@"userId" value: self.channel.membersId[indexPath.row]];
-        [ALUIUtilityClass downloadImageUrlAndSet:alContact.contactImageUrl imageView:imageView defaultImage:@"contact_default_placeholder"];
         
+        [ALUIUtilityClass downloadImageUrlAndSet:self.channel.channelImageURL imageView:imageView defaultImage:@"contact_default_placeholder"];
     } else {
         // Fallback on earlier versions
     }
