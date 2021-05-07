@@ -217,10 +217,10 @@ static int const CHANNEL_MEMBER_FETCH_LMIT = 5;
     alChannel.unreadCount = dbChannel.unreadCount;
     alChannel.adminKey = dbChannel.adminId;
     alChannel.type = dbChannel.type;
-    if (alChannel.type == GROUP_OF_TWO) {
+   // if (alChannel.type == GROUP_OF_TWO) {
         alChannel.membersName = [self getChannelMembersList:key];
         alChannel.membersId = [self getChannelMembersList:key];
-    }
+   // }
     alChannel.notificationAfterTime = dbChannel.notificationAfterTime;
     alChannel.deletedAtTime = dbChannel.deletedAtTime;
     alChannel.metadata = [alChannel getMetaDataDictionary:dbChannel.metadata];
