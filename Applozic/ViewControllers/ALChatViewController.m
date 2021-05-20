@@ -353,7 +353,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     navigationView.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 38);
     labelName.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 22);
 
-    NSString* strDate = [ALApplozicSettings getDateAppointment];
+    NSString* strDate = [ALApplozicSettings getAppointmentDate];
     CGSize stringSize = [ALUtilityClass getSizeForText:strDate maxWidth:self.view.frame.size.width - 100 fontSize:12];
     labelDate.frame = CGRectMake(0, 22, stringSize.width, 16);
     labelDate.center = CGPointMake(labelName.center.x, labelDate.center.y);
@@ -1100,7 +1100,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     labelName.lineBreakMode = NSLineBreakByTruncatingTail;
     [navigationView addSubview:labelName];
     
-    NSString* strDate = [ALApplozicSettings getDateAppointment];
+    NSString* strDate = [ALApplozicSettings getAppointmentDate];
  
     labelDate = [[UILabel alloc] initWithFrame:CGRectZero];
     labelDate.text = strDate;

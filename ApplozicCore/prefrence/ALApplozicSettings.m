@@ -1935,20 +1935,20 @@
     return [userDefaults valueForKey:AL_SUPPORT_CONTACT_USER_ID];
 }
 
-+(void)setDateAppointment:(NSString *)date {
++(void)setAppointmentDate:(NSString *)date {
     NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
     [userDefaults setValue:date forKey:DUULY_APPOINTMENT_DATE];
     [userDefaults synchronize];
 }
 
-+(NSString *)getDateAppointment {
++(NSString *)getAppointmentDate {
     NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
     return [userDefaults valueForKey:DUULY_APPOINTMENT_DATE];
 }
 
-+(void)setAppointmentId:(NSString *)date {
++(void)setAppointmentId:(NSString *)ID {
     NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
-    [userDefaults setValue:date forKey:DUULY_APPOINTMENT_ID];
+    [userDefaults setValue:ID forKey:DUULY_APPOINTMENT_ID];
     [userDefaults synchronize];
 }
 

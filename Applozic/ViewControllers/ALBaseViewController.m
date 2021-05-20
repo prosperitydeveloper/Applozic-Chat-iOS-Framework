@@ -221,7 +221,10 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
             [self  dismissViewControllerAnimated:YES completion:nil];
         }
     }
-    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"UserTapCalendarInChat" object:self]];
+    NSString * ID = [ALApplozicSettings getAppointmentId];
+    NSDictionary * dictionary = @{@"ID": ID};
+   
+    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"UserTapCalendarInChat" object:dictionary]];
 }
 
 -(void)refreshTable:(id)sender {

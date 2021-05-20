@@ -635,7 +635,10 @@ static NSString *const DUULY_APPOINTMENT_ID = @"com.applozic.userdefault.DUULY_A
 +(void)setSupportContactUserId:(NSString *)userId;
 +(NSString *)getSupportContactUserId;
 
-+(void)setDateAppointment:(NSString *)date;
-+(NSString *)getDateAppointment;
++(void)setAppointmentDate:(NSString *)date;
++(NSString *)getAppointmentDate;
+
++(void)setAppointmentId:(NSString *)ID;
++(NSString *)getAppointmentId;
 
 @end
