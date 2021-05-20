@@ -161,6 +161,7 @@ static NSString *const AL_PHOTO_PICKER_SELECTION_LIMIT = @"com.applozic.userdefa
 static NSString *const AL_MESSAGE_META_DATA_KEY = @"com.applozic.userdefault.AL_MESSAGE_META_DATA_KEY";
 static NSString *const AL_SUPPORT_CONTACT_USER_ID = @"com.applozic.userdefault.AL_SUPPORT_CONTACT_USER_ID";
 static NSString *const DUULY_APPOINTMENT_DATE = @"com.applozic.userdefault.DUULY_APPOINTMENT_DATE";
+static NSString *const DUULY_APPOINTMENT_ID = @"com.applozic.userdefault.DUULY_APPOINTMENT_ID";
 
 @interface ALApplozicSettings : NSObject
 
