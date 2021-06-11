@@ -1957,13 +1957,13 @@
     return [userDefaults valueForKey:DUULY_APPOINTMENT_ID];
 }
 
-+(void)setAppointmentColor:(NSString *)color {
++(void)setAppointmentColor:(UIColor *)color {
     NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
     [userDefaults setValue:color forKey:DUULY_APPOINTMENT_COLOR];
     [userDefaults synchronize];
 }
 
-+(NSString *)getAppointmentColor {
++(UIColor *)getAppointmentColor {
     NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
     return [userDefaults valueForKey:DUULY_APPOINTMENT_COLOR];
 }

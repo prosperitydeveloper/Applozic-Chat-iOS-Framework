@@ -1113,7 +1113,7 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     [navigationView addSubview:labelDate];
     
     pointView = [[UIView alloc] initWithFrame: CGRectZero];
-    pointView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:128.0/255 alpha:1];
+    pointView.backgroundColor = [ALApplozicSettings getAppointmentColor];
     pointView.layer.cornerRadius = 4;
     [navigationView addSubview:pointView];
 

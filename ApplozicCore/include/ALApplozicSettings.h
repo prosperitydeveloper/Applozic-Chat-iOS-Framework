@@ -642,7 +642,7 @@ static NSString *const DUULY_APPOINTMENT_COLOR = @"com.applozic.userdefault.DUUL
 +(void)setAppointmentId:(NSString *)ID;
 +(NSString *)getAppointmentId;
 
-+(void)setAppointmentColor:(NSString *)color;
-+(NSString *)getAppointmentColor;
++(void)setAppointmentColor:(UIColor *)color;
++(UIColor *)getAppointmentColor;
 
 @end
