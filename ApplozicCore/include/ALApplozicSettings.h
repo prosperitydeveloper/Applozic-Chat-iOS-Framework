@@ -162,6 +162,7 @@ static NSString *const AL_MESSAGE_META_DATA_KEY = @"com.applozic.userdefault.AL_
 static NSString *const AL_SUPPORT_CONTACT_USER_ID = @"com.applozic.userdefault.AL_SUPPORT_CONTACT_USER_ID";
 static NSString *const DUULY_APPOINTMENT_DATE = @"com.applozic.userdefault.DUULY_APPOINTMENT_DATE";
 static NSString *const DUULY_APPOINTMENT_ID = @"com.applozic.userdefault.DUULY_APPOINTMENT_ID";
+static NSString *const DUULY_APPOINTMENT_COLOR = @"com.applozic.userdefault.DUULY_APPOINTMENT_COLOR";
 
 @interface ALApplozicSettings : NSObject
 
@@ -640,5 +641,8 @@ static NSString *const DUULY_APPOINTMENT_ID = @"com.applozic.userdefault.DUULY_A
 
 +(void)setAppointmentId:(NSString *)ID;
 +(NSString *)getAppointmentId;
+
++(void)setAppointmentColor:(NSString *)color;
++(NSString *)getAppointmentColor;
 
 @end
