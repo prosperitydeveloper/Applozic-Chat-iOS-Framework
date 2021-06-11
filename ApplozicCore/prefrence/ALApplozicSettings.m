@@ -1959,13 +1959,15 @@
 
 +(void)setAppointmentColor:(UIColor *)color {
     NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
-    [userDefaults setValue:color forKey:DUULY_APPOINTMENT_COLOR];
+    NSData * colorData = [NSKeyedArchiver archivedDataWithRootObject:color];
+    [userDefaults setObject:colorData forKey:DUULY_APPOINTMENT_COLOR];
     [userDefaults synchronize];
 }
 
 +(UIColor *)getAppointmentColor {
     NSUserDefaults * userDefaults = ALApplozicSettings.getUserDefaults;
-    return [userDefaults valueForKey:DUULY_APPOINTMENT_COLOR];
+    NSData * colorData = [userDefaults objectForKey:DUULY_APPOINTMENT_COLOR];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:colorData];
 }
 
 @end

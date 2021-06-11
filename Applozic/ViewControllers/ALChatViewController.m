@@ -348,7 +348,8 @@ ALSoundRecorderProtocol, ALCustomPickerDelegate,ALImageSendDelegate,UIDocumentPi
     [self serverCallForLastSeen];
 }
 
-- (void)viewWillLayoutSubviews {
+- (void)viewWillLayoutSubviews
+{
     [super viewWillLayoutSubviews];
     navigationView.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 38);
     labelName.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 22);
