@@ -204,13 +204,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
     
 }
 
--(void)back:(id)sender {
-    NSArray * viewControllers = self.navigationController.viewControllers;
-    NSUInteger count = [viewControllers count];
-    if (count > 1) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    
+-(void)back:(id)sender {    
     UIViewController *  uiController = [self.navigationController popViewControllerAnimated:YES];
     if(!uiController ){
         if(self.individualLaunch){
