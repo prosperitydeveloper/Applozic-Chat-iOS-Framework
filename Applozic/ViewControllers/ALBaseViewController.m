@@ -211,6 +211,7 @@ static CGFloat const sendTextViewCornerRadius = 10.0f;
             [self  dismissViewControllerAnimated:YES completion:nil];
         }
     }
+    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"UserTapBackInChat" object:nil userInfo: nil]];
 }
 
 -(void)calendar:(id)sender {
